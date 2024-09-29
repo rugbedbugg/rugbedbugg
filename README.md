@@ -24,7 +24,8 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
 - **Tools**:  
   ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)  
   ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
-  ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)  
+  ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
+  ![PyCharm](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)  
 
 ---
 
@@ -32,13 +33,12 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
 
 - **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of aracde and modern look and feel. 
 - **LibrarianOnline**: A free-to-use online library management website. Work in progress...
-- **LibrarianOnline**: A free-to-use online library management website. Work in progress...
 
 ---
 
-## 🏆 Hackathon Success!
+## 🏆 Hackathon Success
 
-I was a proud winner Best Fresher's Team of **HACKBATTLE'24**! Along with my talented friends Aishwarrya, Arjun, and Aritra. We built **Defeat Ine-VIT-able**,  an amazing project where I took charge of the backend and frontend development. 🎉
+Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented friends Aishwarrya, Arjun, and Aritra. We built **Defeat Ine-VIT-able**,  an amazing project where I took charge of the backend and frontend development. 🎉
 
 ---
 
@@ -50,9 +50,9 @@ I was a proud winner Best Fresher's Team of **HACKBATTLE'24**! Along with my tal
 
 ---
 
-- ⚡ Fun fact: ... 1 in every 2 people is a creative person. Its not me, so it must be...
+- ⚡ Fun fact: Around half of all people possess a special skill or talent that sets them apart, even if it's something simple that brings joy to others. Not me, so it has to be...
 
-### Thanks for stopping by, ! 😄
+### Thanks for stopping by, see you soon! 😄
 
 
 <!---
