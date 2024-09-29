@@ -42,7 +42,7 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ---
 
-##  📫 How to reach me .. linkedin, insta, discord even? your choice! 🔗 Let's Connect
+##  📫 How to reach me .. 
 
 - [LinkedIn](https://www.linkedin.com/in/partha-gogoi-736241308/)
 - [Leetcode](https://leetcode.com/u/oxide_1/)
