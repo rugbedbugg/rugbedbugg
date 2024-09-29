@@ -50,7 +50,7 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ---
 
-- ⚡ Fun fact: Around half of all people possess a special skill or talent that sets them apart, even if it's something simple that brings joy to others. Not me, so it has to be...
+- ⚡ Fun fact: 1 in 2 people possess a special skill or talent that sets them apart, even if it's something simple that brings joy to others. Not me, so it has to be...
 
 ### Thanks for stopping by, see you soon! 😄
 
