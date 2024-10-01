@@ -17,8 +17,8 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
   ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
   ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
   ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
-  
-  ![SQL Badge](https://img.shields.io/badge/sql-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+  ![SQL Badge](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=sqlite&logoColor=white)
+
 
 
 - **Frameworks**:  
@@ -29,7 +29,7 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
   ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
   ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
   ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)
-  ![MySQL Badge](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+  ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
   
 ---
 
