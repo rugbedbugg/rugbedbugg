@@ -30,6 +30,7 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
   ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 
 - **Version Control**:
+  
   ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
   ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
   
