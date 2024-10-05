@@ -46,7 +46,7 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ---
 
-##  📫 How to reach me .. 
+##  📫 Find me here .. 
 
 - Discord: .rug_.
 - [Leetcode](https://leetcode.com/u/oxide1-6/)
