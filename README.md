@@ -26,10 +26,12 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
 
 - **Tools**:  
   ![VSCode Badge](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)  
-  ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
-  ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
   ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)
   ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+
+- **Version Control**:
+  ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
+  ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
   
 ---
 
