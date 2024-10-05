@@ -13,7 +13,8 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
 
 ## 🚀 Skills & Tech Stack
 
-- **Languages**:  
+- **Languages**:
+  
   ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
   ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
   ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
@@ -21,10 +22,12 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
 
 
 
-- **Frameworks**:  
+- **Frameworks**:
+    
   ![Flask](https://img.shields.io/badge/-Flask-000000?style=flat&logo=flask&logoColor=white)
 
-- **Tools**:  
+- **Tools**:
+    
   ![VSCode Badge](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)  
   ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)
   ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
