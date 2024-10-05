@@ -5,7 +5,7 @@
 
 - 😄 Pronouns: he/him
 
-### 💻 Full-Stack Developer | 🤖 AI/ML Enthusiast | 🖥️ Ethichal Hacking Enthusiast | 📷 Photography Enthusiast
+### 💻 Full-Stack Developer | 🤖 AI/ML Enthusiast | 🖥️ Ethical Hacking Enthusiast | 📷 Photography Enthusiast
 
 Welcome to my GitHub! I'm passionate about creating seamless, user-friendly websites and web applications. I love working with **Python**, **Flask**, **HTML**, **MySQL** and **CSS** to bring ideas to life. New skills on the way!
 
