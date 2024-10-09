@@ -19,7 +19,7 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
   ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
   ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)  
   ![SQL Badge](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=sqlite&logoColor=white)  
-  ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)  
+  ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)  
 
 
 - **Frameworks**:
