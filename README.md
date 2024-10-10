@@ -42,6 +42,7 @@ Welcome to my GitHub! I'm passionate about Machine Learning, Cyber Security and 
 
 
 - **Database Managment**:
+  
   ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)  
 
 
