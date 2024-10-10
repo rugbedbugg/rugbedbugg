@@ -7,18 +7,15 @@
 
 ### 💻 Full-Stack Developer | 🤖 AI/ML Enthusiast | 🖥️ Ethical Hacking Enthusiast | 📷 Photography Enthusiast
 
-Welcome to my GitHub! I'm passionate about creating seamless, user-friendly websites and web applications. I love working with **Python**, **Flask**, **HTML**, **MySQL** and **CSS** to bring ideas to life. New skills on the way!
+Welcome to my GitHub! I'm passionate about Machine Learning, Cyber Security and creating solutions to automate mundane everyday tasks. New skills on the way!
 
 ---
 
 ## 🚀 Skills & Tech Stack
 
-- **Languages**:
+- **Programming Languages**:
   
   ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
-  ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
-  ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)  
-  ![SQL Badge](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=sqlite&logoColor=white)  
   ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)  
 
 
@@ -26,20 +23,35 @@ Welcome to my GitHub! I'm passionate about creating seamless, user-friendly webs
     
   ![Flask](https://img.shields.io/badge/-Flask-000000?style=flat&logo=flask&logoColor=white)  
 
-- **Tools**:
+
+- **My IDE Setup**:
     
   ![VSCode Badge](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)  
   ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)  
-  ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)  
+
 
 - **Version Control**:
   
   ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
   ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
-  
+
+
+- **Query Langs**:
+
+  ![SQL Badge](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=sqlite&logoColor=white)  
+
+
+- **Database Managment**:
+  ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)  
+
+
+- **Web Dev**:
+
+  ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
+  ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
 ---
 
-## 🎯 Current Projects ✨✨
+## 🎯 Projects ✨✨
 
 - **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of aracde and modern look and feel. 
 - **LibrarianOnline**: A free-to-use online library management website. Work in progress...
