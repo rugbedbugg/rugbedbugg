@@ -27,7 +27,7 @@ Welcome to my GitHub! I'm passionate about Machine Learning, Cyber Security and 
 
 - **My IDE Setup**:
     
-  ![VSCode Badge](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)  
+  ![VSCode Badge](https://badgen.net/badge/VSCode/Editor/007ACC?icon=visual-studio-code&labelColor=555)  
   ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)  
 
 
