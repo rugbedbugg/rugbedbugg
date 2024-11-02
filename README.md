@@ -16,7 +16,7 @@ Welcome to my GitHub! I'm passionate about Machine Learning, Cyber Security and 
 - **Programming Languages**:
   
   ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
-  ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+  ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white) 
   ![Dart Badge](https://img.shields.io/badge/-Dart-0175C2?style=flat&logo=dart&logoColor=white) 
 
 
