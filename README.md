@@ -1,87 +1,27 @@
-
-- 👋 Hi @rugbedbugg here, your local daft
-
-- 👀 I’m interested in gaming, sports, coding, making a certain someone happy
-
-- 😄 Pronouns: he/him
-
-### 💻 Backend Developer | 🤖 AI/ML Enthusiast | 🖥️ Ethical Hacking Enthusiast | 📷 Photography Enthusiast
-
-Welcome to my GitHub! I'm passionate about Machine Learning, Cyber Security and creating solutions to automate mundane everyday tasks. New skills on the way!
-
----
-
-## 🚀 Skills & Tech Stack
-
-- **Programming Languages**:
-  
-  ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
-  ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)  
-  ![Dart Badge](https://img.shields.io/badge/-Dart-0175C2?style=flat&logo=dart&logoColor=white) 
+# 💫 About Me:
+<br>- 👋 Hi @rugbedbugg here, your local daft<br><br>- 👀 I’m interested in gaming, sports, coding, making a certain someone happy<br><br>- 😄 Pronouns: he/him<br><br>### 💻 Backend Developer | 🖥️ Ethical Hacking Enthusiast | 📷 Hobby Photographer<br><br>Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions to automate mundane everyday tasks. New skills on the way!<br><br>---<br><br> ## 🎯 Projects ✨✨<br><br>- **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of aracde and modern look and feel. <br>- **LibrarianOnline**: A free-to-use online library management website. Work in progress...<br><br>---<br><br>## 🏆 Hackathon Success ✨<br><br>Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented friends Aishwarrya, Arjun, and Aritra. We built **Defeat Ine-VIT-able**,  an amazing project where I took charge of the backend and frontend development. 🎉<br><br>---<br><br>##  
 
 
-- **Frameworks**:
-    
-  ![Flask](https://img.shields.io/badge/-Flask-000000?style=flat&logo=flask&logoColor=white)  
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/_boyin_paradise) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/partha-gogoi-736241308) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/ur_local_daft) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@@rknif781) 
 
+# 💻 Tech Stack:
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white) ![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white) ![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white) ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white) ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white) ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_blue&hide_border=true&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_blue&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_blue&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
-- **My IDE Setup**:
-    
-  ![VSCode Badge](https://badgen.net/badge/VSCode/Editor/007ACC?icon=visual-studio-code&labelColor=555)  
-  ![PyCharm Badge](https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=white)  
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
-- **Version Control**:
-  
-  ![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)  
-  ![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)
-
-
-- **Query Langs**:
-
-  ![SQL Badge](https://img.shields.io/badge/-SQL-003B57?style=flat&logo=sqlite&logoColor=white)  
-
-
-- **Database Managment**:
-  
-  ![MySQL Badge](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)  
-
-
-- **Web Dev**:
-
-  ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)  
-  ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
----
-
-## 🎯 Projects ✨✨
-
-- **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of aracde and modern look and feel. 
-- **LibrarianOnline**: A free-to-use online library management website. Work in progress...
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=rugbedbugg&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
 
-## 🏆 Hackathon Success ✨
-
-Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented friends Aishwarrya, Arjun, and Aritra. We built **Defeat Ine-VIT-able**,  an amazing project where I took charge of the backend and frontend development. 🎉
-
----
-
-##  📫 Find me here .. 
-
-- Discord: .rug_.
-- [Leetcode](https://leetcode.com/u/oxide1-6/)
-- [LinkedIn](https://www.linkedin.com/in/partha-gogoi-736241308/)
-
----
-
-- ⚡ Fun fact: 1 in 2 people possess a special skill or talent that sets them apart, even if it's something simple that brings joy to others. Doesnt sound like me, so it has to be...
-.
-.
-.
-### Thanks for stopping by, see you soon! 😄
-
-
-<!---
-rugbedbugg/rugbedbugg is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
