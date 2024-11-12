@@ -13,7 +13,7 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ## 🎯 Projects ✨✨
 
 - **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of arcade and modern look and feel.
-- **LibrarianOnline**: A free-to-use online library management website. Work in progress...
+- **p-YT-hon**: A free-to-use YouTube video downloader so that you dont have to pay for YouTube subsciptions
 
 
 
@@ -58,9 +58,9 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ## 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_blue&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_blue&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_blue&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 ## 🏆 GitHub Trophies
 
@@ -76,4 +76,4 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ---
 
-[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visit
+[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
