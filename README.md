@@ -48,7 +48,7 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-## 💻💻💻 When I wouldnt be coding
+## 💻💻💻 When I wouldn't be coding
 
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
@@ -61,7 +61,7 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ## 📊 GitHub Stats
 
-![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
@@ -71,10 +71,5 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
-### 🔝 Top Contributed Repo
-
-![](https://github-contributor-stats.vercel.app/api?username=rugbedbugg&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
----
 
 [![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
