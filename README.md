@@ -10,19 +10,6 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 
 
 
-## 🎯 Projects ✨✨
-
-- **Defeat Ine-VIT-able**: Award winning free-to-play online gaming website, having a catalogue of arcade games... all with a touch of arcade and modern look and feel.
-- **p-YT-hon**: A free-to-use YouTube video downloader so that you dont have to pay for YouTube subsciptions
-
-
-
-## 🏆 Hackathon Success ✨
-
-Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented friends Aishwarrya, Arjun, and Aritra. We built **Defeat Ine-VIT-able**, an amazing project where I took charge of the backend and frontend development. 🎉
-
-
-
 ## 🌐 Socials
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/_boyin_paradise)
@@ -58,6 +45,9 @@ Proud winner of Best Fresher's Team of **HACKBATTLE'24**! Along with my talented
 ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
 ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white)
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
+
+
+<a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=e8q" width="652" alt="oxide 1-6's Dev Card"/></a>
 
 ## 📊 GitHub Stats
 
