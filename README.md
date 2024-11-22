@@ -60,8 +60,9 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 
-[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
-
-## Off-Github Stats 💥💥
+## 💥💥 Off-Github Stats 
 
 <a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=zqg" width="652" alt="oxide 1-6's Dev Card"/></a>
+
+
+[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
