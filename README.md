@@ -47,8 +47,6 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
-<a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=e8q" width="652" alt="oxide 1-6's Dev Card"/></a>
-
 ## 📊 GitHub Stats
 
 ![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false)<br/>
@@ -63,3 +61,7 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 
 
 [![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
+
+## Off-Github Stats 💥💥
+
+<a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=zqg" width="652" alt="oxide 1-6's Dev Card"/></a>
