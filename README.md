@@ -31,7 +31,7 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-## Cooking up something here..
+## 💻💻 Cooking up something here..
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
 
