@@ -4,7 +4,7 @@
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
 
-# 💻 Backend Developer | 🖥️ Ethical Hacking Enthusiast | 📷 Hobby Photographer
+ 🖥️ Backend Developer | 🖥💻 Ethical Hacking Enthusiast | 📷 Hobby Photographer
 
 Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions to automate mundane everyday tasks. New skills on the way!
 
