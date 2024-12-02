@@ -34,6 +34,12 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ## 💻💻 Cooking up something here..
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Kali Purple](https://img.shields.io/badge/Kali_Purple-%235F3D5B.svg?style=for-the-badge&logo=kali&logoColor=white)
+![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
+![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
+![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
+![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
+
 
 ## 💻💻💻 When I wouldn't be coding
 
