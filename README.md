@@ -4,10 +4,9 @@
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
 
- 🖥️ Web Dev | 💻 Ethical Hacking Enthusiast | 📷 Hobby Photographer
+ 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast | 
 
-Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions to automate mundane everyday tasks. New skills on the way!
-
+Welcome to my GitHub!
 
 
 ## 🌐 Socials
@@ -16,6 +15,7 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/partha-gogoi-736241308)
 [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white)](https://pinterest.com/ur_local_daft)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/@@rknif781)
+
 
 ## 💻 Tech Stack
 
@@ -31,6 +31,8 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-%230078D4.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+
 
 ## 💻💻 Cooking up something here..
 
@@ -40,6 +42,8 @@ Welcome to my GitHub! I'm passionate about Cyber Security and creating solutions
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-%23183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-%23007CBA.svg?style=for-the-badge&logo=vmware&logoColor=white)
 
 
 ## 💻💻💻 When I wouldn't be coding
