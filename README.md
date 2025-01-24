@@ -4,7 +4,7 @@
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
 
- 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast | 
+## 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast 
 
 Welcome to my GitHub!
 
