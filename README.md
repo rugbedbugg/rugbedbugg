@@ -31,7 +31,9 @@ Welcome to my GitHub!
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-0078D4?logo=microsoftazure&logoColor=white&style=flat)
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-%230078D4.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![x86 Assembly](https://img.shields.io/badge/x86%20Assembly-0071C5?logo=intel&logoColor=white&style=flat)
 
 
 ## 💻💻 Cooking up something here..
