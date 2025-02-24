@@ -37,7 +37,7 @@ Welcome to my GitHub!
 
 ## 💻💻 Cooking up something here..
 
-![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-111927?style=flat&logo=Hack%20The%20Box&logoColor=00FF00)
+![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Kali Purple](https://img.shields.io/badge/Kali_Purple-%23557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
