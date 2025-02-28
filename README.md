@@ -21,7 +21,6 @@ Welcome to my GitHub!
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
@@ -30,7 +29,6 @@ Welcome to my GitHub!
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-%230078D4.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
@@ -39,12 +37,15 @@ Welcome to my GitHub!
 ## 💻💻 Cooking up something here..
 
 ![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00)
+![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Kali Purple](https://img.shields.io/badge/Kali_Purple-%23557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
+![Lynx](https://img.shields.io/badge/Lynx-%23666666.svg?style=for-the-badge&logo=lynx&logoColor=white)
+![FFUF](https://img.shields.io/badge/FFUF-%23000000.svg?style=for-the-badge&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-%23183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-%23007CBA.svg?style=for-the-badge&logo=vmware&logoColor=white)
