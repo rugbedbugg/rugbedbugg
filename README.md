@@ -70,7 +70,7 @@ Welcome to my GitHub!
 
 ![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-## 🏆🏋️‍♂️🏆 picoCTF Progress
+## 🏆🏋️‍♂️🏆 picoCTF
 
 🔹 **Challenges Solved:** 13 / 373  
 🔹 **Rank:** N/A
