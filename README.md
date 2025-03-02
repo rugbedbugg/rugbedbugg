@@ -63,6 +63,11 @@ Welcome to my GitHub!
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
+## picoCTF!!
+
+<a href="https://play.picoctf.org/users/your_username"><img src="https://raw.githubusercontent.com/your_github_username/your_repository/main/picoCTF-progress.png" width="652" alt="picoCTF Progress Card"/></a>
+
+
 ## 📊 GitHub Stats
 
 ![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false)<br/>
