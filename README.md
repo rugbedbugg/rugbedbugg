@@ -63,12 +63,6 @@ Welcome to my GitHub!
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
-## 🏆 picoCTF Progress
-
-<!-- PICOCTF_PROGRESS_START -->
-Your progress table will be updated here automatically.
-<!-- PICOCTF_PROGRESS_END -->
-
 ## 📊 GitHub Stats
 
 ![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false)<br/>
@@ -79,12 +73,42 @@ Your progress table will be updated here automatically.
 
 ![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+## 🏆🏋️‍♂️🏆 picoCTF Progress
 
+🔹 **User:** [rugbedbugg](https://play.picoctf.org/users/rugbedbugg)  
+🔹 **Challenges Solved:** 10 / 50
+🔹 **Rank:** N/A
+### 🏋️‍♂️ Easy Challenges
+
+| Most Recent Challenge    | Category         | Status                          |
+|--------------------------|------------------|---------------------------------|
+| interencdec              | Cryptography     | 1 ✅ Completed  0 ⏳ In Progress |
+| Search of the Ployglot   | Forensics        | 3 ✅ Completed  0 ⏳ In Progress |
+| Time Machine             | General Skills   | 2 ✅ Completed  0 ⏳ In Progress |
+| dont-use-client-side     | Web Exploitation | 6 ✅ Completed  1 ⏳ In Progress |
+
+### 🏋️‍♂️ Medium Challenges
+
+| Most Recent Challenge    | Category         | Status                          |
+|--------------------------|------------------|---------------------------------|
+|        N/A               | Cryptography     | 0 ✅ Completed  1 ⏳ In Progress |
+|        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Web Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
+
+### 🏋️‍♂️ Hard Challenges
+
+| Most Recent Challenge    | Category         | Status                          |
+|--------------------------|------------------|---------------------------------|
+|        N/A               | Cryptography     | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Web Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
 <a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=zqg" width="652" alt="oxide 1-6's Dev Card"/></a>
 
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 [![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
