@@ -3,7 +3,7 @@ import json
 import os
 
 # 🔹 Replace with your picoCTF username
-USERNAME = "your_picoctf_username"
+USERNAME = "rugbedbugg"
 
 # API URL
 API_URL = f"https://play.picoctf.org/api/stats/{USERNAME}"
