@@ -1,32 +1,32 @@
-name: Update picoCTF Progress Card
+name: Update picoCTF Progress
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Every 12 hours
+    - cron: "0 0 * * *"  # Runs once daily at midnight UTC
   workflow_dispatch:  # Allows manual execution
 
 jobs:
-  update-card:
+  update-progress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set Up Python
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install Dependencies
-        run: pip install requests pillow
+        run: pip install pillow requests
 
-      - name: Generate Progress Card
-        run: python generate_picoctf_card.py
+      - name: Run Update Script
+        run: python update_picoCTF.py
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "GitHub Actions Bot"
+          git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add picoCTF-progress.png
-          git commit -m "Update picoCTF progress card" || exit 0
+          git commit -m "Updated picoCTF progress card" || exit 0
           git push
