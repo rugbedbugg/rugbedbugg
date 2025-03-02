@@ -76,7 +76,7 @@ Welcome to my GitHub!
 ## 🏆🏋️‍♂️🏆 picoCTF Progress
 
 🔹 **User:** [rugbedbugg](https://play.picoctf.org/users/rugbedbugg)  
-🔹 **Challenges Solved:** 10 / 50
+🔹 **Challenges Solved:** 13 / 373
 🔹 **Rank:** N/A
 ### 🏋️‍♂️ Easy Challenges
 
