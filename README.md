@@ -87,10 +87,10 @@ Welcome to my GitHub!
 
 | Most Recent Challenge    | Category         | Status                          |
 |--------------------------|------------------|---------------------------------|
-|        N/A               | Cryptography     | 0 ✅ Completed  1 ⏳ In Progress |
+| la cifra de              | Cryptography     | 0 ✅ Completed  1 ⏳ In Progress |
 |        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Web Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
+| jaWT Notepad             | Web Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
 
 ### 🏋️‍♂️ Hard Challenges
 
