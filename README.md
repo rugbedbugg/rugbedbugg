@@ -1,13 +1,9 @@
-# 💫 About Me
+# 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast 
 
+Welcome to my GitHub!
 - 👋 Hi, @rugbedbugg here, your local daft
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
-
-## 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast 
-
-Welcome to my GitHub!
-
 
 ## 🌐 Socials
 
@@ -38,7 +34,7 @@ Welcome to my GitHub!
 
 ![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00)
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
-![picoCTF](https://img.shields.io/badge/picoCTF-%231F1F1F.svg?style=for-the-badge&logo=<(https://imgur.com/a/li0hi9k)>&logoColor=white)
+![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Kali Purple](https://img.shields.io/badge/Kali_Purple-%23557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
