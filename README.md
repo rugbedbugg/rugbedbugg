@@ -65,8 +65,9 @@ Welcome to my GitHub!
 
 ## picoCTF!!
 
-<a href="https://play.picoctf.org/users/rugbedbugg"><img src="https://raw.githubusercontent.com/rugbedbugg/rugbedbugg/main/picoCTF-progress.png" width="652" alt="picoCTF Progress Card"/></a>
-
+<a href="https://play.picoctf.org/users/rugbedbugg">
+    <img src="https://raw.githubusercontent.com/rugbedbugg/rugbedbugg/main/picoCTF-progress.png" width="652" alt="picoCTF Progress Card"/>
+</a>
 
 ## 📊 GitHub Stats
 
