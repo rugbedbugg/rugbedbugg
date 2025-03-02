@@ -72,7 +72,7 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 picoCTF Progress
 
-🔹 **Challenges Solved:** 13 / 373 
+🔹 **Challenges Solved:** 13 / 373  
 🔹 **Rank:** N/A
 ### 🏋️‍♂️ Easy Challenges
 
