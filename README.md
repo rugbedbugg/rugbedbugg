@@ -63,11 +63,11 @@ Welcome to my GitHub!
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
-## picoCTF!!
+## 🏆 picoCTF Progress
 
-<a href="https://play.picoctf.org/users/rugbedbugg">
-    <img src="https://raw.githubusercontent.com/rugbedbugg/rugbedbugg/main/picoCTF-progress.png" width="652" alt="picoCTF Progress Card"/>
-</a>
+<!-- PICOCTF_PROGRESS_START -->
+Your progress table will be updated here automatically.
+<!-- PICOCTF_PROGRESS_END -->
 
 ## 📊 GitHub Stats
 
