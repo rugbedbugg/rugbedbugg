@@ -60,11 +60,11 @@ Welcome to my GitHub!
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats!
 
-![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+[](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true&text_color=FF5555)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact&text_color=FF5555)
 
 ## 🏆 GitHub Trophies
 
