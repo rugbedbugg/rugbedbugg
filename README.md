@@ -72,7 +72,7 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 picoCTF
 
-🔹 **Challenges Solved:** 13 / 373  
+🔹 **Challenges Solved:** 15 / 373  
 🔹 **Rank:** N/A
 ### 🏋️‍♂️ Easy Challenges
 
@@ -87,10 +87,10 @@ Welcome to my GitHub!
 
 | Most Recent Challenge    | Category         | Status                          |
 |--------------------------|------------------|---------------------------------|
-| la cifra de              | Cryptography     | 0 ✅ Completed  1 ⏳ In Progress |
+| rsa_oracle               | Cryptography     | 1 ✅ Completed  1 ⏳ In Progress |
 |        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
-| jaWT Notepad             | Web Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
+| Trickster                | Web Exploitation | 1 ✅ Completed  1 ⏳ In Progress |
 
 ### 🏋️‍♂️ Hard Challenges
 
@@ -108,3 +108,5 @@ Welcome to my GitHub!
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 [![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
+
+
