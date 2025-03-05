@@ -41,7 +41,7 @@ Welcome to my GitHub!
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
-![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-orange?logo=gnu-bash&logoColor=white)
+![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-orange?style=flat&logo=gnu-bash&logoColor=white)
 ![Lynx](https://img.shields.io/badge/Lynx-%23666666.svg?style=for-the-badge&logo=lynx&logoColor=white)
 ![ProxyChains](https://img.shields.io/badge/ProxyChains-v4.14-red?logo=torproject&logoColor=white)
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
