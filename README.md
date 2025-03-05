@@ -42,7 +42,8 @@ Welcome to my GitHub!
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
 ![Lynx](https://img.shields.io/badge/Lynx-%23666666.svg?style=for-the-badge&logo=lynx&logoColor=white)
-![FFUF](https://img.shields.io/badge/FFUF-%23000000.svg?style=for-the-badge&logoColor=white)
+![Proxychains](https://img.shields.io/badge/FFUF-%23000000.svg?style=for-the-badge&logoColor=white)
+![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-%23183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-%23007CBA.svg?style=for-the-badge&logo=vmware&logoColor=white)
@@ -57,7 +58,6 @@ Welcome to my GitHub!
 ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)
 ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
 ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white)
-![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 
 ## 📊 GitHub Stats!
