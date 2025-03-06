@@ -5,6 +5,8 @@ Welcome to my GitHub!
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
 
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+
 ## 🌐 Socials
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/_boyin_paradise)
@@ -72,10 +74,9 @@ Welcome to my GitHub!
 
 ![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-## 🏆🏋️‍♂️🏆 picoCTF
+## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Solved:** 15 / 373  
-🔹 **Rank:** N/A
+🔹 **Challenges Solved:** 15 
 ### 🏋️‍♂️ Easy Challenges
 
 | Most Recent Challenge    | Category         | Status                          |
@@ -84,6 +85,7 @@ Welcome to my GitHub!
 | Search of the Ployglot   | Forensics        | 3 ✅ Completed  0 ⏳ In Progress |
 | Time Machine             | General Skills   | 2 ✅ Completed  0 ⏳ In Progress |
 | dont-use-client-side     | Web Exploitation | 6 ✅ Completed  1 ⏳ In Progress |
+| heap0                    | Bin Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
 
 ### 🏋️‍♂️ Medium Challenges
 
@@ -93,6 +95,7 @@ Welcome to my GitHub!
 |        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
 | Trickster                | Web Exploitation | 1 ✅ Completed  1 ⏳ In Progress |
+|        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
 
 ### 🏋️‍♂️ Hard Challenges
 
@@ -102,13 +105,10 @@ Welcome to my GitHub!
 |        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | Web Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
 <a href="https://app.daily.dev/rugbedbugg"><img src="https://api.daily.dev/devcards/v2/WV72FuYZzUb95EhG30Tua.png?type=wide&r=zqg" width="652" alt="oxide 1-6's Dev Card"/></a>
-
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
-
-[![](https://visitcount.itsvg.in/api?id=rugbedbugg&icon=0&color=0)](https://visitcount.itsvg.in)
 
 
