@@ -17,8 +17,6 @@ Welcome to my GitHub!
 
 ## 💻 Tech Stack
 
-[](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true&text_color=FF5555)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact&text_color=FF5555)
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -67,9 +65,11 @@ Welcome to my GitHub!
 ![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
 ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white)
 
-## 🏆 GitHub Trophies
+## 🏆 This GitHub Thing
 
 ![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+[](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true&text_color=FF5555)<br/>
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
