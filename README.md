@@ -79,7 +79,7 @@ Welcome to my GitHub!
 | Most Recent Challenge    | Category         | Status                          |
 |--------------------------|------------------|---------------------------------|
 | interencdec              | Cryptography     | 1 ✅ Completed  0 ⏳ In Progress |
-| Search of the Ployglot   | Forensics        | 3 ✅ Completed  0 ⏳ In Progress |
+| Hidden Pixels            | Forensics        | 3 ✅ Completed  1 ⏳ In Progress |
 | Time Machine             | General Skills   | 2 ✅ Completed  0 ⏳ In Progress |
 | dont-use-client-side     | Web Exploitation | 6 ✅ Completed  1 ⏳ In Progress |
 | heap0                    | Bin Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
