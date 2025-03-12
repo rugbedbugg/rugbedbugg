@@ -40,8 +40,11 @@ Welcome to my GitHub!
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-0088CC?style=for-the-badge)
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Writer](https://img.shields.io/badge/Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
+![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/Obsidian-5A4FCF?style=for-the-badge&logo=obsidian&logoColor=white)
+![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white)
+![recordMyDesktop](https://img.shields.io/badge/recordMyDesktop-FFA500?style=for-the-badge&logo=recordmydesktop&logoColor=white)
 
 
 ## 💻💻 Cooking up something here..
