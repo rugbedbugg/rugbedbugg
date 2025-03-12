@@ -24,6 +24,7 @@ Welcome to my GitHub!
 ![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![x86 Assembly](https://img.shields.io/badge/x86_Assembly-%230071C5.svg?style=for-the-badge&logo=intel&logoColor=white)
@@ -43,7 +44,7 @@ Welcome to my GitHub!
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/Obsidian-5A4FCF?style=for-the-badge&logo=obsidian&logoColor=white)
-![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=termux&logoColor=white)
+![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=gnometerminal&logoColor=white)
 ![recordMyDesktop](https://img.shields.io/badge/recordMyDesktop-FFA500?style=for-the-badge&logo=recordmydesktop&logoColor=white)
 
 
