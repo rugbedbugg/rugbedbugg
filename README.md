@@ -46,7 +46,7 @@ Welcome to my GitHub!
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
 ![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
-![Kali Purple](https://img.shields.io/badge/Kali_Purple-%23557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
+![Kali Purple](https://img.shields.io/badge/Kali%20Purple-6A0DAD?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Linux Terminal](https://img.shields.io/badge/Linux%20Terminal-000000?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-000000?style=for-the-badge&logo=gnu-bash&logoColor=FFD700)
 ![APT](https://img.shields.io/badge/APT-336791?style=for-the-badge&logo=debian&logoColor=white)
