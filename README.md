@@ -38,6 +38,8 @@ Welcome to my GitHub!
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-0088CC?style=for-the-badge)
+![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
+![LibreOffice Writer](https://img.shields.io/badge/Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/Obsidian-5A4FCF?style=for-the-badge&logo=obsidian&logoColor=white)
 
@@ -70,8 +72,6 @@ Welcome to my GitHub!
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=firefox&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
-![LibreOffice Writer](https://img.shields.io/badge/Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
 ![Yoru Main](https://img.shields.io/badge/Yoru%20Main-0059FF?style=for-the-badge&logo=riot-games&logoColor=white)
 ![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white)
