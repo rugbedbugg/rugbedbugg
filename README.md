@@ -1,4 +1,4 @@
-# 🖥️ Machine Learning Enthusiast | 💻 Ethical Hacking Enthusiast 
+# 🤖 Gen AI Enthusiast | 💻 Ethical Hacking Enthusiast 
 
 Welcome to my GitHub!
 - 👋 Hi, @rugbedbugg here, your local daft
