@@ -44,6 +44,7 @@ Welcome to my GitHub!
 ![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-%23557C94.svg?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Kali Purple](https://img.shields.io/badge/Kali_Purple-%23557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
+![Zsh](https://img.shields.io/badge/Zsh-FFD700?style=for-the-badge&logo=gnu-bash&logoColor=black)
 ![APT](https://img.shields.io/badge/APT-336791?style=for-the-badge&logo=debian&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
