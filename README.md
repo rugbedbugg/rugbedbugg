@@ -5,7 +5,7 @@ Welcome to my GitHub!
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
 
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 ## 🌐 Socials
 
@@ -18,7 +18,7 @@ Welcome to my GitHub!
 
 ## 💻 Tech Stack
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact&text_color=FF5555)
+![Look at this!](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=true&layout=compact&text_color=FF5555)
 
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -66,6 +66,8 @@ Welcome to my GitHub!
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
+![Wappalyzer](https://img.shields.io/badge/Wappalyzer-4427A0?style=for-the-badge&logo=wappalyzer&logoColor=white)
+![🐉 Ghidra](https://img.shields.io/badge/Ghidra-FF0000?style=for-the-badge&logo=dragon&logoColor=white)
 ![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-%23E95420?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Lynx](https://img.shields.io/badge/Lynx-%23666666.svg?style=for-the-badge&logo=lynx&logoColor=white)
 ![ProxyChains](https://img.shields.io/badge/ProxyChains-v4.3.1-%2300A884?style=for-the-badge&logo=tails&logoColor=white)
@@ -102,10 +104,11 @@ Welcome to my GitHub!
 | Most Recent Challenge    | Category         | Status                          |
 |--------------------------|------------------|---------------------------------|
 | interencdec              | Cryptography     | 1 ✅ Completed  0 ⏳ In Progress |
-| Hidden Pixels            | Forensics        | 3 ✅ Completed  1 ⏳ In Progress |
-| Time Machine             | General Skills   | 2 ✅ Completed  0 ⏳ In Progress |
+| Hidden Pixels (Personal) | Forensics        | 3 ✅ Completed  1 ⏳ In Progress |
+| Big Zip                  | General Skills   | 6 ✅ Completed  0 ⏳ In Progress |
 | dont-use-client-side     | Web Exploitation | 6 ✅ Completed  1 ⏳ In Progress |
 | heap0                    | Bin Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
+| Pack and Ship (Personal) | Reverse Engg     | 0 ✅ Completed  1 ⏳ In Progress |
 
 ### 🏋️‍♂️ Medium Challenges
 
@@ -116,6 +119,7 @@ Welcome to my GitHub!
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
 | Trickster                | Web Exploitation | 1 ✅ Completed  1 ⏳ In Progress |
 |        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Reverse Engg     | 0 ✅ Completed  0 ⏳ In Progress |
 
 ### 🏋️‍♂️ Hard Challenges
 
@@ -126,6 +130,7 @@ Welcome to my GitHub!
 |        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | Web Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
 |        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
+|        N/A               | Reverse Engg     | 0 ✅ Completed  0 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
