@@ -67,7 +67,7 @@ Welcome to my GitHub!
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Searchsploit](https://img.shields.io/badge/Searchsploit-%230a9d34.svg?style=for-the-badge&logo=searchsploit&logoColor=white)
 ![Wappalyzer](https://img.shields.io/badge/Wappalyzer-4427A0?style=for-the-badge&logo=wappalyzer&logoColor=white)
-![🐉 Ghidra](https://img.shields.io/badge/Ghidra-FF0000?style=for-the-badge&logo=dragon&logoColor=white)
+![Ghidra](https://img.shields.io/badge/🐉_Ghidra-FF0000?style=for-the-badge&logo=dragon&logoColor=white)
 ![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-%23E95420?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Lynx](https://img.shields.io/badge/Lynx-%23666666.svg?style=for-the-badge&logo=lynx&logoColor=white)
 ![ProxyChains](https://img.shields.io/badge/ProxyChains-v4.3.1-%2300A884?style=for-the-badge&logo=tails&logoColor=white)
