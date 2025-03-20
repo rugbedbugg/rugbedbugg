@@ -43,7 +43,7 @@ Welcome to my GitHub!
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-0088CC?style=for-the-badge)
-![Cursor AI](https://img.shields.io/badge/Cursor%20AI-000000?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=codeforces&logoColor=white)
 ![Qwen 2.5 Max](https://img.shields.io/badge/Qwen%202.5%20Max-0085FF?style=for-the-badge&logo=alibabacloud&logoColor=white)
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Writer](https://img.shields.io/badge/LibreOffice%20Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
