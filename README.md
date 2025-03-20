@@ -43,6 +43,8 @@ Welcome to my GitHub!
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![DeepSeek](https://img.shields.io/badge/DeepSeek-0088CC?style=for-the-badge)
+![Cursor AI](https://img.shields.io/badge/Cursor%20AI-000000?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Qwen 2.5 Max](https://img.shields.io/badge/Qwen%202.5%20Max-0085FF?style=for-the-badge&logo=alibabacloud&logoColor=white)
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Writer](https://img.shields.io/badge/LibreOffice%20Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
@@ -99,39 +101,18 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Solved:** 15 
-### 🏋️‍♂️ Easy Challenges
+🔹 **Challenges Completed:** 18 
+🔹 **Challenges Attmepted:** 24
+### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
 | Most Recent Challenge    | Category         | Status                          |
 |--------------------------|------------------|---------------------------------|
-| interencdec              | Cryptography     | 1 ✅ Completed  0 ⏳ In Progress |
+| interencdec              | Cryptography     | 2 ✅ Completed  1 ⏳ In Progress |
 | Hidden Pixels (Personal) | Forensics        | 3 ✅ Completed  1 ⏳ In Progress |
 | Big Zip                  | General Skills   | 6 ✅ Completed  0 ⏳ In Progress |
-| dont-use-client-side     | Web Exploitation | 6 ✅ Completed  1 ⏳ In Progress |
+| dont-use-client-side     | Web Exploitation | 7 ✅ Completed  2 ⏳ In Progress |
 | heap0                    | Bin Exploitation | 0 ✅ Completed  1 ⏳ In Progress |
 | Pack and Ship (Personal) | Reverse Engg     | 0 ✅ Completed  1 ⏳ In Progress |
-
-### 🏋️‍♂️ Medium Challenges
-
-| Most Recent Challenge    | Category         | Status                          |
-|--------------------------|------------------|---------------------------------|
-| rsa_oracle               | Cryptography     | 1 ✅ Completed  1 ⏳ In Progress |
-|        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
-| Trickster                | Web Exploitation | 1 ✅ Completed  1 ⏳ In Progress |
-|        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Reverse Engg     | 0 ✅ Completed  0 ⏳ In Progress |
-
-### 🏋️‍♂️ Hard Challenges
-
-| Most Recent Challenge    | Category         | Status                          |
-|--------------------------|------------------|---------------------------------|
-|        N/A               | Cryptography     | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Forensics        | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | General Skills   | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Web Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Bin Exploitation | 0 ✅ Completed  0 ⏳ In Progress |
-|        N/A               | Reverse Engg     | 0 ✅ Completed  0 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
