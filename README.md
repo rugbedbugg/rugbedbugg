@@ -80,8 +80,8 @@ Welcome to my GitHub!
 
 ## 💻💻💻 When I wouldn't be coding
 
-![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=firefox&logoColor=white)
+![Brave](https://img.shields.io/badge/Brave-FF6600?style=for-the-badge&logo=brave&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
 ![Yoru Main](https://img.shields.io/badge/Yoru%20Main-0059FF?style=for-the-badge&logo=riot-games&logoColor=white)
