@@ -105,12 +105,12 @@ Welcome to my GitHub!
 
 | Most Recent Challenge    | Category         | Status                           |
 |--------------------------|------------------|----------------------------------|
-| interencdec              | Cryptography     | 2  ✅ Completed  1 ⏳ In Progress |
-| Hidden Pixels (Personal) | Forensics        | 3  ✅ Completed  1 ⏳ In Progress |
+| interencdec              | Cryptography     | 02 ✅ Completed  1 ⏳ In Progress |
+| Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  1 ⏳ In Progress |
 | repetitions              | General Skills   | 10 ✅ Completed  0 ⏳ In Progress |
-| dont-use-client-side     | Web Exploitation | 7  ✅ Completed  2 ⏳ In Progress |
-| heap0                    | Bin Exploitation | 0  ✅ Completed  1 ⏳ In Progress |
-| Pack and Ship (Personal) | Reverse Engg     | 0  ✅ Completed  1 ⏳ In Progress |
+| dont-use-client-side     | Web Exploitation | 07 ✅ Completed  2 ⏳ In Progress |
+| heap0                    | Bin Exploitation | 00 ✅ Completed  1 ⏳ In Progress |
+| Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  1 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
