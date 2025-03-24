@@ -105,14 +105,14 @@ Welcome to my GitHub!
 🔹 **Challenges Attmepted:** 38
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
-| Most Recent Challenge    | Category         | Status                             |
-|--------------------------|------------------|------------------------------------|
-| hashcrack                | Cryptography     | 03 ✅ Completed | 01 ⏳ In Progress |
-| Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed | 01 ⏳ In Progress |
-| useless                  | General Skills   | 19 ✅ Completed | 01 ⏳ In Progress |
-| dont-use-client-side     | Web Exploitation | 07 ✅ Completed | 02 ⏳ In Progress |
-| heap0                    | Bin Exploitation | 00 ✅ Completed | 01 ⏳ In Progress |
-| Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed | 01 ⏳ In Progress |
+| Most Recent Challenge    | Category         | Status                            |
+|--------------------------|------------------|-----------------------------------|
+| hashcrack                | Cryptography     | 03 ✅ Completed  01 ⏳ In Progress |
+| Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  01 ⏳ In Progress |
+| useless                  | General Skills   | 19 ✅ Completed  01 ⏳ In Progress |
+| dont-use-client-side     | Web Exploitation | 07 ✅ Completed  02 ⏳ In Progress |
+| heap0                    | Bin Exploitation | 00 ✅ Completed  01 ⏳ In Progress |
+| Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  01 ⏳ In Progress |
 
 ## 💥💥 Off-Github Stats 
 
