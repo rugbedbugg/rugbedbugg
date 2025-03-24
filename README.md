@@ -63,6 +63,8 @@ Welcome to my GitHub!
 ![Kali Purple](https://img.shields.io/badge/Kali%20Purple-6A0DAD?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-000000?style=for-the-badge&logo=gnu-bash&logoColor=FFD700)
 ![APT](https://img.shields.io/badge/APT-336791?style=for-the-badge&logo=debian&logoColor=white)
+![CyberChef](https://img.shields.io/badge/CyberChef-0055A5?style=for-the-badge&logo=cakephp&logoColor=white)
+![CrackStation.net](https://img.shields.io/badge/CrackStation.net-8B0000?style=for-the-badge&logo=databricks&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
