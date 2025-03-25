@@ -101,15 +101,15 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Completed:** 52  
-🔹 **Challenges Attmepted:** 61
+🔹 **Challenges Completed:** 63  
+🔹 **Challenges Attmepted:** 72
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
 | Most Recent Challenge    | Category         | Status                            |
 |--------------------------|------------------|-----------------------------------|
 | hashcrack                | Cryptography     | 03 ✅ Completed  ⏳ 01 In Progress |
 | Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
-| static aint always noise | General Skills   | 38 ✅ Completed  ⏳ 03 In Progress |
+| static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 03 In Progress |
 | dont-use-client-side     | Web Exploitation | 07 ✅ Completed  ⏳ 02 In Progress |
 | heap0                    | Bin Exploitation | 00 ✅ Completed  ⏳ 01 In Progress |
 | Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  ⏳ 01 In Progress |
