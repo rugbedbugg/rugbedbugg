@@ -77,7 +77,6 @@ Welcome to my GitHub!
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-%23183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-%23007CBA.svg?style=for-the-badge&logo=vmware&logoColor=white)
-![Genymotion](https://img.shields.io/badge/Genymotion-EA3E64?style=for-the-badge&logo=genymotion&logoColor=white)
 
 
 ## 💻💻💻 When I wouldn't be coding
