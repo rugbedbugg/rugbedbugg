@@ -4,7 +4,7 @@ Welcome to my GitHub!
 - 👋 Hi, @rugbedbugg here, your local daft
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
-
+ 
 ![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 ## 🌐 Socials
