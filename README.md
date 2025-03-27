@@ -100,8 +100,8 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Completed:** 63  
-🔹 **Challenges Attmepted:** 72
+🔹 **Challenges Completed:** 65  
+🔹 **Challenges Attmepted:** 74
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
 | Most Recent Challenge    | Category         | Status                            |
@@ -109,7 +109,7 @@ Welcome to my GitHub!
 | hashcrack                | Cryptography     | 03 ✅ Completed  ⏳ 01 In Progress |
 | Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
 | static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 03 In Progress |
-| dont-use-client-side     | Web Exploitation | 07 ✅ Completed  ⏳ 02 In Progress |
+| n0 s4n1ty           | Web Exploitation | 09 ✅ Completed  ⏳ 02 In Progress |
 | heap0                    | Bin Exploitation | 00 ✅ Completed  ⏳ 01 In Progress |
 | Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  ⏳ 01 In Progress |
 
