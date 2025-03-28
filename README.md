@@ -95,20 +95,20 @@ Welcome to my GitHub!
 ## 🏆 This GitHub Thing
 
 ![](https://github-profile-trophy.vercel.app/?username=rugbedbugg&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-[](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
+![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true&text_color=FF5555)<br/>
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Completed:** 92  
-🔹 **Challenges Attmepted:** 104
+🔹 **Challenges Completed:** 96  
+🔹 **Challenges Attmepted:** 123
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
 | Most Recent Challenge    | Category         | Status                            |
 |--------------------------|------------------|-----------------------------------|
-| hashcrack                | Cryptography     | 20 ✅ Completed  ⏳ 04 In Progress |
+| hashcrack                | Cryptography     | 24 ✅ Completed  ⏳ 16 In Progress |
 | Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
-| static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 03 In Progress |
+| static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 06 In Progress |
 | n0 s4n1ty                | Web Exploitation | 09 ✅ Completed  ⏳ 02 In Progress |
 | heap0                    | Bin Exploitation | 00 ✅ Completed  ⏳ 01 In Progress |
 | Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  ⏳ 01 In Progress |
