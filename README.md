@@ -106,7 +106,7 @@ Welcome to my GitHub!
 
 | Most Recent Challenge    | Category         | Status                            |
 |--------------------------|------------------|-----------------------------------|
-| hashcrack                | Cryptography     | 24 ✅ Completed  ⏳ 16 In Progress |
+| Ricochet                 | Cryptography     | 25 ✅ Completed  ⏳ 15 In Progress |
 | Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
 | static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 06 In Progress |
 | n0 s4n1ty                | Web Exploitation | 09 ✅ Completed  ⏳ 02 In Progress |
