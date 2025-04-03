@@ -100,18 +100,18 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 CTFs
 
-🔹 **Challenges Completed:** 96  
+🔹 **Challenges Completed:** 98  
 🔹 **Challenges Attmepted:** 123
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
-| Most Recent Challenge    | Category         | Status                            |
-|--------------------------|------------------|-----------------------------------|
-| Ricochet                 | Cryptography     | 25 ✅ Completed  ⏳ 15 In Progress |
-| Hidden Pixels (Personal) | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
-| static aint always noise | General Skills   | 50 ✅ Completed  ⏳ 06 In Progress |
-| n0 s4n1ty                | Web Exploitation | 09 ✅ Completed  ⏳ 02 In Progress |
-| heap0                    | Bin Exploitation | 00 ✅ Completed  ⏳ 01 In Progress |
-| Pack and Ship (Personal) | Reverse Engg     | 00 ✅ Completed  ⏳ 01 In Progress |
+| Most Recent Challenge        | Category         | Status                            |
+|------------------------------|------------------|-----------------------------------|
+| Ricochet                     | Cryptography     | 25 ✅ Completed  ⏳ 15 In Progress |
+| Hidden Pixels (Personal)     | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
+| static aint always noise     | General Skills   | 50 ✅ Completed  ⏳ 06 In Progress |
+| Cookie Monster Secret Recipe | Web Exploitation | 11 ✅ Completed  ⏳ 02 In Progress |
+| heap0                        | Bin Exploitation | 00 ✅ Completed  ⏳ 01 In Progress |
+| Pack and Ship (Personal)     | Reverse Engg     | 00 ✅ Completed  ⏳ 01 In Progress |
 
 ## 💥💥 Off-Github Stats 
 
