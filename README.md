@@ -26,6 +26,8 @@ Welcome to my GitHub!
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio%202022-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white)
+![PowerShell ISE](https://img.shields.io/badge/PowerShell%20ISE-003B6F?style=for-the-badge&logo=powershell&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![x86 Assembly](https://img.shields.io/badge/x86_Assembly-%230071C5.svg?style=for-the-badge&logo=intel&logoColor=white)
@@ -41,7 +43,6 @@ Welcome to my GitHub!
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white)
-![DeepSeek](https://img.shields.io/badge/DeepSeek-0088CC?style=for-the-badge)
 ![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=codeforces&logoColor=white)
 ![Qwen 2.5 Max](https://img.shields.io/badge/Qwen%202.5%20Max-0085FF?style=for-the-badge&logo=alibabacloud&logoColor=white)
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
@@ -49,7 +50,7 @@ Welcome to my GitHub!
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
 ![Obsidian](https://img.shields.io/badge/Obsidian-5A4FCF?style=for-the-badge&logo=obsidian&logoColor=white)
-![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=gnometerminal&logoColor=white)
+
 ![recordMyDesktop](https://img.shields.io/badge/recordMyDesktop-FFA500?style=for-the-badge&logo=recordmydesktop&logoColor=white)
 
  
@@ -61,10 +62,15 @@ Welcome to my GitHub!
 ![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali%20Linux-000000?style=for-the-badge&logo=kalilinux&logoColor=red)
 ![Kali Purple](https://img.shields.io/badge/Kali%20Purple-6A0DAD?style=for-the-badge&logo=kalilinux&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-012456?style=for-the-badge&logo=powershell&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-000000?style=for-the-badge&logo=gnu-bash&logoColor=FFD700)
+![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=gnometerminal&logoColor=white)
+![Winget](https://img.shields.io/badge/winget-00adef?style=for-the-badge&logo=windows11&logoColor=white)
 ![APT](https://img.shields.io/badge/APT-336791?style=for-the-badge&logo=debian&logoColor=white)
 ![CyberChef](https://img.shields.io/badge/CyberChef-0055A5?style=for-the-badge&logo=cakephp&logoColor=white)
+![ProxyChains](https://img.shields.io/badge/ProxyChains-v4.3.1-%2300A884?style=for-the-badge&logo=tails&logoColor=white)
 ![CrackStation.net](https://img.shields.io/badge/CrackStation.net-8B0000?style=for-the-badge&logo=databricks&logoColor=white)
+![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-%23E95420?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-%230094D6.svg?style=for-the-badge&logo=nmap&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Nessus-00979D?style=for-the-badge&logo=Nessus&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-%23103F91.svg?style=for-the-badge&logo=metasploit&logoColor=white)
@@ -73,13 +79,17 @@ Welcome to my GitHub!
 ![Ghidra](https://img.shields.io/badge/🐉_Ghidra-FF0000?style=for-the-badge&logo=dragon&logoColor=white)
 ![Cutter](https://img.shields.io/badge/Cutter-CC0000?style=for-the-badge&logo=codecov&logoColor=white)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
-![Gobuster](https://img.shields.io/badge/Gobuster-v3.5.0-%23E95420?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![ProxyChains](https://img.shields.io/badge/ProxyChains-v4.3.1-%2300A884?style=for-the-badge&logo=tails&logoColor=white)
+![Detect It Easy](https://img.shields.io/badge/Detect%20It%20Easy-6E3C9E?style=for-the-badge&logo=search&logoColor=white)
 ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
+![ReClass.NET](https://img.shields.io/badge/ReClass.NET-2B2B2B?style=for-the-badge&logo=dotnet&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-%23D11F27.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
+![x64dbg](https://img.shields.io/badge/x64dbg-000000?style=for-the-badge&logo=gnu&logoColor=white)
+![Cheat Engine](https://img.shields.io/badge/Cheat%20Engine-1E90FF?style=for-the-badge&logo=hackaday&logoColor=white)
+![Audacity](https://img.shields.io/badge/Audacity-0000CC?style=for-the-badge&logo=audacity&logoColor=white)
+![Process Explorer](https://img.shields.io/badge/Process%20Explorer-800080?style=for-the-badge&logo=microsoft&logoColor=white)
+![HWInfo](https://img.shields.io/badge/HWInfo-005E93?style=for-the-badge&logo=windows&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-%23183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-%23007CBA.svg?style=for-the-badge&logo=vmware&logoColor=white)
-
 
 ## 💻💻💻 When I wouldn't be coding
 
@@ -106,8 +116,8 @@ Welcome to my GitHub!
 🔹 **Challenges Attmepted:** 123
 ### 🏋️‍♂️🏋️‍♂️🏋️‍♂️ Challenges
 
-| Most Recent Challenge        | Category         | Status                            |
-|------------------------------|------------------|-----------------------------------|
+| Most Recent Challenge        | Category         | Status                              |
+|------------------------------|------------------|-------------------------------------|
 | Ricochet                     | Cryptography     | 25 ✅ Completed  ⏳ 15 In Progress |
 | Hidden Pixels (Personal)     | Forensics        | 03 ✅ Completed  ⏳ 01 In Progress |
 | static aint always noise     | General Skills   | 50 ✅ Completed  ⏳ 06 In Progress |
