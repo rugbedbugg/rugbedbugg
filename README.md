@@ -34,7 +34,7 @@ Welcome to my GitHub!
 ![PowerShell ISE](https://img.shields.io/badge/PowerShell%20ISE-003B6F?style=for-the-badge&logo=powershell&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![Cargo](https://img.shields.io/badge/Cargo-Rust%20Package%20Manager-%23dea584?style=for-the-badge&logo=rust&logoColor=black)
+![Cargo](https://img.shields.io/badge/Cargo-Rust%20Pkg%20Mgr-%23dea584?style=for-the-badge&logo=rust&logoColor=black)
 ![Maven](https://img.shields.io/badge/Maven-Build%20Automation-%23C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![x86 Assembly](https://img.shields.io/badge/x86_Assembly-%230071C5.svg?style=for-the-badge&logo=intel&logoColor=white)
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
