@@ -56,6 +56,7 @@ Welcome to my GitHub!
 ![LibreOffice Writer](https://img.shields.io/badge/LibreOffice%20Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
+![OBS Studio v30.1.1](https://img.shields.io/badge/OBS_Studio-30.1.1-302E31?style=for-the-badge&logo=obsstudio&logoColor=white)
 ![recordMyDesktop](https://img.shields.io/badge/recordMyDesktop-FFA500?style=for-the-badge&logo=recordmydesktop&logoColor=white)
 
  
@@ -102,6 +103,7 @@ Welcome to my GitHub!
 ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=firefox&logoColor=white)
 ![Brave](https://img.shields.io/badge/Brave-FF6600?style=for-the-badge&logo=brave&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![CS 1.6](https://img.shields.io/badge/Counter--Strike%201.6-LAN%20Classic-000000?style=for-the-badge&logo=steam&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
 ![Yoru Main](https://img.shields.io/badge/Yoru%20Main-0059FF?style=for-the-badge&logo=riot-games&logoColor=white)
 ![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white)
