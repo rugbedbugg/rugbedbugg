@@ -105,6 +105,8 @@ Welcome to my GitHub!
 ![Brave](https://img.shields.io/badge/Brave-FF6600?style=for-the-badge&logo=brave&logoColor=white)
 ![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![CS 1.6](https://img.shields.io/badge/Counter--Strike%201.6-LAN%20Classic-000000?style=for-the-badge&logo=steam&logoColor=white)
+![MATE Desktop](https://img.shields.io/badge/MATE-Desktop%20Environment-609857?style=for-the-badge&logo=mate&logoColor=white)
+![TLauncher](https://img.shields.io/badge/TLauncher-Minecraft%20Launcher-2C2C2C?style=for-the-badge&logo=minecraft&logoColor=white)
 ![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)
 ![Yoru Main](https://img.shields.io/badge/Yoru%20Main-0059FF?style=for-the-badge&logo=riot-games&logoColor=white)
 ![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white)
