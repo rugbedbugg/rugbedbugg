@@ -56,7 +56,7 @@ Welcome to my GitHub!
 ![LibreOffice Writer](https://img.shields.io/badge/LibreOffice%20Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
-![OBS Studio v30.1.1](https://img.shields.io/badge/OBS_Studio-30.1.1-302E31?style=for-the-badge&logo=obsstudio&logoColor=white)
+![OBS Studio](https://img.shields.io/badge/OBS_Studio-302E31?style=for-the-badge&logo=obsstudio&logoColor=white)
 ![recordMyDesktop](https://img.shields.io/badge/recordMyDesktop-FFA500?style=for-the-badge&logo=recordmydesktop&logoColor=white)
 
  
