@@ -123,7 +123,7 @@ Welcome to my GitHub!
 
 ## 🏆🏋️‍♂️🏆 Cyber-Stuff
 
-![TryHackMe Banner](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4734450)
+![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/4734450.png)](https://tryhackme.com/p/4734450)
 
 🔹 **Challenges Completed:** 98  
 🔹 **Challenges Attmepted:** 123
