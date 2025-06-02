@@ -121,7 +121,9 @@ Welcome to my GitHub!
 ![](https://github-readme-stats.vercel.app/api?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&text_color=FF5555)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=rugbedbugg&theme=shadow_red&hide_border=true&text_color=FF5555)<br/>
 
-## 🏆🏋️‍♂️🏆 CTFs
+## 🏆🏋️‍♂️🏆 Cyber-Stuff
+
+![TryHackMe Banner](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4734450)
 
 🔹 **Challenges Completed:** 98  
 🔹 **Challenges Attmepted:** 123
