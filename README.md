@@ -26,12 +26,6 @@ Welcome to my GitHub!
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
-![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)
-![CLion](https://img.shields.io/badge/CLion-000000?style=for-the-badge&logo=clion&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
-![RustRover](https://img.shields.io/badge/RustRover-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![PowerShell ISE](https://img.shields.io/badge/PowerShell%20ISE-003B6F?style=for-the-badge&logo=powershell&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Cargo](https://img.shields.io/badge/Cargo-Rust%20Pkg%20Mgr-%23dea584?style=for-the-badge&logo=rust&logoColor=black)
@@ -45,15 +39,30 @@ Welcome to my GitHub!
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 ![Spring v6](https://img.shields.io/badge/Spring-6-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot v3.2.5](https://img.shields.io/badge/Spring_Boot-3.2.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+
+
+## ⌨️⌨️ Code Editors/ Datasets
+
+![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)
+![CLion](https://img.shields.io/badge/CLion-000000?style=for-the-badge&logo=clion&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
+![RustRover](https://img.shields.io/badge/RustRover-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![PowerShell ISE](https://img.shields.io/badge/PowerShell%20ISE-003B6F?style=for-the-badge&logo=powershell&logoColor=white)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter_Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
+
+
+## ✈️✈️ Daily workflow
+
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge&logo=openai&logoColor=white)
 ![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=codeforces&logoColor=white)
 ![Qwen 2.5 Max](https://img.shields.io/badge/Qwen%202.5%20Max-0085FF?style=for-the-badge&logo=alibabacloud&logoColor=white)
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![LibreOffice Writer](https://img.shields.io/badge/LibreOffice%20Writer-0644A5?style=for-the-badge&logo=libreoffice&logoColor=white)
+![Obsidian](https://img.shields.io/badge/Obsidian-5A4FCF?style=for-the-badge&logo=obsidian&logoColor=white)
 ![LibreOffice Impress](https://img.shields.io/badge/LibreOffice%20Impress-E34F26?style=for-the-badge&logo=libreoffice&logoColor=white)
 ![Joplin](https://img.shields.io/badge/Joplin-1071E5?style=for-the-badge&logo=joplin&logoColor=white)
 ![OBS Studio](https://img.shields.io/badge/OBS_Studio-302E31?style=for-the-badge&logo=obsstudio&logoColor=white)
@@ -62,9 +71,9 @@ Welcome to my GitHub!
  
 ## 💻💻 Cooking up something here..
 
-![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00)
+<!-- ![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00) -->
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
-![Let's Defend](https://img.shields.io/badge/Let's%20Defend-1E1E1E?style=for-the-badge&logo=letsdefend&logoColor=00FFFF)
+<!-- ![Let's Defend](https://img.shields.io/badge/Let's%20Defend-1E1E1E?style=for-the-badge&logo=letsdefend&logoColor=00FFFF) -->
 ![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali%20Linux-000000?style=for-the-badge&logo=kalilinux&logoColor=red)
 ![Kali Purple](https://img.shields.io/badge/Kali%20Purple-6A0DAD?style=for-the-badge&logo=kalilinux&logoColor=white)
