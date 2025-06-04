@@ -40,7 +40,7 @@ Welcome to my GitHub!
 ![Spring Boot v3.2.5](https://img.shields.io/badge/Spring_Boot-3.2.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 
 
-## ⌨️⌨️ Code Editors/ Datasets
+## ⌨️⌨️ Code Editors | Datasets
 
 ![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white)
 ![CLion](https://img.shields.io/badge/CLion-000000?style=for-the-badge&logo=clion&logoColor=white)
