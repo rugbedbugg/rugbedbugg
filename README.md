@@ -4,8 +4,6 @@ Welcome to my GitHub!
 - 👋 Hi, @rugbedbugg here, your local daft
 - 👀 I’m interested in gaming, sports, coding, making a certain someone happy
 - 😄 Pronouns: he/him
- 
-![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 ## 🌐 Socials
 
@@ -15,6 +13,7 @@ Welcome to my GitHub!
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/@@rknif781)
 [![Discord](https://img.shields.io/badge/Discord-rug_.-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 
+![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 ## 💻 Tech Stack
 
