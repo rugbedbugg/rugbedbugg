@@ -71,8 +71,8 @@ Welcome to my GitHub!
 ## 💻💻 Cooking up something here..
 
 <!-- ![Hack The Box](https://img.shields.io/badge/Hack_The_Box-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=00FF00) -->
-![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
 <!-- ![Let's Defend](https://img.shields.io/badge/Let's%20Defend-1E1E1E?style=for-the-badge&logo=letsdefend&logoColor=00FFFF) -->
+![TryHackMe](https://img.shields.io/badge/TryHackMe-%23red.svg?style=for-the-badge&logo=tryhackme&logoColor=white)
 ![picoCTF](https://img.shields.io/badge/picoCTF-%23C19ACD.svg?style=for-the-badge&logo=picoCTF&logoColor=%23C8102E)
 ![Kali Linux](https://img.shields.io/badge/Kali%20Linux-000000?style=for-the-badge&logo=kalilinux&logoColor=red)
 ![Kali Purple](https://img.shields.io/badge/Kali%20Purple-6A0DAD?style=for-the-badge&logo=kalilinux&logoColor=white)
