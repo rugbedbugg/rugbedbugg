@@ -39,7 +39,7 @@ Welcome to my GitHub!
 ![Spring v6](https://img.shields.io/badge/Spring-6-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot v3.2.5](https://img.shields.io/badge/Spring_Boot-3.2.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-00A67E?style=for-the-badge&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-Lang%20Graph-0077B6?style=for-the-badge&logoColor=white)
+![LangGraph](https://img.shields.io/badge/Lang%20Graph-0077B6?style=for-the-badge&logoColor=white)
 
 
 
