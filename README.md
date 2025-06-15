@@ -82,6 +82,7 @@ Welcome to my GitHub!
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-012456?style=for-the-badge&logo=powershell&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-000000?style=for-the-badge&logo=gnu-bash&logoColor=FFD700)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Termux](https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=gnometerminal&logoColor=white)
 ![Winget](https://img.shields.io/badge/Winget-Windows%20Pkg%20Mgr-00adef?style=for-the-badge&logo=windows11&logoColor=white)
 ![APT](https://img.shields.io/badge/APT-Debian%20Pkg%20Mgr-336791?style=for-the-badge&logo=debian&logoColor=white)
