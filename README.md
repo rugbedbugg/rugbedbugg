@@ -11,7 +11,7 @@ Welcome to my GitHub!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/partha-gogoi-736241308)
 [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white)](https://pinterest.com/ur_local_daft)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/@@rknif781)
-[![Discord](https://img.shields.io/badge/Discord-rug_.-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-rug_.-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 
 ![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
