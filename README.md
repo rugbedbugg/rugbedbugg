@@ -8,7 +8,7 @@ It was then when I felt like a god: That's **Arch** for you.
 Temple OS is **the OS** sent to earth by god himself.  
 R.I.P. Terry Davis  
 
----
+
 
 ## 🤖 About Me
 
@@ -18,8 +18,6 @@ R.I.P. Terry Davis
 * 🎨 Linux ricer & terminal maximalist
 * 🎧 Guess who watches Youtube from the terminal
 
-
----
 
 ## 🌐 Socials
 
@@ -31,7 +29,6 @@ R.I.P. Terry Davis
 
 ![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal\&theme=dark)
 
----
 
 ## 💻 Tech Stack
 
@@ -44,10 +41,7 @@ R.I.P. Terry Davis
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge\&logo=libreoffice\&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
-
-### 🔨 Languages & Tools
-
-#### 💻 Programming Languages  
+### 💻 Programming Languages  
 ![Rust](https://img.shields.io/badge/Rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
 ![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=cplusplus&logoColor=white)
