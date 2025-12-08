@@ -1,10 +1,3 @@
-██████╗ ██╗   ██╗███╗   ██╗███████╗████████╗██████╗ ██╗   ██╗
-██╔══██╗██║   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗╚██╗ ██╔╝
-██████╔╝██║   ██║██╔██╗ ██║█████╗     ██║   ██████╔╝ ╚████╔╝ 
-██╔══██╗██║   ██║██║╚██╗██║██╔══╝     ██║   ██╔══██╗  ╚██╔╝  
-██████╔╝╚██████╔╝██║ ╚████║███████╗   ██║   ██║  ██║   ██║   
-╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   
-
 # 🐧 rugbedbugg • aka rug_.(Oxide 1-6) • Linux Ricer • Terminal Purist
 
 **Oxide 1-6 (@rugbedbugg)** — your local daft. Welcome to my GitHub!
@@ -43,7 +36,6 @@ R.I.P. Terry Davis
 
 ![Look at this!](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&theme=shadow_red&hide_border=true&include_all_commits=true&count_private=false&layout=compact&text_color=FF5555)
 
----
 
 ## ✈️ Daily Workflow
 
@@ -51,7 +43,6 @@ R.I.P. Terry Davis
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge\&logo=libreoffice\&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
----
 
 ### 🔨 Languages & Tools
 
@@ -63,7 +54,6 @@ R.I.P. Terry Davis
 ![Java](https://img.shields.io/badge/Java-%23E34F26.svg?style=for-the-badge&logo=java&logoColor=white)
 ![RISC-V](https://img.shields.io/badge/RISC-V-%23663399.svg?style=for-the-badge&logoColor=white)
 
----
 
 ## 📸 Screenshots / My Ricings
 > *“If it isn’t riced, it isn’t mine.”*
@@ -72,7 +62,6 @@ R.I.P. Terry Davis
 |---------|--------|--------|
 | ![rice1](https://via.placeholder.com/400x250?text=Screenshot+1) | ![rice2](https://via.placeholder.com/400x250?text=Screenshot+2) | ![rice3](https://via.placeholder.com/400x250?text=Screenshot+3) |
 
----
 
 ## 📊 GitHub Stats
 
