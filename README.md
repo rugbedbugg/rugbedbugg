@@ -1,11 +1,11 @@
 # 🐧 rugbedbugg • aka rug_.(Oxide 1-6) • Linux Ricer • Terminal Purist
 
-**Oxide 1-6 (@rugbedbugg)** — your local daft. Welcome to my GitHub!
-
-Once you told the computer to do something and it did it exactly how I told it to. I was then when I like a god: That's **Arch** for you.
-
-Temple OS is **the OS** sent to earth by god himself. 
-R.I.P. Terry Davis
+**Oxide 1-6 (@rugbedbugg)** — your local daft. Welcome to my GitHub!  
+Once you told the computer to do something and it did it exactly how I told it to.  
+It was then when I felt like a god: That's **Arch** for you.  
+  
+Temple OS is **the OS** sent to earth by god himself.  
+R.I.P. Terry Davis  
 
 ---
 
