@@ -1,6 +1,7 @@
 # 🐧 rugbedbugg • aka rug_.(Oxide 1-6) • Linux Ricer • Terminal Purist
 
 **Oxide 1-6 (@rugbedbugg)** — your local daft. Welcome to my GitHub!  
+  
 Once you told the computer to do something and it did it exactly how I told it to.  
 It was then when I felt like a god: That's **Arch** for you.  
   
