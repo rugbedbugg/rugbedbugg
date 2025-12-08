@@ -1,4 +1,4 @@
-# 🐧 rugbedbugg • aka rug_.(Oxide 1-6) • Linux Ricer • Terminal Purist
+# 🐧 rugbedbugg • aka Oxide 1-6 • Linux Ricer • Terminal Purist
 
 **Oxide 1-6 (@rugbedbugg)** — your local daft. Welcome to my GitHub!  
   
