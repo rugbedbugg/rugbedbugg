@@ -13,7 +13,7 @@ R.I.P. Terry Davis
 ## 🤖 About Me
 
 * 🖥️ Linux Power-User
-* * 🐧 Arch btw | Hyprland | Stow-Managed Configs
+* 🐧 Arch btw | Hyprland | Stow-Managed Configs
 * ⚙️ Hyprland + Waybar + Kitty + Bash
 * 🎨 Linux ricer & terminal maximalist
 * 🎧 Guess who watches Youtube from the terminal
