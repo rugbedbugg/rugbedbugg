@@ -30,6 +30,14 @@ R.I.P. Terry Davis
 ![Discord](https://img.shields.io/badge/Discord-rug_.-5865F2?style=for-the-badge\&logo=discord\&logoColor=white)
 
 
+## 📸 Screenshots / My Ricings
+> *“If it isn’t riced, it isn’t mine.”*
+
+| Hyprland | Waybar | Kitty |
+|---------|--------|--------|
+| ![rice1](https://via.placeholder.com/400x250?text=Screenshot+1) | ![rice2](https://via.placeholder.com/400x250?text=Screenshot+2) | ![rice3](https://via.placeholder.com/400x250?text=Screenshot+3) |
+
+
 ## ✈️ Daily Workflow
 
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge\&logo=openai\&logoColor=white)
@@ -44,22 +52,6 @@ R.I.P. Terry Davis
 ![Java](https://img.shields.io/badge/Java-%23E34F26.svg?style=for-the-badge&logo=java&logoColor=white)
 ![RISC-V](https://img.shields.io/badge/RISC-V-%23663399.svg?style=for-the-badge&logoColor=white)
 
-
-## 📸 Screenshots / My Ricings
-> *“If it isn’t riced, it isn’t mine.”*
-
-| Hyprland | Waybar | Kitty |
-|---------|--------|--------|
-| ![rice1](https://via.placeholder.com/400x250?text=Screenshot+1) | ![rice2](https://via.placeholder.com/400x250?text=Screenshot+2) | ![rice3](https://via.placeholder.com/400x250?text=Screenshot+3) |
-
-
-## 📊 GitHub Stats
-
-![Stats](https://github-readme-stats.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&hide_border=true&icon_color=FF5555&title_color=FF5555&text_color=CFCFCF)
-
-![Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&hide_border=true&text_color=FF5555)
-
----
 
 ## 🎨 Remember commrade,
 
