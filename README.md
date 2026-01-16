@@ -4,7 +4,7 @@
   
 > *"Once I told the computer to do something and it did it exactly how I told it to. It was then when I felt like a god"*  
   
-That's **Arch** for you
+That's **Linux** for you
   
 Temple OS is **the OS** sent to earth by god himself.  
 R.I.P. Terry Davis  
@@ -14,8 +14,8 @@ R.I.P. Terry Davis
 ## 🤖 About Me
 
 🖥️ Linux Power-User  
-🐧 Arch btw | Hyprland | Stow-Managed Configs  
-⚙️ Hyprland + Waybar + Kitty + Bash  
+🐧 Arch btw | Caelestia | Hyprland  
+⚙️ Hyprland + Quickshell + Foot + Bash  
 🎨 Linux ricer & terminal maximalist  
 🎧 Guess who watches Youtube from the terminal  
 
@@ -32,11 +32,9 @@ R.I.P. Terry Davis
 
 
 ## 📸 Screenshots / My Ricings
-> *“If it isn’t riced, it isn’t mine.”*
+> *“If it isn’t riced, it isn’t mine.”*  
 
-| Hyprland | Waybar | Kitty |
-|---------|--------|--------|
-| ![rice1](https://via.placeholder.com/400x250?text=Screenshot+1) | ![rice2](https://via.placeholder.com/400x250?text=Screenshot+2) | ![rice3](https://via.placeholder.com/400x250?text=Screenshot+3) |
+https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
 
 
 ## ✈️ Daily Workflow
@@ -56,4 +54,4 @@ R.I.P. Terry Davis
 
 ## 🎨 Remember commrade,
 
-*“Linux is not a OS its a lifestyle- Best lived in the terminal”*
+*“Linux is not an OS, its a lifestyle: Best lived in the terminal”*
