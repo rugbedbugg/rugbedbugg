@@ -24,11 +24,12 @@ R.I.P. Terry Davis
 
 ![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal\&theme=dark)
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge\&logo=Instagram\&logoColor=white)](https://instagram.com/_boyin_paradise)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://linkedin.com/in/partha-gogoi-736241308)
-[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge\&logo=Pinterest\&logoColor=white)](https://pinterest.com/ur_local_daft)
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge\&logo=YouTube\&logoColor=white)](https://youtube.com/@@rknif781)
-![Discord](https://img.shields.io/badge/Discord-rug_.-5865F2?style=for-the-badge\&logo=discord\&logoColor=white)
+[![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge\&logo=linkedin\&logoColor=0077B5)](https://linkedin.com/in/partha-gogoi-736241308)
+[![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/ur_local_daft)
+[![YouTube](https://img.shields.io/badge/YouTube-0F172A?style=for-the-badge\&logo=youtube\&logoColor=FF0000)]([https://youtube.com/@rknif781](https://youtube.com/@rknif781))
+![Discord](https://img.shields.io/badge/Discord-0F172A?style=for-the-badge\&logo=discord\&logoColor=5865F2)
+
 
 
 ## 📸 Screenshots / My Ricings
@@ -39,17 +40,19 @@ https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
 
 ## ✈️ Daily Workflow
 
-![ChatGPT](https://img.shields.io/badge/ChatGPT-00A67E?style=for-the-badge\&logo=openai\&logoColor=white)
-![LibreOffice](https://img.shields.io/badge/LibreOffice-18A303?style=for-the-badge\&logo=libreoffice\&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-0F172A?style=for-the-badge\&logo=openai\&logoColor=00A67E)
+![LibreOffice](https://img.shields.io/badge/LibreOffice-0F172A?style=for-the-badge\&logo=libreoffice\&logoColor=18A303)
+![Ollama](https://img.shields.io/badge/Ollama-0F172A?style=for-the-badge\&logo=ollama\&logoColor=white)
+![Zed](https://img.shields.io/badge/Zed-0F172A?style=for-the-badge\&logo=zedindustries\&logoColor=white)
 
-### 💻 Programming Languages  
-![Rust](https://img.shields.io/badge/Rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
-![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-%23E34F26.svg?style=for-the-badge&logo=java&logoColor=white)
-![RISC-V](https://img.shields.io/badge/RISC-V-%23663399.svg?style=for-the-badge&logoColor=white)
+### 💻 Programming Languages
+
+![Rust](https://img.shields.io/badge/Rust-0F172A?style=for-the-badge\&logo=rust\&logoColor=white)
+![C](https://img.shields.io/badge/C-0F172A?style=for-the-badge\&logo=c\&logoColor=00599C)
+![C++](https://img.shields.io/badge/C++-0F172A?style=for-the-badge\&logo=cplusplus\&logoColor=00599C)
+![Python](https://img.shields.io/badge/Python-0F172A?style=for-the-badge\&logo=python\&logoColor=FFD43B)
+![Java](https://img.shields.io/badge/Java-0F172A?style=for-the-badge\&logo=openjdk\&logoColor=ED8B00)
+![Assembly](https://img.shields.io/badge/Assembly-0F172A?style=for-the-badge\&logo=gnubash\&logoColor=white)
 
 
 ## 🎨 Remember commrade,
