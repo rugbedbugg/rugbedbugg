@@ -23,7 +23,7 @@ R.I.P. Terry Davis
 
 <p align="left">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&exclude_repo=MFC_RealNetwork,NeoColab_Exploit_Writeup,GDSC_Steganog-reverseEngg"/>
 </p>
 
 ## ✈️ Daily Workflow
