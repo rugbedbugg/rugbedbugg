@@ -19,24 +19,12 @@ R.I.P. Terry Davis
 🎨 Linux ricer & terminal maximalist  
 🎧 Guess who watches Youtube from the terminal  
 
+## ⚡ GitHub Stats
 
-## 🌐 Socials
-
-![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal\&theme=dark)
-
-[![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge\&logo=linkedin\&logoColor=0077B5)](https://linkedin.com/in/partha-gogoi-736241308)
-[![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/ur_local_daft)
-[![YouTube](https://img.shields.io/badge/YouTube-0F172A?style=for-the-badge\&logo=youtube\&logoColor=FF0000)]([https://youtube.com/@rknif781](https://youtube.com/@rknif781))
-![Discord](https://img.shields.io/badge/Discord-0F172A?style=for-the-badge\&logo=discord\&logoColor=5865F2)
-
-
-
-## 📸 Screenshots / My Ricings
-> *“If it isn’t riced, it isn’t mine.”*  
-
-https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
-
+<p align="left">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight"/>
+</p>
 
 ## ✈️ Daily Workflow
 
@@ -53,6 +41,23 @@ https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
 ![Python](https://img.shields.io/badge/Python-0F172A?style=for-the-badge\&logo=python\&logoColor=FFD43B)
 ![Java](https://img.shields.io/badge/Java-0F172A?style=for-the-badge\&logo=openjdk\&logoColor=ED8B00)
 ![Assembly](https://img.shields.io/badge/Assembly-0F172A?style=for-the-badge\&logo=gnubash\&logoColor=white)
+
+## 🌐 Socials
+
+![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal\&theme=dark)
+
+[![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge\&logo=linkedin\&logoColor=0077B5)](https://linkedin.com/in/partha-gogoi-736241308)
+[![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/ur_local_daft)
+[![YouTube](https://img.shields.io/badge/YouTube-0F172A?style=for-the-badge\&logo=youtube\&logoColor=FF0000)]([https://youtube.com/@rknif781](https://youtube.com/@rknif781))
+![Discord](https://img.shields.io/badge/Discord-0F172A?style=for-the-badge\&logo=discord\&logoColor=5865F2)
+
+
+## 📸 Screenshots / My Ricings
+> *“If it isn’t riced, it isn’t mine.”*  
+
+https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
+
 
 
 ## 🎨 Remember commrade,
