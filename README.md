@@ -20,8 +20,8 @@ R.I.P. Terry Davis
 🎧 Guess who watches Youtube from the terminal  
 
 <p align="left">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&include_all_commits=true&cache_seconds=200"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&exclude_repo=MFC_RealNetwork,NeoColab_Exploit_Writeup,GDSC_Steganog-reverseEngg,website-game-hackbattle,Dev-Tools-Assistant,ML_SchoolAssignments"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&cache_seconds=200"/>  
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&hide_border=true&exclude_repo=MFC_RealNetwork,NeoColab_Exploit_Writeup,GDSC_Steganog-reverseEngg,website-game-hackbattle,Dev-Tools-Assistant,ML_SchoolAssignments"/>
 </p>
 <picture>
   <source media="(prefers-color-scheme: dark)"
