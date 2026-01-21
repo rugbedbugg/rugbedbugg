@@ -52,8 +52,9 @@ R.I.P. Terry Davis
 
 ![Sensible Words](https://quotes-github-readme.vercel.app/api?type=horizontal\&theme=dark)
 
-[![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
+[![Email](https://img.shields.io/badge/Email-1a1b26?style=for-the-badge&logo=gmail&logoColor=7aa2f7)](mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge\&logo=linkedin\&logoColor=0077B5)](https://linkedin.com/in/partha-gogoi-736241308)
+[![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
 [![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/ur_local_daft)
 [![YouTube](https://img.shields.io/badge/YouTube-0F172A?style=for-the-badge\&logo=youtube\&logoColor=FF0000)]([https://youtube.com/@rknif781](https://youtube.com/@rknif781))
 ![Discord](https://img.shields.io/badge/Discord-0F172A?style=for-the-badge\&logo=discord\&logoColor=5865F2)
