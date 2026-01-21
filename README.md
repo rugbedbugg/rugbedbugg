@@ -13,6 +13,8 @@ R.I.P. Terry Davis
 
 ## 🤖 About Me
 
+🤖 Alter ego Detected:- [Arsenic 1-6 (@mystik-krysat)](https://github.com/mystik-krysat)  
+
 🖥️ Linux Power-User  
 🐧 Arch btw | Caelestia | Hyprland  
 ⚙️ Hyprland + Quickshell + Foot + Bash  
