@@ -17,8 +17,6 @@ R.I.P. Terry Davis
 
 🖥️ Linux Power-User  
 🐧 Arch btw | Caelestia | Hyprland  
-⚙️ Hyprland + Quickshell + Foot + Bash  
-🎨 Linux ricer & terminal maximalist  
 🎧 Guess who watches Youtube from the terminal  
 
 <p align="left">
