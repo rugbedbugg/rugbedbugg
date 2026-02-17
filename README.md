@@ -45,6 +45,7 @@ R.I.P. Terry Davis
 ![Python](https://img.shields.io/badge/Python-0F172A?style=for-the-badge\&logo=python\&logoColor=FFD43B)
 ![Java](https://img.shields.io/badge/Java-0F172A?style=for-the-badge\&logo=openjdk\&logoColor=ED8B00)
 ![Assembly](https://img.shields.io/badge/Assembly-0F172A?style=for-the-badge\&logo=gnubash\&logoColor=white)
+![Bash] (https://img.shields.io/badge/Bash-0F172A?style=for-the-badge&logo=gnubash&logoColor=4EAA25)
 
 ## 🌐 Socials
 
