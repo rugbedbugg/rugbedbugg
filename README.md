@@ -21,14 +21,19 @@ R.I.P. Terry Davis
 
 <p align="left">
   <img height="180em" src="https://github-readme-stats-vert-eight-34.vercel.app/api?username=rugbedbugg&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true"/>  
-  <img height="180em" src="https://github-readme-stats-vert-eight-34.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&hide_border=true&color=7aa2f7&exclude_repo=MFC_RealNetwork,NeoColab_Exploit_Writeup,GDSC_Steganog-reverseEngg,website-game-hackbattle,Dev-Tools-Assistant,ML_SchoolAssignments"/>
+  <img height="180em" src="https://github-readme-stats-vert-eight-34.vercel.app/api/top-langs/?username=rugbedbugg&layout=compact&theme=tokyonight&hide_border=true&color=7aa2f7&exclude_repo=portfolio-website,ML_SchoolAssignments"/>
   <!-- <img src="https://leetcard.jacoblin.cool/mystik-krysat?hide=ranking&theme=tokyonight&border=0&colors=181924,7aa2f7,a9b1d6,c0caf5,7dcfff,4fd6be,ff9e64,151820"/> -->
 </p>
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://github-readme-activity-graph.vercel.app/graph?username=rugbedbugg&theme=tokyo-night&hide_border=true" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rugbedbugg&theme=tokyo-night&hide_border=true" />
-</picture>
+<p align="left">
+  <img src="https://github-profile-trophy-fork-two.vercel.app/?username=rugbedbugg&theme=tokyonight&no-frame=true&no-bg=true&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="GitHub Trophies"/>
+</p>
+<p align="left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+      srcset="https://github-readme-activity-graph.vercel.app/graph?username=rugbedbugg&theme=tokyo-night&hide_border=true" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=rugbedbugg&theme=tokyo-night&hide_border=true&no-bg=true" />
+  </picture>
+</p>
 
 ## ✈️ Daily Workflow
 
@@ -36,6 +41,7 @@ R.I.P. Terry Davis
 ![LibreOffice](https://img.shields.io/badge/LibreOffice-0F172A?style=for-the-badge\&logo=libreoffice\&logoColor=18A303)
 ![Ollama](https://img.shields.io/badge/Ollama-0F172A?style=for-the-badge\&logo=ollama\&logoColor=white)
 ![Zed](https://img.shields.io/badge/Zed-0F172A?style=for-the-badge\&logo=zedindustries\&logoColor=white)
+![OpenClaw](https://img.shields.io/badge/OpenClaw-0F172A?style=for-the-badge)
 
 ### 💻 Programming Languages
 
@@ -54,7 +60,7 @@ R.I.P. Terry Davis
 [![Email](https://img.shields.io/badge/Email-1a1b26?style=for-the-badge&logo=gmail&logoColor=7aa2f7)](mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge\&logo=linkedin\&logoColor=0077B5)](https://linkedin.com/in/partha-gogoi-736241308)
 [![Instagram](https://img.shields.io/badge/Instagram-0F172A?style=for-the-badge\&logo=instagram\&logoColor=E4405F)](https://instagram.com/_boyin_paradise)
-[![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/ur_local_daft)
+[![Pinterest](https://img.shields.io/badge/Pinterest-0F172A?style=for-the-badge\&logo=pinterest\&logoColor=E60023)](https://pinterest.com/rugbedbugg)
 [![YouTube](https://img.shields.io/badge/YouTube-0F172A?style=for-the-badge\&logo=youtube\&logoColor=FF0000)]([https://youtube.com/@rknif781](https://youtube.com/@rknif781))
 ![Discord](https://img.shields.io/badge/Discord-0F172A?style=for-the-badge\&logo=discord\&logoColor=5865F2)
 
