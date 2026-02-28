@@ -25,7 +25,7 @@ R.I.P. Terry Davis
   <!-- <img src="https://leetcard.jacoblin.cool/mystik-krysat?hide=ranking&theme=tokyonight&border=0&colors=181924,7aa2f7,a9b1d6,c0caf5,7dcfff,4fd6be,ff9e64,151820"/> -->
 </p>
 <p align="left">
-  <img src="https://github-profile-trophy-fork-two.vercel.app/?username=rugbedbugg&theme=tokyonight&no-frame=true&no-bg=true&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy-kannan.vercel.app/?username=rugbedbugg&theme=tokyonight&no-frame=true&no-bg=true&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="GitHub Trophies"/>
 </p>
 <p align="left">
   <picture>
