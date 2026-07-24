@@ -133,12 +133,13 @@ def bg(w, h):
             % (w, h, C["ground"], w, h, w, h))
 
 
-def svg(w, h, extra_css, body):
+def svg(w, h, extra_css, body, bg_on=True):
     doc = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="%s" height="%s" '
         'viewBox="0 0 %s %s" font-family="\'Departure Mono\',monospace">'
         '%s<style>%s%s</style>%s%s</svg>'
-        % (w, h, w, h, defs(), BASE_CSS, extra_css, bg(w, h), body)
+        % (w, h, w, h, defs(), BASE_CSS, extra_css,
+           bg(w, h) if bg_on else "", body)
     )
     return doc
 
@@ -168,12 +169,17 @@ def panel_frame(h, title, ref, y0=0):
 #  HEADER
 # ===========================================================================
 def build_header():
-    h = 312
+    fw, fh = 300, 225           # surveillance feed tile (4:3)
+    row_y = 176
+    h = row_y + fh + 16
     css = (
         "@keyframes jitter{0%,93%,100%{transform:translateX(0)}"
         "94%{transform:translateX(-3px)}96%{transform:translateX(2px)}"
         "98%{transform:translateX(-1px)}}"
         ".nm{animation:jitter 7s steps(1) infinite;transform-box:fill-box}"
+        "@keyframes roll{0%{transform:translateY(-14px)}"
+        "100%{transform:translateY(" + str(fh) + "px)}}"
+        ".track{animation:roll 9s linear infinite}"
     )
     b = []
     # status bar
@@ -210,156 +216,92 @@ def build_header():
              '<tspan fill="%s">//</tspan> Terminal Purist</text>'
              % (cx, C["cyan"], C["purple"]))
 
-    # boot log box
-    bx, bw, by = (W - 520) / 2, 520, 176
-    b.append('<rect x="%s" y="%s" width="2" height="106" fill="%s"/>'
-             % (bx, by, BC))
-    tx = bx + 16
-    lines = [
-        ('<tspan fill="%s">Oxide 1-6 (@rugbedbugg)</tspan> — your local '
-         'daft. Welcome to my GitHub!' % C["cyan"], C["text"]),
-    ]
-    y = by + 12
-    fs = 12
-    b.append('<text x="%s" y="%s" font-size="%s" fill="%s">%s</text>'
-             % (tx, y, fs, lines[0][1], lines[0][0]))
+    # ---- identity row: boot log (left) + surveillance feed (right) ----
+    fx = W - 8 - fw
+    fy = row_y
+    # boot log (left column)
+    bx = 8
+    bw = fx - bx - 20
+    fs = 11
+    maxc = int(bw / (fs * 0.72))
+    b.append('<rect x="%s" y="%s" width="2" height="%s" fill="%s"/>'
+             % (bx, fy + 2, fh - 40, BC))
+    tx = bx + 14
+    y = fy + 14
+    b.append('<text x="%s" y="%s" font-size="%s" fill="%s">'
+             '<tspan fill="%s">Oxide 1-6 (@rugbedbugg)</tspan> — your local '
+             'daft.</text>' % (tx, y, fs, C["text"], C["cyan"]))
+    y += 16
+    b.append('<text x="%s" y="%s" font-size="%s" fill="%s">Welcome to my '
+             'GitHub!</text>' % (tx, y, fs, C["text"]))
     y += 22
     quote = ("“Once I told the computer to do something and it did it "
              "exactly how I told it to. It was then when I felt like a god.”")
-    for ql in wrap(quote, 64):
+    for ql in wrap(quote, maxc):
         b.append('<text x="%s" y="%s" font-size="%s" fill="%s">%s</text>'
                  % (tx, y, fs, C["purple"], esc(ql)))
-        y += 18
-    y += 4
+        y += 16
+    y += 6
     b.append('<text x="%s" y="%s" font-size="%s" fill="%s">That’s '
              '<tspan fill="%s">Linux</tspan> for you.</text>'
              % (tx, y, fs, C["text"], C["cyan"]))
-    y += 20
+    y += 22
     b.append('<text x="%s" y="%s" font-size="%s" fill="%s">TempleOS is '
-             '<tspan fill="%s">the OS</tspan> sent to earth by god himself. '
+             '<tspan fill="%s">the OS</tspan> sent to earth by god'
+             '</text>' % (tx, y, fs, C["text"], C["bright"]))
+    y += 16
+    b.append('<text x="%s" y="%s" font-size="%s" fill="%s">himself. '
              '<tspan fill="%s">R.I.P. Terry Davis</tspan></text>'
-             % (tx, y, fs, C["text"], C["bright"], C["orange"]))
-    return svg(W, h, css, "".join(b))
+             % (tx, y, fs, C["text"], C["orange"]))
 
-
-# ===========================================================================
-#  MONITOR (hero)
-# ===========================================================================
-def build_monitor():
-    pad = 14
-    ix = pad
-    iw = W - 2 * pad
-    tt_w = 210
-    gap = 12
-    feed_w = iw - tt_w - gap
-    feed_h = round(feed_w * 3 / 4)
-    head_h = 26
-    bars_y = pad + head_h + 6
-    body_y = bars_y + 12
-    foot_y = body_y + feed_h + 16
-    h = foot_y + 20
-
-    css = (
-        "@keyframes roll{0%{transform:translateY(-14px)}"
-        "100%{transform:translateY(" + str(feed_h + 4) + "px)}}"
-        ".track{animation:roll 9s linear infinite}"
-    )
-    b = []
-    b.append('<rect x="2" y="2" width="%s" height="%s" fill="#000" '
-             'stroke="%s" stroke-width="2"/>' % (W - 4, h - 4, "rgba(85,255,255,.4)"))
-    # monhead
-    hy = pad
-    b.append('<rect x="%s" y="%s" width="%s" height="%s" '
-             'fill="rgba(85,255,255,.06)" stroke="%s"/>'
-             % (ix, hy, iw, head_h, BC))
-    b.append(led(ix + 10, hy + head_h / 2))
-    b.append('<text x="%s" y="%s" font-size="9.5" letter-spacing="1.6" '
-             'fill="%s">[LIVE] · 480i</text>'
-             % (ix + 24, hy + 16.5, C["red"]))
-    b.append('<text x="%s" y="%s" font-size="9.5" letter-spacing="1.6" '
-             'text-anchor="middle" fill="%s">MEMORY REBOOT — VØJ '
-             '(SLOWED)</text>' % (W / 2, hy + 16.5, C["gray"]))
-    b.append('<text x="%s" y="%s" font-size="9.5" letter-spacing="1.6" '
-             'text-anchor="end" fill="%s">02:41:07</text>'
-             % (ix + iw - 8, hy + 16.5, C["cyan"]))
-    # SMPTE bars
+    # surveillance feed (right column) — the dithered headshot, no subject box
+    iy = fy + 4
+    ih = fh - 4
     bar_cols = ["#ffffff", "#ffff55", "#55ffff", "#55ff55", "#ff55ff",
                 "#ff5555", "#5555ff"]
-    bw = iw / len(bar_cols)
+    sw = fw / len(bar_cols)
     for i, col in enumerate(bar_cols):
-        b.append('<rect x="%s" y="%s" width="%s" height="5" fill="%s"/>'
-                 % (ix + i * bw, bars_y, bw + 1, col))
-    # feed
-    fx, fy = ix, body_y
-    b.append('<clipPath id="fclip"><rect x="%s" y="%s" width="%s" height="%s"/>'
-             '</clipPath>' % (fx, fy, feed_w, feed_h))
-    b.append('<g clip-path="url(#fclip)">')
+        b.append('<rect x="%s" y="%s" width="%s" height="4" fill="%s"/>'
+                 % (fx + i * sw, fy, sw + 1, col))
+    b.append('<clipPath id="hfclip"><rect x="%s" y="%s" width="%s" height="%s"/>'
+             '</clipPath>' % (fx, iy, fw, ih))
+    b.append('<g clip-path="url(#hfclip)">')
     b.append('<image x="%s" y="%s" width="%s" height="%s" '
              'preserveAspectRatio="xMidYMid slice" '
              'href="data:image/png;base64,%s" '
              'style="image-rendering:pixelated;filter:contrast(1.12) '
              'brightness(.9) sepia(.2) hue-rotate(150deg) saturate(1.25)"/>'
-             % (fx, fy, feed_w, feed_h, AVATAR_B64))
+             % (fx, iy, fw, ih, AVATAR_B64))
     b.append('<rect x="%s" y="%s" width="%s" height="%s" fill="url(#scan)" '
-             'opacity=".4"/>' % (fx, fy, feed_w, feed_h))
+             'opacity=".4"/>' % (fx, iy, fw, ih))
     b.append('<rect class="track" x="%s" y="%s" width="%s" height="12" '
-             'fill="#fff" opacity=".10"/>' % (fx, fy, feed_w))
+             'fill="#fff" opacity=".10"/>' % (fx, iy, fw))
     b.append('<rect x="%s" y="%s" width="%s" height="%s" fill="url(#vig)"/>'
-             % (fx, fy, feed_w, feed_h))
+             % (fx, iy, fw, ih))
     b.append('</g>')
     b.append('<rect x="%s" y="%s" width="%s" height="%s" fill="none" '
-             'stroke="%s"/>' % (fx, fy, feed_w, feed_h, BC))
-    # OSD rec
-    b.append('<rect x="%s" y="%s" width="128" height="14" fill="rgba(0,0,0,.6)"/>'
-             % (fx + 6, fy + 6))
-    b.append(led(fx + 14, fy + 13))
+             'stroke="rgba(85,255,255,.4)" stroke-width="2"/>'
+             % (fx, fy, fw, fh))
+    # top OSD strip
+    b.append('<rect x="%s" y="%s" width="%s" height="17" fill="rgba(0,0,0,.55)"/>'
+             % (fx, iy, fw))
+    b.append(led(fx + 9, iy + 8.5))
+    b.append('<text x="%s" y="%s" font-size="8" letter-spacing="1.2" fill="%s">'
+             'CH 03 · CAM-01</text>' % (fx + 19, iy + 12, C["cyan"]))
+    b.append('<text x="%s" y="%s" font-size="8" letter-spacing="1.2" '
+             'text-anchor="end" fill="%s">LIVE</text>'
+             % (fx + fw - 8, iy + 12, C["red"]))
+    # bottom OSD
+    b.append('<rect x="%s" y="%s" width="%s" height="34" fill="url(#nmfade)"/>'
+             % (fx, iy + ih - 34, fw))
     b.append('<text x="%s" y="%s" font-size="8" letter-spacing=".8" fill="%s">'
              'REC <tspan fill="%s">02:41:07:14</tspan></text>'
-             % (fx + 24, fy + 16.5, C["red"], C["cyan"]))
-    # OSD channel
-    b.append('<text x="%s" y="%s" font-size="8" letter-spacing="1.4" '
-             'text-anchor="end" fill="%s">CH 03 · CAM-01 LIVE</text>'
-             % (fx + feed_w - 8, fy + 16.5, C["cyan"]))
-    # OSD geo
-    b.append('<text x="%s" y="%s" font-size="8" letter-spacing=".8" fill="%s">'
-             'THU 23 JUL 2026 <tspan fill="%s">LCL</tspan> 02:41:07</text>'
-             % (fx + 8, fy + feed_h - 18, "#ddffee", C["cyan"]))
+             % (fx + 8, iy + ih - 16, C["red"], C["cyan"]))
     b.append('<text x="%s" y="%s" font-size="8" letter-spacing=".8" fill="%s">'
              '◎ 12.911210, 79.132685</text>'
-             % (fx + 8, fy + feed_h - 8, C["cyan"]))
-    b.append(corners(fx, fy, feed_w, feed_h, s=12, inset=4))
-    # teletext
-    tx = ix + feed_w + gap
-    tt = [("SUBJECT FILE :: CH 04", C["yellow"]),
-          ("--------------------", BC2)]
-    rows = [("ID     : ", "OXIDE 1-6", C["bright"]),
-            ("CLASS  : ", "LINUX RICER", C["cyan"]),
-            ("WM     : ", "HYPRLAND", C["cyan"]),
-            ("SHELL  : ", "CAELESTIA", C["cyan"]),
-            ("STATUS : ", "RICED", C["green"]),
-            ("LOC    : ", "12°54'40\"N 79°07'57\"E", C["cyan"])]
-    tt_h = 20 + (len(tt) + len(rows)) * 20
-    b.append('<rect x="%s" y="%s" width="%s" height="%s" '
-             'fill="rgba(85,255,255,.04)" stroke="%s"/>'
-             % (tx, fy, tt_w, tt_h, BC2))
-    ty = fy + 22
-    for txt, col in tt:
-        b.append('<text x="%s" y="%s" font-size="10" letter-spacing=".8" '
-                 'fill="%s">%s</text>' % (tx + 13, ty, col, esc(txt)))
-        ty += 20
-    for lbl, val, col in rows:
-        b.append('<text x="%s" y="%s" font-size="10" letter-spacing=".8" '
-                 'fill="%s">%s<tspan fill="%s">%s</tspan></text>'
-                 % (tx + 13, ty, C["cyan"], esc(lbl), col, esc(val)))
-        ty += 20
-    # footer
-    b.append('<text x="%s" y="%s" font-size="9.5" letter-spacing="1.6" '
-             'fill="%s">● REC · PLAYBACK</text>'
-             % (ix, foot_y, C["cyan"]))
-    b.append('<text x="%s" y="%s" font-size="9.5" letter-spacing="1.6" '
-             'text-anchor="end" fill="%s">SECURITY TAPE · SP 60FPS</text>'
-             % (ix + iw, foot_y, C["cyand"]))
-    return svg(W, h, css, "".join(b))
+             % (fx + 8, iy + ih - 6, C["cyan"]))
+    b.append(corners(fx, fy, fw, fh, col=BCH, s=11, inset=4))
+    return svg(W, h, css, "".join(b), bg_on=False)
 
 
 # ===========================================================================
@@ -615,14 +557,12 @@ def build_feed(name, handle, cam, icon, fxfn):
     # bottom name gradient
     b.append('<rect x="0" y="%s" width="%s" height="40" fill="url(#nmfade)"/>'
              % (FH - 40, FW))
-    b.append(feed_icon(icon, 8, FH - 24))
-    b.append('<text x="26" y="%s" font-size="11.5" letter-spacing=".5" '
-             'fill="%s">%s</text>' % (FH - 14, C["bright"], esc(name.upper())))
-    b.append('<text x="26" y="%s" font-size="9" fill="%s">%s</text>'
-             % (FH - 5, C["cyan"], esc(handle)))
+    b.append(feed_icon(icon, 8, FH - 21))
+    b.append('<text x="27" y="%s" font-size="12" letter-spacing=".6" '
+             'fill="%s">%s</text>' % (FH - 11, C["bright"], esc(name.upper())))
     b.append('<text x="%s" y="%s" font-size="8.5" letter-spacing="1.4" '
              'text-anchor="end" fill="%s">CONNECT ▶</text>'
-             % (FW - 8, FH - 8, C["cyan"]))
+             % (FW - 8, FH - 11, C["cyan"]))
     # cam / live (dark strip keeps labels legible over the animated feed)
     b.append('<rect x="0" y="0" width="%s" height="19" fill="rgba(0,0,0,.55)"/>'
              % FW)
@@ -640,55 +580,250 @@ def build_feed(name, handle, cam, icon, fxfn):
 # ===========================================================================
 #  TRANSMISSION
 # ===========================================================================
-def build_transmission():
-    quotes = ["Talk is cheap. Show me the code.",
-              "Simplicity is prerequisite for reliability.",
-              "Given enough eyeballs, all bugs are shallow.",
-              "First, solve the problem. Then, write the code.",
-              "Programs must be written for people to read."]
+def build_transmission(quote):
     body_y = 44
-    h = body_y + 168
+    lines = wrap(quote, 78)
+    y1 = body_y + 26
+    h = body_y + 20 + len(lines) * 22 + 8
     b = [panel_frame(h, "TRANSMISSION", "REF://QUOTES.LOG")]
-    n = len(quotes)
-    dur = n * 2.6
-    # cycling quote (stacked, opacity keyframes)
-    css = []
-    y1 = body_y + 22
     b.append('<text x="22" y="%s" font-size="10.5" letter-spacing="1.4" '
              'fill="%s">INCOMING · SENSIBLE WORDS</text>'
              % (body_y + 4, C["cyan"]))
-    b.append('<rect x="22" y="%s" width="2" height="20" fill="%s"/>'
-             % (y1 - 14, C["cyan"]))
-    step = 100.0 / n
-    for i, q in enumerate(quotes):
-        a = i * step
-        vis1, vis2 = a + step * 0.08, a + step * 0.92
-        nb = ((i + 1) % n) * step
-        kf = ("@keyframes q%d{0%%{opacity:0}%.1f%%{opacity:0}%.1f%%{opacity:1}"
-              "%.1f%%{opacity:1}%.1f%%{opacity:0}100%%{opacity:0}}"
-              % (i, max(a - 1, 0), vis1, vis2, nb))
-        css.append(kf)
-        b.append('<text x="34" y="%s" font-size="14" fill="%s" opacity="0" '
-                 'style="animation:q%d %.1fs linear infinite">“%s”'
-                 '</text>' % (y1, C["bright"], i, dur, esc(q)))
-    b.append('<text x="34" y="%s" font-size="11" fill="%s">— auto-rotated '
-             'on every load</text>' % (y1 + 18, C["dim"]))
-    # custom quote
-    y2 = y1 + 62
-    b.append('<text x="22" y="%s" font-size="10.5" letter-spacing="1.4" '
-             'fill="%s">OPERATIVE LOG · CUSTOM</text>' % (y2, C["cyan"]))
-    b.append('<rect x="22" y="%s" width="2" height="40" fill="%s"/>'
-             % (y2 + 10, C["purple"]))
-    b.append('<text x="34" y="%s" font-size="14" fill="%s">“Linux is not '
-             'an OS, it’s a lifestyle: best lived in the terminal.”'
-             '</text>' % (y2 + 26, C["title"]))
-    b.append('<text x="34" y="%s" font-size="11" fill="%s">— Oxide 1-6'
-             '</text>' % (y2 + 44, C["dim"]))
-    return svg(W, h, "".join(css), "".join(b))
+    b.append('<rect x="22" y="%s" width="2" height="%s" fill="%s"/>'
+             % (y1 - 13, max(20, len(lines) * 22 - 4), C["cyan"]))
+    y = y1
+    for i, ln in enumerate(lines):
+        txt = ("“" + ln) if i == 0 else ln
+        if i == len(lines) - 1:
+            txt = txt + "”"
+        b.append('<text x="34" y="%s" font-size="14" fill="%s">%s</text>'
+                 % (y, C["bright"], esc(txt)))
+        y += 22
+    return svg(W, h, "", "".join(b))
 
 
 # ===========================================================================
-#  SECTION LABEL STRIPS (for telemetry card + field-recording video)
+#  TELEMETRY — live stats, colorblind languages, 2D calendar (self-hosted)
+# ===========================================================================
+USER = "rugbedbugg"
+SKIP_REPOS = {"portfolio-website", "ML_SchoolAssignments"}
+# Okabe-Ito colorblind-safe categorical palette, assigned by language rank.
+LANG_COLORS = ["#56b4e9", "#e69f00", "#d55e00", "#cc79a7",
+               "#009e73", "#f0e442", "#0072b2", "#dddddd"]
+CAL_SHADES = ["rgba(85,255,255,.10)", "rgba(85,255,255,.28)",
+              "rgba(85,255,255,.50)", "rgba(85,255,255,.72)", "#55ff55"]
+# Fallbacks (snapshot fetched 2026-07-24) used when offline / rate-limited.
+FB_STATS = {"repos": 21, "stars": 41, "followers": 23, "following": 17}
+FB_LANGS = [("Python", 61.3), ("Assembly", 13.4), ("Rust", 11.7),
+            ("C++", 6.1), ("Java", 4.7), ("Lua", 1.4), ("Shell", 1.1)]
+
+
+def _get(url):
+    import os
+    import json
+    import urllib.request
+    headers = {"User-Agent": "oxide-build"}
+    tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if tok:
+        headers["Authorization"] = "Bearer " + tok
+    req = urllib.request.Request(url, headers=headers)
+    return json.load(urllib.request.urlopen(req, timeout=15))
+
+
+def fetch_stats():
+    try:
+        u = _get("https://api.github.com/users/%s" % USER)
+        repos, page = [], 1
+        while True:
+            chunk = _get("https://api.github.com/users/%s/repos"
+                         "?per_page=100&page=%d" % (USER, page))
+            repos += chunk
+            if len(chunk) < 100:
+                break
+            page += 1
+        stars = sum(r["stargazers_count"] for r in repos)
+        return ({"repos": u["public_repos"], "stars": stars,
+                 "followers": u["followers"], "following": u["following"]}, repos)
+    except Exception as e:
+        print("  ..stats fetch failed (%s) -> fallback" % e)
+        return dict(FB_STATS), None
+
+
+def fetch_langs(repos):
+    import collections
+    if repos is None:
+        return list(FB_LANGS)
+    try:
+        agg = collections.Counter()
+        for r in repos:
+            if r["name"] in SKIP_REPOS or r.get("fork"):
+                continue
+            for k, v in _get(r["languages_url"]).items():
+                agg[k] += v
+        tot = sum(agg.values()) or 1
+        return [(k, round(100.0 * v / tot, 1)) for k, v in agg.most_common(7)]
+    except Exception as e:
+        print("  ..langs fetch failed (%s) -> fallback" % e)
+        return list(FB_LANGS)
+
+
+def fetch_calendar():
+    import re
+    import random
+    import urllib.request
+    try:
+        req = urllib.request.Request(
+            "https://github.com/users/%s/contributions" % USER,
+            headers={"User-Agent": "Mozilla/5.0"})
+        html = urllib.request.urlopen(req, timeout=15).read().decode()
+        lv = [int(x) for x in re.findall(r'data-level="(\d)"', html)]
+        if lv:
+            return lv
+        raise ValueError("no cells")
+    except Exception as e:
+        print("  ..calendar fetch failed (%s) -> generated" % e)
+        random.seed(7)
+        out = []
+        for _ in range(53 * 7):
+            r = random.random()
+            out.append(4 if r > .93 else 3 if r > .82 else
+                       2 if r > .62 else 1 if r > .4 else 0)
+        return out
+
+
+def build_telemetry(stats, langs, cal):
+    label_h, pad = 28, 14
+    card_x, card_w = 16, W - 32
+    ipad = 14
+    ix = card_x + ipad
+    iw = card_w - 2 * ipad
+    card_top = label_h + pad
+    hd_h = 26
+    css = (".cur{animation:blink 1s steps(1,end) infinite}"
+           ".sec::before{content:'> '}")
+    c = []
+    cy = card_top + hd_h + 20
+    # prompt
+    c.append('<text x="%s" y="%s" font-size="12.5" fill="%s">'
+             '<tspan fill="%s">~/rugbedbugg</tspan> '
+             '<tspan fill="%s">(main)</tspan> <tspan fill="%s">$</tspan> '
+             '<tspan fill="%s">./metrics --generate</tspan>'
+             '<tspan class="cur" fill="%s">█</tspan></text>'
+             % (ix, cy, C["text"], C["cyan"], C["purple"], C["dim"],
+                C["bright"], C["cyan"]))
+    cy += 24
+
+    def seclabel(txt, right=None):
+        s = ('<text x="%s" y="%s" font-size="10.5" letter-spacing="1.4" '
+             'fill="%s"><tspan fill="%s">&gt; </tspan>%s</text>'
+             % (ix, cy, C["cyan"], C["dim"], esc(txt)))
+        if right:
+            s += ('<text x="%s" y="%s" font-size="9.5" text-anchor="end" '
+                  'fill="%s">%s</text>' % (ix + iw, cy, C["dim"], esc(right)))
+        return s
+
+    # core stats
+    c.append(seclabel("core stats"))
+    cy += 12
+    boxes = [(stats["repos"], "REPOS"), (stats["stars"], "STARS"),
+             (stats["followers"], "FOLLOWERS"), (stats["following"], "FOLLOWING")]
+    bw = (iw - 3 * 8) / 4
+    for i, (n, lab) in enumerate(boxes):
+        bx = ix + i * (bw + 8)
+        c.append('<rect x="%s" y="%s" width="%s" height="42" '
+                 'fill="rgba(85,255,255,.03)" stroke="rgba(85,255,255,.16)"/>'
+                 % (bx, cy, bw))
+        c.append('<text x="%s" y="%s" font-size="17" fill="%s" '
+                 'filter="url(#glow)">%s</text>'
+                 % (bx + 9, cy + 22, C["cyan"], n))
+        c.append('<text x="%s" y="%s" font-size="9" letter-spacing=".8" '
+                 'fill="%s">%s</text>' % (bx + 9, cy + 34, C["dim"], lab))
+    cy += 42 + 18
+
+    # languages
+    c.append(seclabel("most used languages", "colorblind-safe"))
+    cy += 12
+    shown = list(langs)
+    ssum = sum(p for _, p in shown)
+    if ssum < 99.0:
+        shown = shown + [("Other", round(100 - ssum, 1))]
+    total = sum(p for _, p in shown) or 1
+    colmap = {}
+    x = ix
+    barw = iw
+    c.append('<rect x="%s" y="%s" width="%s" height="12" fill="none" '
+             'stroke="rgba(255,255,255,.14)"/>' % (ix, cy, barw))
+    for i, (name, pct) in enumerate(shown):
+        col = "#8a8a8a" if name == "Other" else LANG_COLORS[i % len(LANG_COLORS)]
+        colmap[name] = col
+        segw = barw * pct / total
+        c.append('<rect x="%s" y="%s" width="%s" height="12" fill="%s"/>'
+                 % (x, cy, segw, col))
+        x += segw
+    cy += 26
+    # legend (flow with wrap)
+    lx, lrow_h = ix, 18
+    for name, pct in shown:
+        item = "%s %s%%" % (name, pct)
+        wpx = 15 + len(item) * cw(11) + 16
+        if lx + wpx > ix + iw:
+            lx = ix
+            cy += lrow_h
+        c.append('<rect x="%s" y="%s" width="9" height="9" fill="%s"/>'
+                 % (lx, cy - 9, colmap[name]))
+        c.append('<text x="%s" y="%s" font-size="11" fill="%s">%s '
+                 '<tspan fill="%s">%s%%</tspan></text>'
+                 % (lx + 14, cy, C["bright"], esc(name), C["dim"], pct))
+        lx += wpx
+    cy += 22
+
+    # contribution calendar (2D)
+    c.append(seclabel("contribution activity · last year"))
+    cy += 12
+    cols = (len(cal) + 6) // 7
+    gap = 2
+    cell = (iw - (cols - 1) * gap) / cols
+    cell = min(cell, 11)
+    for idx, lv in enumerate(cal):
+        col_i, row_i = idx // 7, idx % 7
+        gx = ix + col_i * (cell + gap)
+        gy = cy + row_i * (cell + gap)
+        c.append('<rect x="%s" y="%s" width="%s" height="%s" fill="%s"/>'
+                 % (round(gx, 1), round(gy, 1), round(cell, 1), round(cell, 1),
+                    CAL_SHADES[max(0, min(4, lv))]))
+    cy += 7 * (cell + gap) + 6
+    # calkey
+    kx = ix + iw - 12 - 5 * 12 - 30
+    c.append('<text x="%s" y="%s" font-size="10" fill="%s">less</text>'
+             % (kx, cy, C["dim"]))
+    for i, sh in enumerate(CAL_SHADES):
+        c.append('<rect x="%s" y="%s" width="9" height="9" fill="%s"/>'
+                 % (kx + 26 + i * 12, cy - 8, sh))
+    c.append('<text x="%s" y="%s" font-size="10" fill="%s">more</text>'
+             % (kx + 26 + 5 * 12 + 4, cy, C["dim"]))
+    cy += 10
+
+    card_bottom = cy + 6
+    card_h = card_bottom - card_top
+    h = card_bottom + pad
+
+    out = [panel_frame(h, "TELEMETRY", "REF://METRICS.SYS")]
+    out.append('<rect x="%s" y="%s" width="%s" height="%s" fill="#08060e" '
+               'stroke="%s"/>' % (card_x, card_top, card_w, card_h, BC2))
+    out.append('<rect x="%s" y="%s" width="%s" height="%s" fill="#0b0912" '
+               'stroke="%s"/>' % (card_x, card_top, card_w, hd_h, BC2))
+    for i, dc in enumerate(["#2f4a44", "#3a2f4a", "#ff5555"]):
+        out.append('<rect x="%s" y="%s" width="8" height="8" fill="%s"/>'
+                   % (card_x + 12 + i * 12, card_top + 9, dc))
+    out.append('<text x="%s" y="%s" font-size="10" letter-spacing="1.4" '
+               'fill="%s">RUGBEDBUGG@GITHUB — METRICS</text>'
+               % (card_x + 54, card_top + 17, C["cyan"]))
+    out.append("".join(c))
+    return svg(W, h, css, "".join(out))
+
+
+# ===========================================================================
+#  SECTION LABEL STRIPS (for the field-recording video)
 # ===========================================================================
 def build_label(title, ref):
     h = 30
@@ -705,20 +840,71 @@ def build_label(title, ref):
 
 
 # ===========================================================================
-#  FOOTER
+#  FIELD RECORDING — VHS still (clickable; replaces the native video chrome)
 # ===========================================================================
-def build_footer():
-    h = 60
-    b = []
-    b.append('<line x1="0" y1="14" x2="%s" y2="14" stroke="%s"/>' % (W, BC2))
-    b.append('<text x="%s" y="30" font-size="10" letter-spacing="2" '
-             'text-anchor="middle" fill="%s">// end of transmission · '
-             'oxide 1-6 · arch btw //</text>' % (W / 2, C["dim"]))
-    b.append('<text x="%s" y="48" font-size="10" letter-spacing="1.4" '
-             'text-anchor="middle" fill="%s">[ <tspan fill="%s">●</tspan> '
-             'NEW SUBJECT · TRACE INITIATED ]</text>'
-             % (W / 2, C["gray"], C["red"]))
-    return svg(W, h, "", "".join(b))
+def build_field():
+    h = round(W * 9 / 16)
+    pad, gap = 14, 8
+    iw, ih = W - 2 * pad, h - 2 * pad
+    lw = round(iw * 0.5)
+    rx = pad + lw + gap
+    rw = W - pad - rx
+    ph = (ih - gap) / 2
+    css = ("@keyframes roll{0%{transform:translateY(-20px)}"
+           "100%{transform:translateY(" + str(h) + "px)}}"
+           ".trk{animation:roll 6s linear infinite}"
+           "@keyframes pulse{0%,100%{opacity:.8}50%{opacity:1}}"
+           ".play{animation:pulse 2.5s ease-in-out infinite}")
+    b = ['<rect width="%s" height="%s" fill="#0b0e14"/>' % (W, h)]
+
+    def pane(x, y, w, hh, lines):
+        s = ('<rect x="%s" y="%s" width="%s" height="%s" fill="rgba(10,7,16,.6)" '
+             'stroke="%s"/>' % (x, y, w, hh, BC2))
+        s += ('<rect x="%s" y="%s" width="%s" height="10" fill="#0c1418"/>'
+              % (x, y, w))
+        ty = y + 23
+        for txt, col in lines:
+            s += ('<text x="%s" y="%s" font-size="9" fill="%s">%s</text>'
+                  % (x + 6, ty, col, esc(txt)))
+            ty += 13
+        return s
+
+    b.append('<g opacity="0.55">')
+    b.append(pane(pad, pad, lw, ih, [
+        ("~/.config/hypr $ hyprctl", C["cyan"]),
+        ("workspace 1 :: caelestia", C["purple"]),
+        ("████░░░ 88%", C["green"]), ("> neofetch", C["dim"])]))
+    b.append(pane(rx, pad, rw, ph, [
+        ("btop", C["cyan"]), ("cpu ███░", C["green"]), ("mem ██░░", C["green"])]))
+    b.append(pane(rx, pad + ph + gap, rw, ph, [
+        ("cava", C["purple"]), ("▍▁▏▍▂▁▏", C["cyan"]), ("▏▍▂▏▎▍", C["cyan"])]))
+    b.append('</g>')
+    b.append('<rect width="%s" height="%s" fill="url(#scan)" opacity=".25"/>'
+             % (W, h))
+    b.append('<rect class="trk" x="0" y="0" width="%s" height="20" fill="#fff" '
+             'opacity=".05"/>' % W)
+    b.append('<rect width="%s" height="%s" fill="url(#vig)"/>' % (W, h))
+    cx, cy = W / 2, h / 2
+    b.append('<g class="play">')
+    b.append('<rect x="%s" y="%s" width="56" height="56" '
+             'fill="rgba(85,255,255,.08)" stroke="%s"/>' % (cx - 28, cy - 28, C["cyan"]))
+    b.append('<path d="M%s %s l18 11 l-18 11 z" fill="%s" filter="url(#glow)"/>'
+             % (cx - 6, cy - 11, C["cyan"]))
+    b.append('</g>')
+    b.append('<text x="14" y="26" font-size="11" fill="%s">'
+             '“If it isn’t riced, it isn’t mine.”</text>' % C["purple"])
+    b.append(led(W - 70, 20))
+    b.append('<text x="%s" y="26" font-size="11" letter-spacing="1" '
+             'text-anchor="end" fill="%s">REC</text>' % (W - 14, C["red"]))
+    b.append('<text x="14" y="%s" font-size="11" letter-spacing="1.2" fill="%s">'
+             'CAELESTIA // HYPRLAND</text>' % (h - 14, C["cyan"]))
+    b.append('<text x="%s" y="%s" font-size="11" letter-spacing="1" '
+             'text-anchor="end" fill="%s">SP · 60FPS · 00:00:37</text>'
+             % (W - 14, h - 14, C["dim"]))
+    b.append(corners(0, 0, W, h, col=BCH, s=14, inset=6))
+    b.append('<rect x="1" y="1" width="%s" height="%s" fill="none" stroke="%s"/>'
+             % (W - 2, h - 2, BC))
+    return svg(W, h, css, "".join(b))
 
 
 # ===========================================================================
@@ -730,16 +916,37 @@ def write(name, content):
     print("  ok  %-22s %6d bytes" % (name, len(content)))
 
 
+QUOTES = ["Talk is cheap. Show me the code.",
+          "Simplicity is prerequisite for reliability.",
+          "Given enough eyeballs, all bugs are shallow.",
+          "First, solve the problem. Then, write the code.",
+          "Programs must be written for people to read.",
+          "Linux is not an OS, it’s a lifestyle: best lived in the terminal.",
+          "The computer does exactly what you tell it to. That is the terror.",
+          "Weeks of coding can save you hours of planning."]
+
+
+def pick_quote():
+    # Advance one quote every 3 hours (deterministic by wall clock).
+    import time
+    return QUOTES[int(time.time() // (3 * 3600)) % len(QUOTES)]
+
+
 def main():
+    print("fetching live profile data...")
+    stats, repos = fetch_stats()
+    langs = fetch_langs(repos)
+    cal = fetch_calendar()
+    print("  stats=%s  langs=%d  cal_cells=%d"
+          % (stats, len(langs), len(cal)))
     write("header.svg", build_header())
-    write("monitor.svg", build_monitor())
     write("dossier.svg", build_dossier())
+    write("telemetry.svg", build_telemetry(stats, langs, cal))
     write("loadout.svg", build_loadout())
-    write("transmission.svg", build_transmission())
-    write("label-telemetry.svg", build_label("TELEMETRY", "REF://METRICS.SYS"))
+    write("transmission.svg", build_transmission(pick_quote()))
     write("label-uplink.svg", build_label("ESTABLISH UPLINK", "REF://CONTACT.SYS"))
     write("label-field.svg", build_label("FIELD RECORDING", "REF://RICINGS.VHS"))
-    write("footer.svg", build_footer())
+    write("field-recording.svg", build_field())
     for name, handle, cam, icon, fxfn in SOCIALS:
         write("feed-%s.svg" % name.lower(),
               build_feed(name, handle, cam, icon, fxfn))
