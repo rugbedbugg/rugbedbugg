@@ -23,13 +23,8 @@
 
 <table width="100%" border="0" cellpadding="3" cellspacing="0">
   <tr>
-    <td width="33.33%"><a href="https://github.com/rugbedbugg"><img src="./assets/feed-github.svg" alt="GitHub" width="100%"></a></td>
     <td width="33.33%"><a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="LinkedIn" width="100%"></a></td>
     <td width="33.33%"><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email" width="100%"></a></td>
-  </tr>
-  <tr>
-    <td width="33.33%"><a href="https://instagram.com/_boyin_paradise"><img src="./assets/feed-instagram.svg" alt="Instagram" width="100%"></a></td>
-    <td width="33.33%"><a href="https://youtube.com/@rknif781"><img src="./assets/feed-youtube.svg" alt="YouTube" width="100%"></a></td>
     <td width="33.33%"><a href="https://discord.com/users/848834469033017374"><img src="./assets/feed-discord.svg" alt="Discord" width="100%"></a></td>
   </tr>
 </table>

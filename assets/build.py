@@ -349,10 +349,14 @@ def build_loadout():
         border = "rgba(192,132,252,.4)" if lang else BC2
         fillbg = "rgba(168,85,247,.07)" if lang else "rgba(85,255,255,.04)"
         txtcol = C["title"] if lang else C["text"]
+        # Departure Mono advances ~0.636em and the label adds .6 letter-spacing;
+        # size the box to that real width so the last glyph keeps its padding
+        # instead of touching the right border.
+        cpc = 11 * 0.636 + 0.6
         x = 22
         out = []
         for it in items:
-            wc = len(it) * cw(11) + 20
+            wc = len(it) * cpc + 20
             out.append('<rect x="%s" y="%s" width="%s" height="24" fill="%s" '
                        'stroke="%s"/>' % (x, y, round(wc), fillbg, border))
             out.append('<text x="%s" y="%s" font-size="11" letter-spacing=".6" '
@@ -389,166 +393,196 @@ def feed_icon(kind, x, y):
     p = {
         "mail": '<rect x="2.5" y="4.5" width="19" height="15"/><path d="M3 6l9 6.5L21 6"/>',
         "linkedin": '<rect x="2.5" y="2.5" width="19" height="19"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/>',
-        "instagram": '<rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r=".9" fill="%s"/>' % C["cyan"],
-        "youtube": '<rect x="2.5" y="6" width="19" height="12"/><path d="M10.5 9.2l4.5 2.8-4.5 2.8z" fill="%s" stroke="none"/>' % C["cyan"],
         "discord": '<path d="M7 8.5c3-1.4 7-1.4 10 0M6.5 16.5c3.2 1.6 7.8 1.6 11 0M6.5 16.5C5 14 4.7 11 5.8 8.2 7 7.3 8.4 6.9 9 6.8M17.5 16.5c1.5-2.5 1.8-5.5.7-8.3-1.2-.9-2.6-1.3-3.2-1.4"/><path d="M9.5 13v.01M14.5 13v.01" stroke-width="2.3"/>',
-        "github": '<path d="M4 7l4 4-4 4M11 16h7"/>',
     }[kind]
     return a + p + '</g>'
 
 
-def fx_github():
-    L = ['$ git push origin main', 'Enumerating: 24, done', 'Compressing 100%',
-         'Writing objects 100%', 'a1f4e HEAD -> main', '$ git commit -am fix',
-         '[main 9c2b7] patch', '2 files changed, +48']
-    lh = 14
-    seth = len(L) * lh
-    rows = []
-    for rep in range(2):
-        for i, t in enumerate(L):
-            col = C["cyan"] if ('HEAD' in t or ']' in t) else C["green"]
-            rows.append('<text x="9" y="%s" font-size="8" fill="%s">%s</text>'
-                        % (rep * seth + (i + 1) * lh, col, esc(t)))
-    css = ("@keyframes vroll{from{transform:translateY(0)}"
-           "to{transform:translateY(-%dpx)}}"
-           ".rl{animation:vroll 5s linear infinite}" % seth)
-    inner = ('<g class="rl">%s</g>' % "".join(rows))
-    return css, inner
-
-
-def fx_scroll(color, round_av):
-    rowh = 18
-    n = 6
-    seth = n * rowh
-    rc = "5.5" if round_av else "0"
-    rows = []
-    for rep in range(2):
-        for i in range(n):
-            yy = rep * seth + i * rowh + 8
-            rows.append('<rect x="8" y="%s" width="11" height="11" rx="%s" '
-                        'fill="%s"/>' % (yy, rc, color))
-            rows.append('<rect x="24" y="%s" width="88%%" height="3" fill="%s" '
-                        'opacity=".5"/>' % (yy + 1, color))
-            rows.append('<rect x="24" y="%s" width="56%%" height="3" fill="%s" '
-                        'opacity=".5"/>' % (yy + 6, color))
-    css = ("@keyframes vroll{from{transform:translateY(0)}"
-           "to{transform:translateY(-%dpx)}}"
-           ".rl{animation:vroll 5.5s linear infinite}" % seth)
-    return css, '<g class="rl">%s</g>' % "".join(rows)
-
-
-def fx_insta():
-    cells = []
-    css = ("@keyframes igflk{0%,100%{opacity:.4}50%{opacity:.95}}"
-           ".ig i{animation:igflk 3s ease-in-out infinite}")
-    gw = (FW - 8) / 3
-    gh = (FH - 8) / 3
-    grads = []
-    out = ['<g class="ig">']
-    for i in range(9):
-        hh = (i * 40) % 360
-        gid = "ig%d" % i
-        grads.append('<linearGradient id="%s" x1="0" y1="0" x2="1" y2="1">'
-                     '<stop offset="0" stop-color="hsl(%d,75%%,58%%)"/>'
-                     '<stop offset="1" stop-color="hsl(%d,75%%,46%%)"/>'
-                     '</linearGradient>' % (gid, hh, (hh + 50) % 360))
-        cx = 3 + (i % 3) * gw
-        cy = 3 + (i // 3) * gh
-        out.append('<rect x="%s" y="%s" width="%s" height="%s" fill="url(#%s)" '
-                   'style="animation-delay:%.2fs"/>'
-                   % (cx, cy, gw - 2, gh - 2, gid, i * 0.22))
-    out.append('</g>')
-    return css, '<defs>%s</defs>%s' % ("".join(grads), "".join(out))
-
-
-def fx_youtube():
-    cx = FW / 2
-    css = ("@keyframes eq{from{height:3px}to{height:20px}}"
-           ".eq i{animation:eq .8s ease-in-out infinite alternate}"
-           "@keyframes ytfill{from{width:4px}to{width:120px}}"
-           ".ytf{animation:ytfill 4s linear infinite}")
-    out = []
-    out.append('<path d="M%s %s l16 9 l-16 9 z" fill="%s"/>'
-               % (cx - 8, FH / 2 - 34, C["red"]))
-    bx = cx - 27
-    for i in range(9):
-        out.append('<rect class="i" x="%s" y="%s" width="3" height="20" '
-                   'fill="%s" style="transform-box:fill-box;'
-                   'transform-origin:bottom;animation-delay:%.2fs"/>'
-                   % (bx + i * 6, FH / 2 - 8, C["red"], i * 0.07))
-    barw = FW * 0.7
-    out.append('<rect x="%s" y="%s" width="%s" height="4" '
-               'fill="rgba(255,255,255,.18)"/>'
-               % (cx - barw / 2, FH / 2 + 26, barw))
-    out.append('<clipPath id="ytc"><rect x="%s" y="%s" width="%s" height="4"/>'
-               '</clipPath>' % (cx - barw / 2, FH / 2 + 26, barw))
-    out.append('<rect class="ytf" clip-path="url(#ytc)" x="%s" y="%s" '
-               'height="4" fill="%s"/>' % (cx - barw / 2, FH / 2 + 26, C["red"]))
-    return css, "".join(out)
+def _li_avatar(x, y, r, col, glow=False):
+    """Small avatar node: ring with a head + shoulders silhouette."""
+    return ('<g transform="translate(%s,%s)">'
+            '<circle r="%s" fill="#0a1830" stroke="%s" stroke-width="1.2"%s/>'
+            '<circle cy="%s" r="%s" fill="%s"/>'
+            '<path d="M%s %s a%s %s 0 0 1 %s 0" fill="%s"/></g>'
+            % (x, y, r, col, ' filter="url(#glow)"' if glow else '',
+               -r * 0.18, r * 0.34, col,
+               -r * 0.5, r * 0.62, r * 0.5, r * 0.42, r, col))
 
 
 def fx_linkedin():
-    edges = [[50, 40, 18, 16], [50, 40, 82, 18], [50, 40, 16, 64],
-             [50, 40, 84, 62], [50, 40, 50, 10], [18, 16, 50, 10],
-             [82, 18, 84, 62]]
-    nodes = [[50, 40, True], [18, 16, False], [82, 18, False], [16, 64, False],
-             [84, 62, False], [50, 10, False]]
-    css = ("@keyframes lidash{to{stroke-dashoffset:-8}}"
-           ".edge{animation:lidash 1.6s linear infinite}"
-           "@keyframes linode{0%,100%{opacity:.6}50%{opacity:1}}"
-           ".node{animation:linode 2.4s ease-in-out infinite}")
-    sc = 'scale(%f,%f)' % (FW / 100.0, FH / 80.0)
-    out = ['<g transform="%s">' % sc]
-    for g in edges:
+    """Professional network: hub avatar, orbiting connections, marching-ant
+    links, incoming connection pulses and a new-connection ping."""
+    BLU, LT = "#4d9fff", "#a9d4ff"
+    cx, cy = FW / 2, FH / 2 + 3
+    sats = [(40, 44), (FW - 40, 46), (30, FH - 46), (FW - 32, FH - 44),
+            (cx, 30), (34, cy + 6), (FW - 28, cy)]
+    pulse_idx = [0, 3, 4, 6]
+
+    css = ("@keyframes lidash{to{stroke-dashoffset:-18}}"
+           ".edge{animation:lidash 1.5s linear infinite}"
+           "@keyframes linode{0%,100%{opacity:.5}50%{opacity:1}}"
+           ".node{animation:linode 3s ease-in-out infinite}"
+           "@keyframes lispin{to{transform:rotate(360deg)}}"
+           ".ring{animation:lispin 24s linear infinite;"
+           "transform-box:fill-box;transform-origin:center}"
+           "@keyframes lireach{0%{transform:scale(.5);opacity:.85}"
+           "100%{transform:scale(1.7);opacity:0}}"
+           ".reach{animation:lireach 3.2s ease-out infinite;"
+           "transform-box:fill-box;transform-origin:center}")
+    for k in pulse_idx:
+        sx, sy = sats[k]
+        dx, dy = round(cx - sx, 1), round(cy - sy, 1)
+        css += ("@keyframes lip" + str(k) + "{0%{transform:translate(0px,0px);"
+                "opacity:0}14%{opacity:1}86%{opacity:1}100%{transform:translate("
+                + str(dx) + "px," + str(dy) + "px);opacity:0}}"
+                ".lip" + str(k) + "{animation:lip" + str(k)
+                + " 2.8s linear infinite;animation-delay:" + str(round(k * 0.5, 2))
+                + "s}")
+
+    out = ['<circle class="ring" cx="%s" cy="%s" r="52" fill="none" stroke="%s" '
+           'stroke-width="1" stroke-dasharray="2 9" opacity=".3"/>'
+           % (cx, cy, BLU)]
+    for sx, sy in sats:
         out.append('<line class="edge" x1="%s" y1="%s" x2="%s" y2="%s" '
-                   'stroke="#4d9fff" stroke-width=".7" opacity=".55" '
-                   'stroke-dasharray="4 4"/>' % tuple(g))
-    for i, g in enumerate(nodes):
-        col = C["cyan"] if g[2] else "#7cc2ff"
-        r = 3.4 if g[2] else 2.6
-        out.append('<circle class="node" cx="%s" cy="%s" r="%s" fill="%s" '
-                   'style="animation-delay:%.2fs"/>' % (g[0], g[1], r, col, i * 0.3))
-    out.append('</g>')
+                   'stroke="%s" stroke-width="1" opacity=".45" '
+                   'stroke-dasharray="4 5"/>' % (cx, cy, sx, sy, BLU))
+    for i, (sx, sy) in enumerate(sats):
+        out.append('<g class="node" style="animation-delay:%.2fs">%s</g>'
+                   % (i * 0.4, _li_avatar(sx, sy, 8.5, "#7cc2ff")))
+    for k in pulse_idx:
+        sx, sy = sats[k]
+        out.append('<circle class="lip%d" cx="%s" cy="%s" r="2.6" fill="%s" '
+                   'filter="url(#glow)"/>' % (k, sx, sy, C["cyan"]))
+    sx, sy = sats[1]
+    out.append('<circle class="reach" cx="%s" cy="%s" r="12" fill="none" '
+               'stroke="%s" stroke-width="1.5"/>' % (sx, sy, C["green"]))
+    out.append(_li_avatar(cx, cy, 15, LT, glow=True))
+    out.append('<rect x="%s" y="%s" width="13" height="13" rx="2.5" fill="%s"/>'
+               % (cx + 6, cy + 3, BLU))
+    out.append('<text x="%s" y="%s" font-size="9.5" fill="#00142c">in</text>'
+               % (cx + 8, cy + 12.5))
+    return css, "".join(out)
+
+
+def fx_email():
+    """Inbox: unread rows, an envelope dropping in, a sent paper-plane sweep
+    and a blinking compose caret."""
+    TEAL, TEAL2, DIMT = "#7fe3d0", "#39b39a", "#2b4d47"
+    css = ("@keyframes mdrop{0%{transform:translateY(-40px);opacity:0}"
+           "16%{opacity:1}64%{transform:translateY(0);opacity:1}"
+           "80%,100%{transform:translateY(0);opacity:0}}"
+           ".drop{animation:mdrop 4.4s ease-in infinite}"
+           "@keyframes unread{0%,100%{opacity:.3}50%{opacity:1}}"
+           ".un{animation:unread 1.6s ease-in-out infinite}"
+           "@keyframes plane{0%{transform:translate(-34px,6px);opacity:0}"
+           "22%,78%{opacity:.95}100%{transform:translate(250px,-14px);opacity:0}}"
+           ".plane{animation:plane 5.2s ease-in-out infinite}"
+           "@keyframes caret{0%,50%{opacity:1}51%,100%{opacity:0}}"
+           ".caret{animation:caret 1s steps(1) infinite}")
+    out = []
+    for i, ry in enumerate((30, 60, 90)):
+        out.append('<rect x="10" y="%s" width="224" height="24" rx="3" '
+                   'fill="#08201c" stroke="rgba(127,227,208,.25)" '
+                   'stroke-width="1"/>' % ry)
+        out.append('<circle class="un" cx="22" cy="%s" r="3.4" fill="%s" '
+                   'style="animation-delay:%.2fs"/>' % (ry + 12, TEAL, i * 0.4))
+        out.append('<g transform="translate(32,%s)" stroke="%s" stroke-width="1" '
+                   'fill="none"><rect width="15" height="11" rx="1.5"/>'
+                   '<path d="M0 1l7.5 5.5L15 1"/></g>' % (ry + 6, TEAL))
+        out.append('<rect x="54" y="%s" width="%s" height="3.5" fill="%s"/>'
+                   % (ry + 7, 70 + i * 14, TEAL))
+        out.append('<rect x="54" y="%s" width="%s" height="3" fill="%s" '
+                   'opacity=".6"/>' % (ry + 14, 150 - i * 20, DIMT))
+    out.append('<g class="drop"><g transform="translate(105,16)" stroke="%s" '
+               'stroke-width="1.4" fill="#08201c"><rect width="34" height="24" '
+               'rx="2.5"/><path d="M0 2l17 13L34 2" fill="none"/></g></g>' % TEAL)
+    out.append('<path class="plane" d="M0 0l20 8-7 2-2 7z" fill="%s" '
+               'transform="translate(0,116)"/>' % TEAL)
+    out.append('<text x="12" y="132" font-size="9" letter-spacing="1" '
+               'fill="%s">&gt; compose message</text>' % TEAL2)
+    out.append('<rect class="caret" x="130" y="124" width="6" height="10" '
+               'fill="%s"/>' % TEAL)
     return css, "".join(out)
 
 
 def fx_discord():
-    avs = ["#5865f2", "#57f287", "#eb459e", "#fee75c"]
-    css = ("@keyframes dcpop{0%{opacity:0}12%,82%{opacity:1}100%{opacity:.12}}"
-           ".msg{animation:dcpop 4.5s ease-out infinite}"
+    """Server chat + voice: messages popping in, a reaction pill, a typing
+    indicator, a speaking voice avatar and a member list with status dots."""
+    BLURPLE, GRN, PNK, YEL, RED = ("#5865f2", "#57f287", "#eb459e",
+                                   "#fee75c", "#ed4245")
+    TXT, SUB = "#c9c6ff", "#8d8db0"
+    css = ("@keyframes dcpop{0%{opacity:0;transform:translateY(6px)}"
+           "12%,84%{opacity:1;transform:translateY(0)}100%{opacity:.1}}"
+           ".msg{animation:dcpop 5s ease-out infinite}"
            "@keyframes tping{0%,60%,100%{opacity:.3}30%{opacity:1}}"
-           ".tp{animation:tping 1.2s infinite}")
+           ".tp{animation:tping 1.2s infinite}"
+           "@keyframes vspeak{0%{transform:scale(1);opacity:.7}"
+           "100%{transform:scale(1.9);opacity:0}}"
+           ".vs{animation:vspeak 1.8s ease-out infinite;"
+           "transform-box:fill-box;transform-origin:center}"
+           "@keyframes react{0%{transform:scale(0);opacity:0}"
+           "18%{transform:scale(1.25)}32%{transform:scale(1)}"
+           "86%{opacity:1}100%{opacity:0}}"
+           ".rx{animation:react 5s ease-out infinite;"
+           "transform-box:fill-box;transform-origin:center}"
+           "@keyframes stat{0%,100%{opacity:.5}50%{opacity:1}}"
+           ".st{animation:stat 2.4s ease-in-out infinite}")
     out = []
-    for i in range(4):
-        yy = 14 + i * 26
-        out.append('<g class="msg" style="animation-delay:%.2fs">' % (i * 0.55))
-        out.append('<circle cx="14" cy="%s" r="5.5" fill="%s"/>'
-                   % (yy, avs[i % 4]))
-        out.append('<rect x="24" y="%s" width="42%%" height="3" fill="#b3a4ff"/>'
-                   % (yy - 5))
-        out.append('<rect x="24" y="%s" width="%s%%" height="3" fill="#7d7da8"/>'
-                   % (yy, 58 + (i * 17) % 34))
+    avs = (BLURPLE, GRN, PNK)
+    for i in range(3):
+        yy = 30 + i * 32
+        out.append('<g class="msg" style="animation-delay:%.2fs">' % (i * 0.7))
+        out.append('<circle cx="18" cy="%s" r="7" fill="%s"/>' % (yy, avs[i]))
+        out.append('<rect x="30" y="%s" width="%s" height="4" rx="1" fill="%s"/>'
+                   % (yy - 7, 40 + i * 10, TXT))
+        out.append('<rect x="30" y="%s" width="%s" height="3.5" rx="1" fill="%s" '
+                   'opacity=".7"/>' % (yy - 1, 96 - i * 16, SUB))
+        if i == 1:
+            out.append('<rect x="30" y="%s" width="46" height="3.5" rx="1" '
+                       'fill="%s" opacity=".7"/>' % (yy + 5, SUB))
         out.append('</g>')
-    ty = 14 + 4 * 26
-    out.append('<circle cx="14" cy="%s" r="5.5" fill="#5865f2"/>' % ty)
+    # reaction pill on the first message
+    out.append('<g class="rx"><rect x="108" y="21" width="27" height="13" '
+               'rx="6.5" fill="#232447" stroke="%s" stroke-width="1"/>'
+               '<circle cx="116" cy="27.5" r="3" fill="%s"/>'
+               '<rect x="122" y="26" width="8" height="3" rx="1.5" fill="%s"/>'
+               '</g>' % (PNK, PNK, "#b3a4ff"))
+    # typing indicator
+    ty = 126
+    out.append('<circle cx="18" cy="%s" r="7" fill="%s"/>' % (ty, YEL))
+    out.append('<rect x="30" y="%s" width="58" height="13" rx="6.5" '
+               'fill="#232447"/>' % (ty - 6))
     for j in range(3):
-        out.append('<circle class="tp" cx="%s" cy="%s" r="2" fill="#b3a4ff" '
-                   'style="animation-delay:%.2fs"/>'
-                   % (26 + j * 8, ty, j * 0.2))
+        out.append('<circle class="tp" cx="%s" cy="%s" r="2.2" fill="#b3a4ff" '
+                   'style="animation-delay:%.2fs"/>' % (42 + j * 12, ty, j * 0.2))
+    # right column: voice avatar + member list
+    out.append('<line x1="162" y1="26" x2="162" y2="118" stroke="%s" '
+               'stroke-width="1" opacity=".22"/>' % BLURPLE)
+    vx, vy = 200, 42
+    out.append('<circle class="vs" cx="%s" cy="%s" r="12" fill="none" '
+               'stroke="%s" stroke-width="1.6"/>' % (vx, vy, GRN))
+    out.append('<circle cx="%s" cy="%s" r="12" fill="%s"/>' % (vx, vy, BLURPLE))
+    out.append('<circle cx="%s" cy="%s" r="3.2" fill="#e9e9ff"/>' % (vx, vy - 2))
+    out.append('<path d="M%s %s a6 5 0 0 1 12 0" fill="#e9e9ff"/>'
+               % (vx - 6, vy + 6))
+    for i, sc in enumerate((GRN, YEL, RED, GRN)):
+        my = 74 + i * 14
+        out.append('<circle cx="182" cy="%s" r="5" fill="#3a3c66"/>' % my)
+        out.append('<circle class="st" cx="186" cy="%s" r="2.4" fill="%s" '
+                   'style="animation-delay:%.2fs"/>' % (my + 3, sc, i * 0.5))
+        out.append('<rect x="192" y="%s" width="%s" height="3.5" rx="1" '
+                   'fill="%s" opacity=".7"/>' % (my - 2, 34 - i * 4, SUB))
     return css, "".join(out)
 
 
 SOCIALS = [
-    ("GitHub", "rugbedbugg", "CAM-01", "github", fx_github),
-    ("LinkedIn", "partha-gogoi", "CAM-02", "linkedin", fx_linkedin),
-    ("Email", "yes.par781", "CAM-03", "mail", lambda: fx_scroll("#7fe3d0", False)),
-    ("Instagram", "_boyin_paradise", "CAM-04", "instagram", fx_insta),
-    ("YouTube", "@rknif781", "CAM-05", "youtube", fx_youtube),
-    ("Discord", "oxide 1-6", "CAM-06", "discord", fx_discord),
+    ("LinkedIn", "CAM-01", "linkedin", fx_linkedin),
+    ("Email", "CAM-02", "mail", fx_email),
+    ("Discord", "CAM-03", "discord", fx_discord),
 ]
 
 
-def build_feed(name, handle, cam, icon, fxfn):
+def build_feed(name, cam, icon, fxfn):
     css_fx, inner = fxfn()
     css = ("@keyframes snow{0%{transform:translate(0,0)}"
            "100%{transform:translate(-14px,-9px)}}" + css_fx)
@@ -961,9 +995,9 @@ def main():
     write("label-uplink.svg", build_label("ESTABLISH UPLINK", "REF://CONTACT.SYS"))
     write("label-field.svg", build_label("FIELD RECORDING", "REF://RICINGS.VHS"))
     write("field-recording.svg", build_field())
-    for name, handle, cam, icon, fxfn in SOCIALS:
+    for name, cam, icon, fxfn in SOCIALS:
         write("feed-%s.svg" % name.lower(),
-              build_feed(name, handle, cam, icon, fxfn))
+              build_feed(name, cam, icon, fxfn))
     print("done.")
 
 
