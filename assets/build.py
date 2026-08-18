@@ -313,9 +313,12 @@ def build_dossier():
                      ("@rugbedbugg", C["cyan"])]),
         ("ALTER EGO", [("Arsenic 1-6 — ", C["bright"]),
                        ("@mystik-krysat", C["cyan"])]),
-        ("CLASS", [("Linux Power-User", C["purple"])]),
+        ("CLASS", [("Linux/Windows Power-User", C["purple"])]),
         ("RIG", [("Arch btw", C["cyan"]),
-                 (" · Caelestia · Hyprland", C["bright"])]),
+                 (" · Caelestia · Hyprland ", C["bright"]),
+                 ("| ", C["dim"]),
+                 ("Windows", C["cyan"]),
+                 (" · WSL · Powershell", C["bright"])]),
         ("HABIT", [("watches YouTube from the terminal", C["bright"])]),
         ("STATUS", [("● RICED", C["green"])]),
     ]
@@ -363,7 +366,8 @@ def build_loadout():
     b = [panel_frame(h, "DAILY LOADOUT", "REF://LOADOUT.CFG")]
     b.append('<text x="22" y="%s" font-size="10" letter-spacing="1.4" '
              'fill="%s">WORKFLOW</text>' % (body_y + 14, C["dim"]))
-    b.append(chips(["ChatGPT", "LibreOffice", "Ollama", "Zed", "OpenClaw"],
+    b.append(chips(["Sublime Text", "Ollama", "OpenClaw", "FreeFileSync",
+                    "RealTimeSync", "PowerShell"],
                    body_y + 24))
     b.append('<text x="22" y="%s" font-size="10" letter-spacing="1.4" '
              'fill="%s">LANGUAGES</text>' % (body_y + 78, C["dim"]))
@@ -926,10 +930,20 @@ QUOTES = ["Talk is cheap. Show me the code.",
           "Weeks of coding can save you hours of planning."]
 
 
-def pick_quote():
-    # Advance one quote every 3 hours (deterministic by wall clock).
-    import time
-    return QUOTES[int(time.time() // (3 * 3600)) % len(QUOTES)]
+def fetch_quote():
+    # Pull a random programming quote from the internet each build; fall back
+    # to the built-in list if the source or network is unavailable.
+    import random
+    try:
+        data = _get("https://raw.githubusercontent.com/skolakoda/"
+                    "programming-quotes-api/master/data/quotes.json")
+        picks = [q["text"].strip() for q in data
+                 if q.get("text") and 20 <= len(q["text"].strip()) <= 150]
+        if picks:
+            return random.choice(picks)
+    except Exception as e:
+        print("  ..quote fetch failed (%s) -> fallback" % e)
+    return random.choice(QUOTES)
 
 
 def main():
@@ -943,7 +957,7 @@ def main():
     write("dossier.svg", build_dossier())
     write("telemetry.svg", build_telemetry(stats, langs, cal))
     write("loadout.svg", build_loadout())
-    write("transmission.svg", build_transmission(pick_quote()))
+    write("transmission.svg", build_transmission(fetch_quote()))
     write("label-uplink.svg", build_label("ESTABLISH UPLINK", "REF://CONTACT.SYS"))
     write("label-field.svg", build_label("FIELD RECORDING", "REF://RICINGS.VHS"))
     write("field-recording.svg", build_field())
