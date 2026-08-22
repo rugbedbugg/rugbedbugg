@@ -9,7 +9,9 @@ on:
   # Re-render when the generator changes
   push:
     branches: ["main"]
-    paths: ["assets/build.py"]
+    paths:
+      - "assets/build.py"
+      - "assets/builder/**"
 
 # The job commits regenerated SVGs back into the repo
 permissions:
