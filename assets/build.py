@@ -644,14 +644,14 @@ def build_transmission(quote):
 #  TELEMETRY — live stats, colorblind languages, 2D calendar (self-hosted)
 # ===========================================================================
 USER = "rugbedbugg"
-SKIP_REPOS = {"portfolio-website", "ML_SchoolAssignments"}
+SKIP_REPOS = {"portfolio-website", "VIT-CampusMap"}
 # Okabe-Ito colorblind-safe categorical palette, assigned by language rank.
 LANG_COLORS = ["#56b4e9", "#e69f00", "#d55e00", "#cc79a7",
                "#009e73", "#f0e442", "#0072b2", "#dddddd"]
 CAL_SHADES = ["rgba(85,255,255,.10)", "rgba(85,255,255,.28)",
               "rgba(85,255,255,.50)", "rgba(85,255,255,.72)", "#55ff55"]
 # Fallbacks (snapshot fetched 2026-07-24) used when offline / rate-limited.
-FB_STATS = {"repos": 21, "stars": 41, "followers": 23, "following": 17}
+FB_STATS = {"repos": 16, "stars": 80, "followers": 29, "following": 20}
 FB_LANGS = [("Python", 61.3), ("Assembly", 13.4), ("Rust", 11.7),
             ("C++", 6.1), ("Java", 4.7), ("Lua", 1.4), ("Shell", 1.1)]
 
