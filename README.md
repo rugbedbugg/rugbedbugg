@@ -20,16 +20,15 @@
 <img src="./assets/telemetry.svg" alt="Telemetry — core stats, colorblind-safe language breakdown, contribution calendar" width="100%">
 <img src="./assets/loadout.svg" alt="Daily loadout — workflow and languages" width="100%">
 
-<!-- ================= ESTABLISH UPLINK (clickable social feeds; zero cell padding) ================= -->
-<img src="./assets/label-uplink.svg" alt="Establish uplink — REF://CONTACT.SYS" width="100%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="33.33%"><a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="LinkedIn" width="100%"></a></td>
-    <td width="33.33%"><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email" width="100%"></a></td>
-    <td width="33.33%"><a href="https://discord.com/users/848834469033017374"><img src="./assets/feed-discord.svg" alt="Discord" width="100%"></a></td>
-  </tr>
-</table>
+<!-- ================= ESTABLISH UPLINK (clickable social feeds; adjacent imgs, no table —
+     GitHub's td padding CSS overrides cellpadding, so a table can never sit flush) ================= -->
+<img src="./assets/label-uplink.svg" alt="Establish uplink — REF://CONTACT.SYS" width="100%">
+<a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="LinkedIn" width="33.33%"></a><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email" width="33.33%"></a><a href="https://discord.com/users/848834469033017374"><img src="./assets/feed-discord.svg" alt="Discord" width="33.34%"></a>
 
-<!-- ================= FIELD RECORDING (VHS still links out; no native player chrome) ================= -->
-<img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%"><a href="https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0"><img src="./assets/field-recording.svg" alt="Field recording — click to play the ricing footage" width="100%"></a>
+<!-- ================= FIELD RECORDING (bare user-attachments URL = inline playable video;
+     blank line before it is required or the parser eats the blockquote) ================= -->
+<img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%">
+
+> https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
 
 <img src="./assets/transmission.svg" alt="Transmission — incoming sensible words" width="100%">
