@@ -8,21 +8,20 @@
   Regenerate with:  python assets/build.py
   .github/workflows/refresh-profile.yml re-runs it every 3 hours.
   All panels use width="100%" so every section lines up with the video.
+  NOTE: section-label <img> tags must stay on adjacent lines (no blank line)
+  with the body they head — GitHub keeps them in one HTML block, which makes
+  the label hug its section instead of floating in its own <p>.
 -->
 
 <img src="./assets/header.svg" alt="[ SYSTEM :: OXIDE TERMINAL PROFILE :: 198X MODE ] — Oxide 1-6 // Linux Ricer // Terminal Purist" width="100%">
-
 <img src="./assets/dossier.svg" alt="Subject dossier — @rugbedbugg, Linux Power-User, Arch btw · Caelestia · Hyprland" width="100%">
 
 <!-- ================= TELEMETRY (self-hosted; regenerate with assets/build.py) ================= -->
 <img src="./assets/telemetry.svg" alt="Telemetry — core stats, colorblind-safe language breakdown, contribution calendar" width="100%">
-
 <img src="./assets/loadout.svg" alt="Daily loadout — workflow and languages" width="100%">
 
-<!-- ================= ESTABLISH UPLINK (clickable social feeds) ================= -->
-<img src="./assets/label-uplink.svg" alt="Establish uplink — REF://CONTACT.SYS" width="100%">
-
-<table width="100%" border="0" cellpadding="3" cellspacing="0">
+<!-- ================= ESTABLISH UPLINK (clickable social feeds; zero cell padding) ================= -->
+<img src="./assets/label-uplink.svg" alt="Establish uplink — REF://CONTACT.SYS" width="100%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="33.33%"><a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="LinkedIn" width="100%"></a></td>
     <td width="33.33%"><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email" width="100%"></a></td>
@@ -31,8 +30,6 @@
 </table>
 
 <!-- ================= FIELD RECORDING (VHS still links out; no native player chrome) ================= -->
-<img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%">
-
-<a href="https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0"><img src="./assets/field-recording.svg" alt="Field recording — click to play the ricing footage" width="100%"></a>
+<img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%"><a href="https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0"><img src="./assets/field-recording.svg" alt="Field recording — click to play the ricing footage" width="100%"></a>
 
 <img src="./assets/transmission.svg" alt="Transmission — incoming sensible words" width="100%">
