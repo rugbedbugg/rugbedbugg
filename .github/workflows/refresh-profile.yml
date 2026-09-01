@@ -22,6 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Re-runs keep the original event SHA, which may already be stale
+          # after the first attempt pushed refreshed panels.
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
