@@ -1,0 +1,17 @@
+[tools]
+uv = "latest"
+
+[tasks.install]
+run = "uv venv --python 3.12 && uv pip install -r requirements-dev.txt"
+
+[tasks.lint]
+run = "uv run --no-project ruff check assets tests scripts && uv run --no-project ruff format --check assets tests scripts"
+
+[tasks.test]
+run = "uv run --no-project python -m unittest discover -s tests -v"
+
+[tasks.build]
+run = "uv run --no-project python assets/build.py"
+
+[tasks.check]
+run = "mise run lint && mise run test"
