@@ -1,4 +1,5 @@
 """Binary assets embedded into every panel as base64 data URIs."""
+
 import base64
 import os
 

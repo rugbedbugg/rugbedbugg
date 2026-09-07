@@ -15,10 +15,19 @@ The generator lives in the assets/builder/ package:
   builder/github_data.py  live GitHub fetchers with fallbacks
   builder/panels/         one module per output panel
 """
+
 from builder import github_data
-from builder.panels import (SOCIALS, build_dossier, build_feed, build_field,
-                            build_header, build_label, build_loadout,
-                            build_telemetry, build_transmission)
+from builder.panels import (
+    SOCIALS,
+    build_dossier,
+    build_feed,
+    build_field,
+    build_header,
+    build_label,
+    build_loadout,
+    build_telemetry,
+    build_transmission,
+)
 from builder.svgkit import write
 
 
@@ -27,8 +36,7 @@ def main():
     stats, repos = github_data.fetch_stats()
     langs = github_data.fetch_langs(repos)
     cal = github_data.fetch_calendar()
-    print("  stats=%s  langs=%d  cal_cells=%d"
-          % (stats, len(langs), len(cal)))
+    print("  stats=%s  langs=%d  cal_cells=%d" % (stats, len(langs), len(cal)))
     write("header.svg", build_header())
     write("dossier.svg", build_dossier())
     write("telemetry.svg", build_telemetry(stats, langs, cal))
@@ -38,8 +46,7 @@ def main():
     write("label-field.svg", build_label("FIELD RECORDING", "REF://RICINGS.VHS"))
     write("field-recording.svg", build_field())
     for name, cam, icon, fxfn in SOCIALS:
-        write("feed-%s.svg" % name.lower(),
-              build_feed(name, cam, icon, fxfn))
+        write("feed-%s.svg" % name.lower(), build_feed(name, cam, icon, fxfn))
     print("done.")
 
 
