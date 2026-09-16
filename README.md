@@ -13,7 +13,7 @@
   the label hug its section instead of floating in its own <p>.
 -->
 
-<img src="./assets/header.svg" alt="[ SYSTEM :: OXIDE TERMINAL PROFILE :: 198X MODE ] — Oxide 1-6 // Linux Ricer // Terminal Purist" width="100%">
+<img src="./assets/header.svg?v=2" alt="[ SYSTEM :: OXIDE TERMINAL PROFILE :: 198X MODE ] — Oxide 1-6 // Linux Ricer // Terminal Purist" width="100%">
 <img src="./assets/dossier.svg" alt="Subject dossier — @rugbedbugg, Linux Power-User, Arch btw · Caelestia · Hyprland" width="100%">
 
 <!-- ================= TELEMETRY (self-hosted; regenerate with assets/build.py) ================= -->
