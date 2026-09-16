@@ -194,4 +194,7 @@ def build_header():
         "◎ 12.911210, 79.132685</text>" % (fx + 8, iy + ih - 6, C["cyan"])
     )
     b.append(corners(fx, fy, fw, fh, s=11, inset=4))
-    return svg(W, h, css, "".join(b), bg_on=False)
+    # Opaque ground (like every other panel): the header is transparent
+    # otherwise, and its cyan/white console text vanishes on GitHub's
+    # light theme. Keep bg_on default so it reads the same in both themes.
+    return svg(W, h, css, "".join(b))
