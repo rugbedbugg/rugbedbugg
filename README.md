@@ -30,5 +30,7 @@
 <img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%">
 
 > https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
+  
+> https://github.com/user-attachments/assets/f5a19ea3-f70b-426a-8e5a-bf4c54403474
 
 <img src="./assets/transmission.svg" alt="Transmission — incoming sensible words" width="100%">
