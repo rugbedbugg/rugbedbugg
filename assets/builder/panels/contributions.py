@@ -1,4 +1,4 @@
-"""Pinned contribution evidence and a chronological feed of upstream merges."""
+"""One contribution panel, sliced into independently clickable README regions."""
 
 from datetime import datetime
 from textwrap import wrap
@@ -22,50 +22,44 @@ def _lines(text, width):
     return wrap(text, width=width, break_on_hyphens=False) or [""]
 
 
-def build_contribution(project, data):
+def _divider(y):
+    return '<line x1="22" y1="%s" x2="%s" y2="%s" stroke="%s"/>' % (
+        y + 0.5,
+        W - 22,
+        y + 0.5,
+        BC2,
+    )
+
+
+def _project(project, data, top):
     if project == "latch":
-        title, ref = "PINNED / LATCH", "REF://VINNOVATEIT/LATCH"
         name = "VinnovateIT / Latch"
         status = f"{data['latch_count']} MERGED PRS"
         description = "Kotlin Multiplatform core, CLI, credential safety, IPC and release engineering."
-        evidence = "EVIDENCE: #85 / #171 / #173 / #137 / #186"
         action = "VIEW MERGED PRS >>"
-    elif project == "anyps5":
-        title, ref = "PINNED / ANYPS5", "REF://BOYKOPOVAR/ANYPS5"
+    else:
         name = "AnyPS5 / C++ shader compiler"
         status = f"MERGED #{data['anyps5']['number']}"
         description = (
             "Fixed unsigned integer narrowing semantics in shader constant folding."
         )
-        evidence = "EVIDENCE: PR #4195 / 975 REGRESSION CASES"
         action = "VIEW UPSTREAM PR >>"
-    else:
-        raise ValueError(f"Unknown contribution: {project}")
-
-    b = [_text(22, 56, name, 14)]
-    b.append(_text(W - 22, 56, status, 12, C["green"], "end"))
-    y = 82
+    b = [_text(22, top + 28, name, 14)]
+    b.append(_text(W - 22, top + 28, status, 12, C["green"], "end"))
+    y = top + 54
     for line in _lines(description, 86):
         b.append(_text(22, y, line, 13, C["text"]))
         y += 20
-    b.append(
-        '<line x1="22" y1="%s" x2="%s" y2="%s" stroke="%s"/>'
-        % (y - 6, W - 22, y - 6, BC2)
-    )
-    b.append(_text(22, y + 14, evidence, 10.5, C["cyan"]))
-    b.append(_text(W - 22, y + 14, action, 10.5, C["title"], "end"))
-    h = y + 36
-    out = [panel_frame(h, title, ref), "".join(b)]
-    out.append(scanlines(2, 28, W - 4, h - 30, op=0.10))
-    return svg(W, h, "", "".join(out))
+    b.append(_text(W - 22, y + 4, action, 10.5, C["title"], "end"))
+    return "".join(b), y + 26
 
 
-def build_upstream_feed(data):
+def _recent(data, top):
     date = datetime.fromisoformat(data["fetched_at"]).strftime("%Y-%m-%d")
     state = "SAVED SNAPSHOT" if data["cached"] else "FETCHED"
-    b = [_text(22, 60, "LATEST PUBLIC MERGES", 12, C["cyan"])]
-    b.append(_text(W - 22, 60, f"{state} {date} UTC", 10.5, C["gray"], "end"))
-    y = 88
+    b = [_text(22, top + 28, "RECENT PUBLIC MERGES", 12, C["cyan"])]
+    b.append(_text(W - 22, top + 28, f"{state} {date} UTC", 10.5, C["gray"], "end"))
+    y = top + 56
     recent = sorted(data["recent"], key=lambda entry: entry["merged_at"], reverse=True)
     for i, entry in enumerate(recent):
         lines = _lines(entry["title"], 76)
@@ -87,17 +81,50 @@ def build_upstream_feed(data):
         for j, line in enumerate(lines):
             b.append(_text(44, title_y + j * 20, line, 14))
         y = next_y + 20
-
     if not recent:
         b.append(_text(22, y, "No public upstream merges to display.", 14, C["text"]))
         y += 44
-    b.append(
-        '<line x1="22" y1="%s" x2="%s" y2="%s" stroke="%s"/>'
-        % (y - 10, W - 22, y - 10, BC2)
-    )
+    b.append(_divider(y - 10))
     b.append(_text(22, y + 10, "PUBLIC UPSTREAM / MERGED", 10.5, C["gray"]))
     b.append(_text(W - 22, y + 10, "OPEN FULL MERGE FEED >>", 10.5, C["title"], "end"))
-    h = y + 32
-    out = [panel_frame(h, "RECENT MERGES", "REF://UPSTREAM.FEED"), "".join(b)]
-    out.append(scanlines(2, 28, W - 4, h - 30, op=0.10))
-    return svg(W, h, "", "".join(out))
+    return "".join(b), y + 32
+
+
+def _panel(data):
+    b, ranges = [], {}
+    top = 28
+    for project in ("latch", "anyps5"):
+        if project != "latch":
+            b.append(_divider(top))
+        content, bottom = _project(project, data, top)
+        b.append(content)
+        ranges[project] = (0 if project == "latch" else top, bottom)
+        top = bottom
+    b.append(_divider(top))
+    content, h = _recent(data, top)
+    b.append(content)
+    ranges["recent"] = (top, h)
+    body = panel_frame(h, "COLLABORATIVE ENGINEERING", "REF://UPSTREAM.PRS")
+    body += "".join(b) + scanlines(2, 28, W - 4, h - 30, op=0.10)
+    return svg(W, h, "", body), ranges, h
+
+
+def _slice(data, region):
+    # SVG links inside a GitHub <img> are inactive. Crop the same framed panel
+    # into contiguous viewports, each wrapped in its existing README hyperlink.
+    document, ranges, total_h = _panel(data)
+    top, bottom = ranges[region]
+    h = bottom - top
+    return document.replace(f'height="{total_h}"', f'height="{h}"', 1).replace(
+        f'viewBox="0 0 {W} {total_h}"', f'viewBox="0 {top} {W} {h}"', 1
+    )
+
+
+def build_contribution(project, data):
+    if project not in ("latch", "anyps5"):
+        raise ValueError(f"Unknown contribution: {project}")
+    return _slice(data, project)
+
+
+def build_upstream_feed(data):
+    return _slice(data, "recent")

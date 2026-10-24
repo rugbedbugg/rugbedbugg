@@ -9,7 +9,7 @@ from xml.etree import ElementTree
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "assets"))
 from builder import github_data, upstream
-from builder.panels import build_upstream_feed
+from builder.panels import build_contribution, build_upstream_feed
 
 
 def item(repo, number, merged_at, author="rugbedbugg"):
@@ -35,6 +35,31 @@ def pin(private=False):
 
 
 class UpstreamTests(unittest.TestCase):
+    def test_clickable_slices_share_a_frame_and_cover_it_without_gaps(self):
+        data = upstream.saved_snapshot()
+        roots = [
+            ElementTree.fromstring(build_contribution("latch", data)),
+            ElementTree.fromstring(build_contribution("anyps5", data)),
+            ElementTree.fromstring(build_upstream_feed(data)),
+        ]
+        bottom = 0
+        visible_headings = 0
+        for root in roots:
+            _, top, width, height = map(float, root.attrib["viewBox"].split())
+            self.assertEqual(top, bottom)
+            self.assertEqual(width, 780)
+            self.assertEqual(height, float(root.attrib["height"]))
+            bottom = top + height
+            self.assertNotIn("EVIDENCE:", "".join(root.itertext()))
+            for text in root.findall(".//{http://www.w3.org/2000/svg}text"):
+                if text.text == "COLLABORATIVE ENGINEERING":
+                    visible_headings += top <= float(text.attrib["y"]) < bottom
+            self.assertEqual(
+                [ElementTree.tostring(child) for child in root],
+                [ElementTree.tostring(child) for child in roots[0]],
+            )
+        self.assertEqual(visible_headings, 1)
+
     def test_public_upstream_items_are_sorted_by_merge_time(self):
         results = [
             item("upstream/project", 1, "2026-10-01T00:00:00Z"),

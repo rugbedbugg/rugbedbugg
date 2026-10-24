@@ -52,7 +52,6 @@ class BuildTests(unittest.TestCase):
                 "dossier.svg",
                 "telemetry.svg",
                 "loadout.svg",
-                "label-contributions.svg",
                 "contribution-latch.svg",
                 "contribution-anyps5.svg",
                 "contribution-feed.svg",
@@ -71,6 +70,9 @@ class BuildTests(unittest.TestCase):
         for root in panels.values():
             self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
             self.assertIn("viewBox", root.attrib)
+        self.assertNotIn(
+            "GITHUB // METRICS", "".join(panels["telemetry.svg"].itertext())
+        )
         self.assertIn(
             'A < B & "quoted"', "".join(panels["transmission.svg"].itertext())
         )

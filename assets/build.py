@@ -46,10 +46,6 @@ def main():
     write("dossier.svg", build_dossier())
     write("telemetry.svg", build_telemetry(stats, langs, cal))
     write("loadout.svg", build_loadout())
-    write(
-        "label-contributions.svg",
-        build_label("COLLABORATIVE ENGINEERING", "REF://UPSTREAM.PRS"),
-    )
     write("contribution-latch.svg", build_contribution("latch", contributions))
     write("contribution-anyps5.svg", build_contribution("anyps5", contributions))
     write("contribution-feed.svg", build_upstream_feed(contributions))

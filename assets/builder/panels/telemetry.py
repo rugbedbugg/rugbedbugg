@@ -1,6 +1,6 @@
 """Telemetry panel: profile snapshot, language breakdown and contribution calendar."""
 
-from ..svgkit import esc, led, panel_frame, scanlines, svg
+from ..svgkit import esc, panel_frame, scanlines, svg
 from ..theme import BC2, CAL_SHADES, C, LANG_COLORS, W
 
 
@@ -10,22 +10,7 @@ def build_telemetry(stats, langs, cal):
     css = ".cur{animation:blink 1s steps(1,end) infinite}"
     c = []
 
-    # Recorder-style strip; the data is a periodic snapshot, not a live feed.
-    c.append(
-        '<rect x="%s" y="44" width="%s" height="26" '
-        'fill="rgba(85,255,255,.03)"/>' % (ix, iw)
-    )
-    c.append(led(ix + 10, 57, color=C["cyan"], blink=False))
-    c.append(
-        '<text x="%s" y="61" font-size="10" letter-spacing="1.4" '
-        'fill="%s">GITHUB // METRICS</text>' % (ix + 26, C["cyan"])
-    )
-    c.append(
-        '<text x="%s" y="61" font-size="10" letter-spacing="1.4" '
-        'text-anchor="end" fill="%s">SNAPSHOT</text>' % (ix + iw - 10, C["gray"])
-    )
-
-    cy = 96
+    cy = 60
     c.append(
         '<text x="%s" y="%s" font-size="14" fill="%s">'
         '<tspan fill="%s">~/rugbedbugg</tspan> '

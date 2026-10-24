@@ -21,11 +21,11 @@
 <img src="./assets/telemetry.svg" alt="Telemetry — core stats, colorblind-safe language breakdown, contribution calendar" width="100%">
 <img src="./assets/loadout.svg" alt="Daily loadout — workflow and languages" width="100%">
 
-<!-- ================= COLLABORATIVE ENGINEERING (pinned evidence + recent public upstream merges) ================= -->
+<!-- ================= COLLABORATIVE ENGINEERING (one continuous panel, three clickable regions;
+     keep the adjacent slices aligned so the shared frame remains seamless) ================= -->
 <p>
-<img src="./assets/label-contributions.svg" alt="Collaborative engineering — pinned contributions and recent public upstream merges" width="100%" align="top">
-<a href="https://github.com/vinnovateit/latch/pulls?q=is%3Apr+is%3Amerged+author%3Arugbedbugg"><img src="./assets/contribution-latch.svg" alt="Latch — Kotlin Multiplatform core, CLI, credential safety, IPC and release engineering; view merged pull requests" width="100%" align="top"></a>
-<a href="https://github.com/boykopovar/AnyPS5/pull/4195"><img src="./assets/contribution-anyps5.svg" alt="AnyPS5 — merged shader integer-narrowing fix, pull request 4195; 975 regression cases" width="100%" align="top"></a>
+<a href="https://github.com/vinnovateit/latch/pulls?q=is%3Apr+is%3Amerged+author%3Arugbedbugg"><img src="./assets/contribution-latch.svg" alt="Collaborative engineering — Latch: Kotlin Multiplatform core, CLI, credential safety, IPC and release engineering; view merged pull requests" width="100%" align="top"></a>
+<a href="https://github.com/boykopovar/AnyPS5/pull/4195"><img src="./assets/contribution-anyps5.svg" alt="AnyPS5 — merged shader integer-narrowing fix; view pull request 4195" width="100%" align="top"></a>
 <a href="https://github.com/search?q=is%3Apr+is%3Amerged+is%3Apublic+author%3Arugbedbugg+-user%3Arugbedbugg&amp;type=pullrequests&amp;s=updated&amp;o=desc"><img src="./assets/contribution-feed.svg" alt="Recent public upstream merges — chronological pull request titles, repositories and merge dates; open the full feed" width="100%" align="top"></a>
 </p>
 
