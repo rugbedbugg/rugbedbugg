@@ -1,31 +1,41 @@
-"""Transmission panel: a wrapped, animated-quote speech block."""
+"""A periodically refreshed quote log, with readable text and attribution."""
 
-from ..svgkit import esc, panel_frame, svg, wrap
+from textwrap import wrap
+
+from ..svgkit import esc, panel_frame, scanlines, svg
 from ..theme import C, W
 
 
 def build_transmission(quote):
-    body_y = 44
-    lines = wrap(quote, 78)
-    y1 = body_y + 26
-    h = body_y + 20 + len(lines) * 22 + 8
-    b = [panel_frame(h, "TRANSMISSION", "REF://QUOTES.LOG")]
+    lines = wrap(quote["text"], 78, break_on_hyphens=False)
+    author = quote.get("author", "")
+    source = quote.get("source", "PROGRAMMING QUOTES")
+    attribution = ("— " + author + " · ") if author else ""
+    captions = wrap(attribution + source, 92, break_on_hyphens=False)
+    first_y = 58
+    last_y = first_y + (len(lines) - 1) * 22
+    caption_y = last_y + 26
+    h = caption_y + (len(captions) - 1) * 16 + 22
+    b = [panel_frame(h, "INCOMING TRANSMISSIONS", "REF://QUOTES.LOG")]
     b.append(
-        '<text x="22" y="%s" font-size="10.5" letter-spacing="1.4" '
-        'fill="%s">INCOMING · SENSIBLE WORDS</text>' % (body_y + 4, C["cyan"])
+        "<desc>Quote attribution as supplied by the programming-quotes archive.</desc>"
     )
     b.append(
         '<rect x="22" y="%s" width="2" height="%s" fill="%s"/>'
-        % (y1 - 13, max(20, len(lines) * 22 - 4), C["cyan"])
+        % (first_y - 12, last_y - first_y + 16, C["cyan"])
     )
-    y = y1
-    for i, ln in enumerate(lines):
-        txt = ("“" + ln) if i == 0 else ln
+    for i, line in enumerate(lines):
+        text = ("“" if i == 0 else "") + line
         if i == len(lines) - 1:
-            txt = txt + "”"
+            text += "”"
         b.append(
-            '<text x="34" y="%s" font-size="14" fill="%s">%s</text>'
-            % (y, C["bright"], esc(txt))
+            '<text x="36" y="%s" font-size="14" fill="%s">%s</text>'
+            % (first_y + i * 22, C["bright"], esc(text))
         )
-        y += 22
+    for i, line in enumerate(captions):
+        b.append(
+            '<text x="36" y="%s" font-size="11" fill="%s">%s</text>'
+            % (caption_y + i * 16, C["gray"], esc(line))
+        )
+    b.append(scanlines(2, 28, W - 4, h - 30, op=0.10))
     return svg(W, h, "", "".join(b))

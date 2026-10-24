@@ -1,122 +1,134 @@
-"""Telemetry panel: live stats, colorblind-safe languages, contribution calendar."""
+"""Telemetry panel: profile snapshot, language breakdown and contribution calendar."""
 
-from ..svgkit import cw, esc, panel_frame, svg
+from ..svgkit import esc, led, panel_frame, scanlines, svg
 from ..theme import BC2, CAL_SHADES, C, LANG_COLORS, W
 
 
 def build_telemetry(stats, langs, cal):
-    label_h, pad = 28, 14
-    card_x, card_w = 16, W - 32
-    ipad = 14
-    ix = card_x + ipad
-    iw = card_w - 2 * ipad
-    card_top = label_h + pad
-    hd_h = 26
-    css = ".cur{animation:blink 1s steps(1,end) infinite}.sec::before{content:'> '}"
+    ix, pad = 22, 22
+    iw = W - 2 * ix
+    css = ".cur{animation:blink 1s steps(1,end) infinite}"
     c = []
-    cy = card_top + hd_h + 20
-    # prompt
+
+    # Recorder-style strip; the data is a periodic snapshot, not a live feed.
     c.append(
-        '<text x="%s" y="%s" font-size="12.5" fill="%s">'
+        '<rect x="%s" y="44" width="%s" height="26" '
+        'fill="rgba(85,255,255,.03)"/>' % (ix, iw)
+    )
+    c.append(led(ix + 10, 57, color=C["cyan"], blink=False))
+    c.append(
+        '<text x="%s" y="61" font-size="10" letter-spacing="1.4" '
+        'fill="%s">GITHUB // METRICS</text>' % (ix + 26, C["cyan"])
+    )
+    c.append(
+        '<text x="%s" y="61" font-size="10" letter-spacing="1.4" '
+        'text-anchor="end" fill="%s">SNAPSHOT</text>' % (ix + iw - 10, C["gray"])
+    )
+
+    cy = 96
+    c.append(
+        '<text x="%s" y="%s" font-size="14" fill="%s">'
         '<tspan fill="%s">~/rugbedbugg</tspan> '
         '<tspan fill="%s">(main)</tspan> <tspan fill="%s">$</tspan> '
         '<tspan fill="%s">./metrics --generate</tspan>'
         '<tspan class="cur" fill="%s">█</tspan></text>'
         % (ix, cy, C["text"], C["cyan"], C["purple"], C["dim"], C["bright"], C["cyan"])
     )
-    cy += 24
+    cy += 30
 
     def seclabel(txt, right=None):
         s = (
-            '<text x="%s" y="%s" font-size="10.5" letter-spacing="1.4" '
+            '<text x="%s" y="%s" font-size="12" letter-spacing="1.2" '
             'fill="%s"><tspan fill="%s">&gt; </tspan>%s</text>'
             % (ix, cy, C["cyan"], C["dim"], esc(txt))
         )
         if right:
             s += (
-                '<text x="%s" y="%s" font-size="9.5" text-anchor="end" '
-                'fill="%s">%s</text>' % (ix + iw, cy, C["dim"], esc(right))
+                '<text x="%s" y="%s" font-size="11" text-anchor="end" '
+                'fill="%s">%s</text>' % (ix + iw, cy, C["gray"], esc(right))
             )
         return s
 
-    # core stats
     c.append(seclabel("core stats"))
-    cy += 12
+    cy += 16
     boxes = [
         (stats["repos"], "REPOS"),
         (stats["stars"], "STARS"),
         (stats["followers"], "FOLLOWERS"),
         (stats["following"], "FOLLOWING"),
     ]
-    bw = (iw - 3 * 8) / 4
+    bw = (iw - 3 * 12) / 4
     for i, (n, lab) in enumerate(boxes):
-        bx = ix + i * (bw + 8)
+        bx = ix + i * (bw + 12)
         c.append(
-            '<rect x="%s" y="%s" width="%s" height="42" '
-            'fill="rgba(85,255,255,.03)" stroke="rgba(85,255,255,.16)"/>' % (bx, cy, bw)
+            '<rect x="%s" y="%s" width="%s" height="62" '
+            'fill="rgba(85,255,255,.03)" stroke="%s"/>' % (bx, cy, bw, BC2)
         )
         c.append(
-            '<text x="%s" y="%s" font-size="17" fill="%s" '
-            'filter="url(#glow)">%s</text>' % (bx + 9, cy + 22, C["cyan"], n)
+            '<text x="%s" y="%s" font-size="24" fill="%s" '
+            'filter="url(#glow)">%s</text>' % (bx + 12, cy + 29, C["cyan"], n)
         )
         c.append(
-            '<text x="%s" y="%s" font-size="9" letter-spacing=".8" '
-            'fill="%s">%s</text>' % (bx + 9, cy + 34, C["dim"], lab)
+            '<text x="%s" y="%s" font-size="12" letter-spacing=".8" '
+            'fill="%s">%s</text>' % (bx + 12, cy + 49, C["gray"], lab)
         )
-    cy += 42 + 18
+    cy += 62 + 32
 
-    # languages
     c.append(seclabel("most used languages", "colorblind-safe"))
-    cy += 12
+    cy += 18
     shown = list(langs)
     ssum = sum(p for _, p in shown)
     if ssum < 99.0:
-        shown = shown + [("Other", round(100 - ssum, 1))]
+        shown.append(("Other", round(100 - ssum, 1)))
     total = sum(p for _, p in shown) or 1
     colmap = {}
     x = ix
-    barw = iw
-    c.append(
-        '<rect x="%s" y="%s" width="%s" height="12" fill="none" '
-        'stroke="rgba(255,255,255,.14)"/>' % (ix, cy, barw)
-    )
     for i, (name, pct) in enumerate(shown):
-        col = "#8a8a8a" if name == "Other" else LANG_COLORS[i % len(LANG_COLORS)]
+        col = C["gray"] if name == "Other" else LANG_COLORS[i % len(LANG_COLORS)]
         colmap[name] = col
-        segw = barw * pct / total
+        segw = iw * pct / total
         c.append(
-            '<rect x="%s" y="%s" width="%s" height="12" fill="%s"/>'
+            '<rect x="%s" y="%s" width="%s" height="14" fill="%s"/>'
             % (x, cy, segw, col)
         )
+        if i:
+            c.append(
+                '<line x1="%s" y1="%s" x2="%s" y2="%s" '
+                'stroke="%s"/>' % (x, cy, x, cy + 14, C["black"])
+            )
         x += segw
-    cy += 26
-    # legend (flow with wrap)
-    lx, lrow_h = ix, 18
-    for name, pct in shown:
-        item = "%s %s%%" % (name, pct)
-        wpx = 15 + len(item) * cw(11) + 16
-        if lx + wpx > ix + iw:
-            lx = ix
-            cy += lrow_h
-        c.append(
-            '<rect x="%s" y="%s" width="9" height="9" fill="%s"/>'
-            % (lx, cy - 9, colmap[name])
-        )
-        c.append(
-            '<text x="%s" y="%s" font-size="11" fill="%s">%s '
-            '<tspan fill="%s">%s%%</tspan></text>'
-            % (lx + 14, cy, C["bright"], esc(name), C["dim"], pct)
-        )
-        lx += wpx
-    cy += 22
+    c.append(
+        '<rect x="%s" y="%s" width="%s" height="14" fill="none" '
+        'stroke="rgba(255,255,255,.14)"/>' % (ix, cy, iw)
+    )
+    cy += 14 + 28
 
-    # contribution calendar (2D)
+    # Two fixed columns keep names and percentages aligned at a readable size.
+    legend_gap, legend_row_h = 32, 26
+    legend_w = (iw - legend_gap) / 2
+    for i, (name, pct) in enumerate(shown):
+        lx = ix + (i % 2) * (legend_w + legend_gap)
+        ly = cy + (i // 2) * legend_row_h
+        c.append(
+            '<rect x="%s" y="%s" width="10" height="10" fill="%s"/>'
+            % (lx, ly - 10, colmap[name])
+        )
+        c.append(
+            '<text x="%s" y="%s" font-size="14" fill="%s">%s</text>'
+            % (lx + 20, ly, C["bright"], esc(name))
+        )
+        c.append(
+            '<text x="%s" y="%s" font-size="14" text-anchor="end" '
+            'fill="%s">%s%%</text>' % (lx + legend_w, ly, C["gray"], pct)
+        )
+    legend_rows = (len(shown) + 1) // 2
+    cy += max(0, legend_rows - 1) * legend_row_h + 32
+
     c.append(seclabel("contribution activity · last year"))
-    cy += 12
-    cols = (len(cal) + 6) // 7
+    cy += 20
+    cols = max(1, (len(cal) + 6) // 7)
     gap = 2
-    cell = (iw - (cols - 1) * gap) / cols
-    cell = min(cell, 11)
+    cell = min((iw - (cols - 1) * gap) / cols, 12)
     for idx, lv in enumerate(cal):
         col_i, row_i = idx // 7, idx % 7
         gx = ix + col_i * (cell + gap)
@@ -124,52 +136,30 @@ def build_telemetry(stats, langs, cal):
         c.append(
             '<rect x="%s" y="%s" width="%s" height="%s" fill="%s"/>'
             % (
-                round(gx, 1),
-                round(gy, 1),
-                round(cell, 1),
-                round(cell, 1),
+                round(gx, 2),
+                round(gy, 2),
+                round(cell, 2),
+                round(cell, 2),
                 CAL_SHADES[max(0, min(4, lv))],
             )
         )
-    cy += 7 * (cell + gap) + 6
-    # calkey
-    kx = ix + iw - 12 - 5 * 12 - 30
+    cy += 7 * cell + 6 * gap + 24
+    kx = ix + iw - 154
     c.append(
-        '<text x="%s" y="%s" font-size="10" fill="%s">less</text>' % (kx, cy, C["dim"])
+        '<text x="%s" y="%s" font-size="12" fill="%s">less</text>' % (kx, cy, C["gray"])
     )
-    for i, sh in enumerate(CAL_SHADES):
+    for i, shade in enumerate(CAL_SHADES):
         c.append(
-            '<rect x="%s" y="%s" width="9" height="9" fill="%s"/>'
-            % (kx + 26 + i * 12, cy - 8, sh)
+            '<rect x="%s" y="%s" width="10" height="10" fill="%s"/>'
+            % (kx + 42 + i * 14, cy - 10, shade)
         )
     c.append(
-        '<text x="%s" y="%s" font-size="10" fill="%s">more</text>'
-        % (kx + 26 + 5 * 12 + 4, cy, C["dim"])
+        '<text x="%s" y="%s" font-size="12" fill="%s">more</text>'
+        % (kx + 118, cy, C["gray"])
     )
-    cy += 10
 
-    card_bottom = cy + 6
-    card_h = card_bottom - card_top
-    h = card_bottom + pad
-
-    out = [panel_frame(h, "TELEMETRY", "REF://METRICS.SYS")]
-    out.append(
-        '<rect x="%s" y="%s" width="%s" height="%s" fill="#08060e" '
-        'stroke="%s"/>' % (card_x, card_top, card_w, card_h, BC2)
-    )
-    out.append(
-        '<rect x="%s" y="%s" width="%s" height="%s" fill="#0b0912" '
-        'stroke="%s"/>' % (card_x, card_top, card_w, hd_h, BC2)
-    )
-    for i, dc in enumerate(["#2f4a44", "#3a2f4a", "#ff5555"]):
-        out.append(
-            '<rect x="%s" y="%s" width="8" height="8" fill="%s"/>'
-            % (card_x + 12 + i * 12, card_top + 9, dc)
-        )
-    out.append(
-        '<text x="%s" y="%s" font-size="10" letter-spacing="1.4" '
-        'fill="%s">RUGBEDBUGG@GITHUB — METRICS</text>'
-        % (card_x + 54, card_top + 17, C["cyan"])
-    )
-    out.append("".join(c))
+    h = round(cy + pad)
+    out = [panel_frame(h, "TELEMETRY", "REF://METRICS.SYS"), "".join(c)]
+    # Draw after the content so opaque chart fills do not hide the VHS texture.
+    out.append(scanlines(2, 28, W - 4, h - 30, op=0.10))
     return svg(W, h, css, "".join(out))

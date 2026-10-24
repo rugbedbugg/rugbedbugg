@@ -7,30 +7,47 @@
   rotating quote are fetched at build time.
   Regenerate with:  python assets/build.py
   .github/workflows/refresh-profile.yml re-runs it every 3 hours.
-  All panels use width="100%" so every section lines up with the video.
-  NOTE: section-label <img> tags must stay on adjacent lines (no blank line)
-  with the body they head — GitHub keeps them in one HTML block, which makes
-  the label hug its section instead of floating in its own <p>.
+  Section panels span the profile width; social feeds and rice recordings use columns.
+  NOTE: paragraph groups retain GitHub's normal spacing between sections.
+  The uplink header is embedded in its tiles to stay attached at mobile widths.
+  Rice recordings use a two-column table for native playback, with one shared
+  heading, individual tape labels, and one clickable source row per recording.
 -->
 
 <img src="./assets/header.svg?v=2" alt="[ SYSTEM :: OXIDE TERMINAL PROFILE :: 198X MODE ] — Oxide 1-6 // Linux Ricer // Terminal Purist" width="100%">
-<img src="./assets/dossier.svg" alt="Subject dossier — @rugbedbugg, Linux Power-User, Arch btw · Caelestia · Hyprland" width="100%">
+<img src="./assets/dossier.svg" alt="Subject dossier — @rugbedbugg, Arch + NixOS; Arch · 0xIde · Hyprland | NixOS · 0xNix · Hyprland; Description: watches YouTube from the terminal" width="100%">
 
 <!-- ================= TELEMETRY (self-hosted; regenerate with assets/build.py) ================= -->
 <img src="./assets/telemetry.svg" alt="Telemetry — core stats, colorblind-safe language breakdown, contribution calendar" width="100%">
 <img src="./assets/loadout.svg" alt="Daily loadout — workflow and languages" width="100%">
 
-<!-- ================= ESTABLISH UPLINK (clickable social feeds; adjacent imgs, no table —
-     GitHub's td padding CSS overrides cellpadding, so a table can never sit flush) ================= -->
-<img src="./assets/label-uplink.svg" alt="Establish uplink — REF://CONTACT.SYS" width="100%">
-<a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="LinkedIn" width="33.33%"></a><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email" width="33.33%"></a><a href="https://discord.com/users/848834469033017374"><img src="./assets/feed-discord.svg" alt="Discord" width="33.34%"></a>
+<!-- ================= COLLABORATIVE ENGINEERING (pinned evidence + recent public upstream merges) ================= -->
+<p>
+<img src="./assets/label-contributions.svg" alt="Collaborative engineering — pinned contributions and recent public upstream merges" width="100%" align="top">
+<a href="https://github.com/vinnovateit/latch/pulls?q=is%3Apr+is%3Amerged+author%3Arugbedbugg"><img src="./assets/contribution-latch.svg" alt="Latch — Kotlin Multiplatform core, CLI, credential safety, IPC and release engineering; view merged pull requests" width="100%" align="top"></a>
+<a href="https://github.com/boykopovar/AnyPS5/pull/4195"><img src="./assets/contribution-anyps5.svg" alt="AnyPS5 — merged shader integer-narrowing fix, pull request 4195; 975 regression cases" width="100%" align="top"></a>
+<a href="https://github.com/search?q=is%3Apr+is%3Amerged+is%3Apublic+author%3Arugbedbugg+-user%3Arugbedbugg&amp;type=pullrequests&amp;s=updated&amp;o=desc"><img src="./assets/contribution-feed.svg" alt="Recent public upstream merges — chronological pull request titles, repositories and merge dates; open the full feed" width="100%" align="top"></a>
+</p>
 
-<!-- ================= FIELD RECORDING (bare user-attachments URL = inline playable video;
-     blank line before it is required or the parser eats the blockquote) ================= -->
-<img src="./assets/label-field.svg" alt="Field recording — REF://RICINGS.VHS" width="100%">
+<!-- ================= ESTABLISH UPLINK (one group, three independently clickable feeds) ================= -->
+<p>
+<a href="https://linkedin.com/in/partha-gogoi-736241308"><img src="./assets/feed-linkedin.svg" alt="Establish uplink — LinkedIn animated profile and connection preview" width="33.33%" align="top"></a><a href="mailto:yes.par781@gmail.com?subject=GitHub%20Contact&body=Hi%20Partha%2C%0A%0AI%20found%20you%20via%20GitHub.%0A"><img src="./assets/feed-email.svg" alt="Email — animated message composition preview" width="33.33%" align="top"></a><a href="https://discord.com/users/848834469033017374"><img src="./assets/feed-discord.svg" alt="Discord — animated conversation preview" width="33.33%" align="top"></a>
+</p>
 
-> https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0
-  
-> https://github.com/user-attachments/assets/f5a19ea3-f70b-426a-8e5a-bf4c54403474
+<!-- ================= FIELD RECORDINGS (real video attachments, tape labels and source links;
+     one shared section heading, named tape subheadings, and spacing between groups) ================= -->
+<div>
+<img src="./assets/label-field.svg" alt="Field recordings — REF://RICINGS.VHS" width="100%" align="absbottom">
+<table width="100%">
+<tr>
+<td width="50%" valign="top"><img src="./assets/rice-oxide-header.svg" alt="Tape 01 — 0xIde · Arch · Hyprland" width="100%" align="absbottom"><video src="https://github.com/user-attachments/assets/83d512dd-0014-42d0-9bfd-7520563b77e0" controls width="100%" aria-label="0xIde — Arch and Hyprland desktop recording"></video></td>
+<td width="50%" valign="top"><img src="./assets/rice-nix-header.svg" alt="Tape 02 — 0xNix · NixOS · Hyprland" width="100%" align="absbottom"><video src="https://github.com/user-attachments/assets/f5a19ea3-f70b-426a-8e5a-bf4c54403474" controls width="100%" aria-label="0xNix — NixOS and Hyprland desktop recording"></video></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/rugbedbugg/0xIde"><img src="./assets/rice-oxide-footer.svg" alt="Source — view 0xIde dotfiles at github.com/rugbedbugg/0xIde" width="100%" align="top"></a></td>
+<td width="50%"><a href="https://github.com/rugbedbugg/0xNix"><img src="./assets/rice-nix-footer.svg" alt="Source — view 0xNix dotfiles at github.com/rugbedbugg/0xNix" width="100%" align="top"></a></td>
+</tr>
+</table>
+</div>
 
-<img src="./assets/transmission.svg" alt="Transmission — incoming sensible words" width="100%">
+<a href="https://github.com/skolakoda/programming-quotes-api/blob/master/data/quotes.json"><img src="./assets/transmission.svg" alt="Incoming transmissions — rotating computing quote with attribution; open the quote archive" width="100%"></a>

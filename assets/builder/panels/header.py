@@ -1,14 +1,15 @@
 """Header panel: status bar, namemark, boot log and surveillance feed tile."""
 
 from ..embedded import AVATAR_B64
-from ..svgkit import corners, esc, led, svg, wrap
+from ..svgkit import corners, esc, led, scanlines, svg, wrap
 from ..theme import BC, BC2, C, W
 
 
 def build_header():
     fw, fh = 300, 225  # surveillance feed tile (4:3)
+    pad = 22  # align the identity row with the dossier's content inset
     row_y = 176
-    h = row_y + fh + 16
+    h = row_y + fh + pad
     css = (
         "@keyframes jitter{0%,93%,100%{transform:translateX(0)}"
         "94%{transform:translateX(-3px)}96%{transform:translateX(2px)}"
@@ -18,19 +19,24 @@ def build_header():
         "100%{transform:translateY(" + str(fh) + "px)}}"
         ".track{animation:roll 9s linear infinite}"
     )
-    b = []
+    b = [
+        '<rect x="1" y="1" width="%s" height="%s" fill="%s" stroke="%s"/>'
+        % (W - 2, h - 2, C["black"], BC),
+        '<rect x="1" y="1" width="%s" height="26" fill="rgba(85,255,255,.05)"/>'
+        % (W - 2),
+    ]
     # status bar
     b.append(
-        '<text x="8" y="14" font-size="10" letter-spacing="1.5" fill="%s">'
+        '<text x="22" y="17.5" font-size="9.5" letter-spacing="1.6" fill="%s">'
         'NODE//rugbedbugg  ·  SIG:<tspan fill="%s">STRONG</tspan>'
         "  ·  198X MODE</text>" % (C["dim"], C["green"])
     )
-    b.append(led(W - 116, 10))
+    b.append(led(W - 130, 14))
     b.append(
-        '<text x="%s" y="14" font-size="10" letter-spacing="1.5" '
-        'text-anchor="end" fill="%s">REC 00:37:12</text>' % (W - 8, C["red"])
+        '<text x="%s" y="17.5" font-size="9.5" letter-spacing="1.6" '
+        'text-anchor="end" fill="%s">REC 00:37:12</text>' % (W - 14, C["red"])
     )
-    b.append('<line x1="8" y1="24" x2="%s" y2="24" stroke="%s"/>' % (W - 8, BC2))
+    b.append('<line x1="1" y1="27" x2="%s" y2="27" stroke="%s"/>' % (W - 1, BC2))
 
     cx = W / 2
     b.append(
@@ -64,58 +70,67 @@ def build_header():
     )
 
     # ---- identity row: boot log (left) + surveillance feed (right) ----
-    fx = W - 8 - fw
+    fx = W - pad - fw
     fy = row_y
     # boot log (left column)
-    bx = 8
-    bw = fx - bx - 20
-    fs = 11
+    bx = pad
+    bw = fx - bx - pad
+    fs = 13
+    line_h = 22
     maxc = int(bw / (fs * 0.72))
+    quote = (
+        "“Once I told the computer to do something and it did it "
+        "exactly how I told it to. It was then when I felt like a god.”"
+    )
+    quote_lines = wrap(quote, maxc)
+    rail_top, rail_bottom = fy + 8, fy + fh - 8
+    # Departure Mono at 13px: the opening line ascends 11px and the last
+    # line descends 3px. Align the visible text with both ends of the rail.
+    y = rail_top + 11
+    last_baseline = rail_bottom - 3
+    paragraph_gap = (last_baseline - y - (len(quote_lines) + 1) * line_h) / 3
     b.append(
         '<rect x="%s" y="%s" width="2" height="%s" fill="%s"/>'
-        % (bx, fy + 2, fh - 40, BC)
+        % (bx - 10, rail_top, rail_bottom - rail_top, BC)
     )
-    tx = bx + 14
-    y = fy + 14
+    tx = bx
     b.append(
         '<text x="%s" y="%s" font-size="%s" fill="%s">'
         '<tspan fill="%s">Oxide 1-6 (@rugbedbugg)</tspan> — your local '
         "daft.</text>" % (tx, y, fs, C["text"], C["cyan"])
     )
-    y += 16
+    y += line_h
     b.append(
         '<text x="%s" y="%s" font-size="%s" fill="%s">Welcome to my '
         "GitHub!</text>" % (tx, y, fs, C["text"])
     )
-    y += 22
-    quote = (
-        "“Once I told the computer to do something and it did it "
-        "exactly how I told it to. It was then when I felt like a god.”"
-    )
-    for ql in wrap(quote, maxc):
+    y += paragraph_gap
+    for i, ql in enumerate(quote_lines):
         b.append(
             '<text x="%s" y="%s" font-size="%s" fill="%s">%s</text>'
-            % (tx, y, fs, C["purple"], esc(ql))
+            % (tx, y + i * line_h, fs, C["purple"], esc(ql))
         )
-        y += 16
-    y += 6
+    y += (len(quote_lines) - 1) * line_h + paragraph_gap
     b.append(
         '<text x="%s" y="%s" font-size="%s" fill="%s">That’s '
         '<tspan fill="%s">Linux</tspan> for you.</text>'
         % (tx, y, fs, C["text"], C["cyan"])
     )
-    y += 22
+    y += paragraph_gap
     b.append(
         '<text x="%s" y="%s" font-size="%s" fill="%s">TempleOS is '
         '<tspan fill="%s">the OS</tspan> sent to earth by god'
         "</text>" % (tx, y, fs, C["text"], C["bright"])
     )
-    y += 16
+    y += line_h
     b.append(
         '<text x="%s" y="%s" font-size="%s" fill="%s">himself. '
         '<tspan fill="%s">R.I.P. Terry Davis</tspan></text>'
         % (tx, y, fs, C["text"], C["orange"])
     )
+
+    # Texture the title and boot log before drawing the stronger portrait effects.
+    b.append(scanlines(2, 28, W - 4, h - 30, op=0.12))
 
     # surveillance feed (right column) — the dithered headshot, no subject box
     iy = fy + 4
@@ -194,7 +209,5 @@ def build_header():
         "◎ 12.911210, 79.132685</text>" % (fx + 8, iy + ih - 6, C["cyan"])
     )
     b.append(corners(fx, fy, fw, fh, s=11, inset=4))
-    # Opaque ground (like every other panel): the header is transparent
-    # otherwise, and its cyan/white console text vanishes on GitHub's
-    # light theme. Keep bg_on default so it reads the same in both themes.
+    b.append(corners(1, 1, W - 2, h - 2))
     return svg(W, h, css, "".join(b))

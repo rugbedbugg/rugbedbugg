@@ -122,14 +122,9 @@ def svg(w, h, extra_css, body, bg_on=True):
     return doc
 
 
-def panel_frame(h, title, ref, y0=0):
-    """Outer border + label bar + corner brackets + scanline overlay."""
+def title_bar(title, ref, y0=0):
+    """Shared title strip for framed panels and standalone section labels."""
     parts = []
-    parts.append(
-        '<rect x="1" y="%s" width="%s" height="%s" fill="%s" '
-        'stroke="%s"/>' % (y0 + 1, W - 2, h - 2, C["black"], BC)
-    )
-    # label bar
     parts.append(
         '<rect x="1" y="%s" width="%s" height="26" '
         'fill="rgba(85,255,255,.05)"/>' % (y0 + 1, W - 2)
@@ -148,6 +143,16 @@ def panel_frame(h, title, ref, y0=0):
         'text-anchor="end" fill="%s">%s</text>'
         % (W - 14, y0 + 17.5, C["gray"], esc(ref))
     )
+    return "".join(parts)
+
+
+def panel_frame(h, title, ref, y0=0):
+    """Outer border + label bar + corner brackets + scanline overlay."""
+    parts = [
+        '<rect x="1" y="%s" width="%s" height="%s" fill="%s" '
+        'stroke="%s"/>' % (y0 + 1, W - 2, h - 2, C["black"], BC),
+        title_bar(title, ref, y0),
+    ]
     parts.append(corners(1, y0 + 1, W - 2, h - 2))
     parts.append(scanlines(2, y0 + 28, W - 4, h - 30))
     return "".join(parts)

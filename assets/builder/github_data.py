@@ -77,10 +77,10 @@ def fetch_calendar():
         raise ValueError("no cells")
     except Exception as e:
         print("  ..calendar fetch failed (%s) -> generated" % e)
-        random.seed(7)
+        rng = random.Random(7)
         out = []
         for _ in range(53 * 7):
-            r = random.random()
+            r = rng.random()
             out.append(
                 4
                 if r > 0.93
@@ -96,18 +96,23 @@ def fetch_calendar():
 
 
 def fetch_quote():
-    # Pull a random programming quote from the internet each build; fall back
-    # to the built-in list if the source or network is unavailable.
+    # Select fresh content on every build, retaining the archive's attribution.
     try:
-        data = _get(
-            "https://raw.githubusercontent.com/skolakoda/"
-            "programming-quotes-api/master/data/quotes.json"
-        )
-        picks = [
-            q["text"].strip()
-            for q in data
-            if q.get("text") and 20 <= len(q["text"].strip()) <= 150
-        ]
+        data = _get(config.QUOTE_URL)
+        picks = []
+        for record in data:
+            if not isinstance(record, dict) or not isinstance(record.get("text"), str):
+                continue
+            text = " ".join(record["text"].split())
+            if 20 <= len(text) <= 150 and any(
+                topic in text.casefold() for topic in config.QUOTE_TOPICS
+            ):
+                quote = {"text": text}
+                for key in ("author", "source"):
+                    value = record.get(key)
+                    if isinstance(value, str) and value.strip():
+                        quote[key] = " ".join(value.split())[:160]
+                picks.append(quote)
         if picks:
             return random.choice(picks)
     except Exception as e:

@@ -1,0 +1,32 @@
+{
+  "fetched_at": "2026-10-23T19:16:15Z",
+  "latch_count": 64,
+  "anyps5": {
+    "number": 4195,
+    "merged_at": "2026-10-13T04:47:19Z",
+    "url": "https://github.com/boykopovar/AnyPS5/pull/4195"
+  },
+  "recent": [
+    {
+      "repo": "vinnovateit/ascii-game",
+      "number": 6,
+      "title": "[Tooling]: Add pinned Nix development environment",
+      "merged_at": "2026-10-23T18:59:27Z",
+      "url": "https://github.com/vinnovateit/ascii-game/pull/6"
+    },
+    {
+      "repo": "vinnovateit/latch",
+      "number": 202,
+      "title": "[Dev]: Add pinned NixOS development environment",
+      "merged_at": "2026-10-23T18:59:19Z",
+      "url": "https://github.com/vinnovateit/latch/pull/202"
+    },
+    {
+      "repo": "boykopovar/AnyPS5",
+      "number": 4195,
+      "title": "fix(shader): preserve integer narrowing in constant folding",
+      "merged_at": "2026-10-13T04:47:19Z",
+      "url": "https://github.com/boykopovar/AnyPS5/pull/4195"
+    }
+  ]
+}

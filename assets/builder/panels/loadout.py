@@ -1,63 +1,79 @@
-"""Loadout panel: workflow and language chip rows."""
+"""Loadout panel: side-by-side workflow and language inventories."""
 
-from ..svgkit import esc, panel_frame, svg
+from ..svgkit import esc, panel_frame, scanlines, svg
 from ..theme import BC2, C, W
 
 
-def _chips(items, y, lang=False):
-    border = "rgba(192,132,252,.4)" if lang else BC2
-    fillbg = "rgba(168,85,247,.07)" if lang else "rgba(85,255,255,.04)"
-    txtcol = C["title"] if lang else C["text"]
-    # Departure Mono advances ~0.636em and the label adds .6 letter-spacing;
-    # size the box to that real width so the last glyph keeps its padding
-    # instead of touching the right border.
-    cpc = 11 * 0.636 + 0.6
-    x = 22
+def _inventory(items, left, y, width, columns, lang=False):
+    marker = C["purple"] if lang else C["cyan"]
+    txtcol = C["title"] if lang else C["bright"]
+    row_h = 28
+    column_w = width / columns
     out = []
-    for it in items:
-        wc = len(it) * cpc + 20
+    for i, it in enumerate(items):
+        x = left + (i % columns) * column_w
+        baseline = y + (i // columns) * row_h
         out.append(
-            '<rect x="%s" y="%s" width="%s" height="24" fill="%s" '
-            'stroke="%s"/>' % (x, y, round(wc), fillbg, border)
+            '<rect x="%s" y="%s" width="4" height="4" fill="%s"/>'
+            % (x, baseline - 7, marker)
         )
         out.append(
-            '<text x="%s" y="%s" font-size="11" letter-spacing=".6" '
-            'fill="%s">%s</text>' % (x + 10, y + 16, txtcol, esc(it.upper()))
+            '<text x="%s" y="%s" font-size="14" letter-spacing=".3" '
+            'fill="%s">%s</text>' % (x + 14, baseline, txtcol, esc(it))
         )
-        x += wc + 7
-    return "".join(out)
+    rows = (len(items) + columns - 1) // columns
+    bottom = y + max(0, rows - 1) * row_h + 4
+    return "".join(out), bottom
 
 
 def build_loadout():
-    body_y = 44
-    h = body_y + 150
-    b = [panel_frame(h, "DAILY LOADOUT", "REF://LOADOUT.CFG")]
+    cy = 60
+    pad, section_gap = 22, 44
+    section_w = (W - 2 * pad - section_gap) / 2
+    right_x = pad + section_w + section_gap
+    b = []
     b.append(
-        '<text x="22" y="%s" font-size="10" letter-spacing="1.4" '
-        'fill="%s">WORKFLOW</text>' % (body_y + 14, C["dim"])
+        '<text x="22" y="%s" font-size="12" letter-spacing="1.2" '
+        'fill="%s"><tspan fill="%s">&gt; </tspan>WORKFLOW</text>'
+        % (cy, C["cyan"], C["dim"])
     )
+    inventory, workflow_bottom = _inventory(
+        [
+            "Foot",
+            "Fish",
+            "Vim",
+            "lf",
+            "Fuzzel",
+            "btop",
+            "rmpc",
+            "direnv",
+        ],
+        left=pad,
+        y=cy + 30,
+        width=section_w,
+        columns=3,
+    )
+    b.append(inventory)
     b.append(
-        _chips(
-            [
-                "Sublime Text",
-                "Ollama",
-                "OpenClaw",
-                "FreeFileSync",
-                "RealTimeSync",
-                "PowerShell",
-            ],
-            body_y + 24,
-        )
+        '<text x="%s" y="%s" font-size="12" letter-spacing="1.2" '
+        'fill="%s"><tspan fill="%s">&gt; </tspan>LANGUAGES</text>'
+        % (right_x, cy, C["cyan"], C["dim"])
     )
+    inventory, bottom = _inventory(
+        ["Python", "C", "C++", "Java", "Rust", "Shell", "Nix", "Lua"],
+        left=right_x,
+        y=cy + 30,
+        width=section_w,
+        columns=3,
+        lang=True,
+    )
+    b.append(inventory)
+    bottom = max(workflow_bottom, bottom)
     b.append(
-        '<text x="22" y="%s" font-size="10" letter-spacing="1.4" '
-        'fill="%s">LANGUAGES</text>' % (body_y + 78, C["dim"])
+        '<line x1="%s" y1="44" x2="%s" y2="%s" stroke="%s"/>'
+        % (W / 2, W / 2, bottom, BC2)
     )
-    b.append(
-        _chips(
-            ["Rust", "C", "C++", "Python", "Java", "Assembly", "Bash"],
-            body_y + 88,
-            lang=True,
-        )
-    )
-    return svg(W, h, "", "".join(b))
+    h = bottom + 22
+    out = [panel_frame(h, "DAILY LOADOUT", "REF://LOADOUT.CFG"), "".join(b)]
+    out.append(scanlines(2, 28, W - 4, h - 30, op=0.10))
+    return svg(W, h, "", "".join(out))

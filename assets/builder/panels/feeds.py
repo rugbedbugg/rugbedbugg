@@ -1,7 +1,9 @@
 """Social feeds panel: three animated, clickable 4:3 tiles."""
 
-from ..svgkit import corners, esc, led, svg
-from ..theme import BC2, C
+from ..embedded import AVATAR_B64
+from ..svgkit import corners, esc, led, scanlines, svg
+from ..theme import BC, BC2, C, W
+from .labels import label_body
 
 FW, FH = 244, 183  # feed tile size (4:3)
 
@@ -20,272 +22,190 @@ def _feed_icon(kind, x, y):
     return a + p + "</g>"
 
 
-def _li_avatar(x, y, r, col, glow=False):
-    """Small avatar node: ring with a head + shoulders silhouette."""
+def _preview_text(x, y, text, size=12, color=None, anchor="start"):
+    return '<text x="%s" y="%s" font-size="%s" fill="%s" text-anchor="%s">%s</text>' % (
+        x,
+        y,
+        size,
+        color or C["bright"],
+        anchor,
+        esc(text),
+    )
+
+
+def _preview_frame(color, background):
+    return (
+        '<rect x="10" y="32" width="224" height="116" rx="3" '
+        'fill="%s" stroke="%s"/>' % (background, color)
+    )
+
+
+def _linkedin_badge(x, y):
+    """A vector mark with fixed bounds; font metrics cannot clip the 'in'."""
     return (
         '<g transform="translate(%s,%s)">'
-        '<circle r="%s" fill="#0a1830" stroke="%s" stroke-width="1.2"%s/>'
-        '<circle cy="%s" r="%s" fill="%s"/>'
-        '<path d="M%s %s a%s %s 0 0 1 %s 0" fill="%s"/></g>'
-        % (
-            x,
-            y,
-            r,
-            col,
-            ' filter="url(#glow)"' if glow else "",
-            -r * 0.18,
-            r * 0.34,
-            col,
-            -r * 0.5,
-            r * 0.62,
-            r * 0.5,
-            r * 0.42,
-            r,
-            col,
-        )
+        '<rect width="20" height="20" rx="2" fill="#0a66c2"/>'
+        '<g fill="#fff"><circle cx="5.3" cy="5.3" r="1.5"/>'
+        '<path d="M4 8h2.7v8H4zM9 8h2.6v1.1c.7-.9 1.6-1.4 2.8-1.4'
+        " 2.5 0 3.4 1.6 3.4 4V16h-2.7v-4.1c0-1.3-.3-2-1.5-2"
+        '-1.3 0-1.9.9-1.9 2.1v4H9z"/></g></g>' % (x, y)
+    )
+
+
+def _cursor(cls):
+    return (
+        '<path class="%s motion-cursor" d="M0 0v14l4-4 3 6 3-1-3-6 6-1z" '
+        'fill="#fff" stroke="#080a10" stroke-width="1.2" opacity="0"/>' % cls
     )
 
 
 def _fx_linkedin():
-    """Professional network: hub avatar, orbiting connections, marching-ant
-    links, incoming connection pulses and a new-connection ping."""
-    BLU, LT = "#4d9fff", "#a9d4ff"
-    cx, cy = FW / 2, FH / 2 + 3
-    sats = [
-        (40, 44),
-        (FW - 40, 46),
-        (30, FH - 46),
-        (FW - 32, FH - 44),
-        (cx, 30),
-        (34, cy + 6),
-        (FW - 28, cy),
-    ]
-    pulse_idx = [0, 3, 4, 6]
-
+    """Profile preview: Connect, a short pending state, then a held confirmation."""
+    blue = "#7ebcff"
     css = (
-        "@keyframes lidash{to{stroke-dashoffset:-18}}"
-        ".edge{animation:lidash 1.5s linear infinite}"
-        "@keyframes linode{0%,100%{opacity:.5}50%{opacity:1}}"
-        ".node{animation:linode 3s ease-in-out infinite}"
-        "@keyframes lispin{to{transform:rotate(360deg)}}"
-        ".ring{animation:lispin 24s linear infinite;"
-        "transform-box:fill-box;transform-origin:center}"
-        "@keyframes lireach{0%{transform:scale(.5);opacity:.85}"
-        "100%{transform:scale(1.7);opacity:0}}"
-        ".reach{animation:lireach 3.2s ease-out infinite;"
-        "transform-box:fill-box;transform-origin:center}"
+        "@keyframes liready{0%,24%{opacity:1}25%,100%{opacity:0}}"
+        ".li-ready{animation:liready 14s steps(1,end) infinite}"
+        "@keyframes lipending{0%,24%{opacity:0}25%,59%{opacity:1}60%,100%{opacity:0}}"
+        ".li-pending{animation:lipending 14s steps(1,end) infinite}"
+        "@keyframes lidone{0%,59%{opacity:0}60%,100%{opacity:1}}"
+        ".li-done{animation:lidone 14s steps(1,end) infinite}"
+        "@keyframes licursor{0%,8%{opacity:0;transform:translate(210px,133px)}"
+        "13%{opacity:1;transform:translate(210px,133px)}"
+        "21%,26%{opacity:1;transform:translate(161px,121px)}"
+        "30%,100%{opacity:0;transform:translate(161px,121px)}}"
+        ".li-cursor{animation:licursor 14s ease-in-out infinite}"
     )
-    for k in pulse_idx:
-        sx, sy = sats[k]
-        dx, dy = round(cx - sx, 1), round(cy - sy, 1)
-        css += (
-            "@keyframes lip" + str(k) + "{0%{transform:translate(0px,0px);"
-            "opacity:0}14%{opacity:1}86%{opacity:1}100%{transform:translate("
-            + str(dx)
-            + "px,"
-            + str(dy)
-            + "px);opacity:0}}"
-            ".lip"
-            + str(k)
-            + "{animation:lip"
-            + str(k)
-            + " 2.8s linear infinite;animation-delay:"
-            + str(round(k * 0.5, 2))
-            + "s}"
-        )
-
-    out = [
-        '<circle class="ring" cx="%s" cy="%s" r="52" fill="none" stroke="%s" '
-        'stroke-width="1" stroke-dasharray="2 9" opacity=".3"/>' % (cx, cy, BLU)
-    ]
-    for sx, sy in sats:
-        out.append(
-            '<line class="edge" x1="%s" y1="%s" x2="%s" y2="%s" '
-            'stroke="%s" stroke-width="1" opacity=".45" '
-            'stroke-dasharray="4 5"/>' % (cx, cy, sx, sy, BLU)
-        )
-    for i, (sx, sy) in enumerate(sats):
-        out.append(
-            '<g class="node" style="animation-delay:%.2fs">%s</g>'
-            % (i * 0.4, _li_avatar(sx, sy, 8.5, "#7cc2ff"))
-        )
-    for k in pulse_idx:
-        sx, sy = sats[k]
-        out.append(
-            '<circle class="lip%d" cx="%s" cy="%s" r="2.6" fill="%s" '
-            'filter="url(#glow)"/>' % (k, sx, sy, C["cyan"])
-        )
-    sx, sy = sats[1]
-    out.append(
-        '<circle class="reach" cx="%s" cy="%s" r="12" fill="none" '
-        'stroke="%s" stroke-width="1.5"/>' % (sx, sy, C["green"])
+    b = [_preview_frame("#273d54", "#05080d"), _linkedin_badge(18, 38)]
+    b.append(_preview_text(46, 52, "Profile preview", 11.5, blue))
+    b.append(
+        '<image x="18" y="68" width="28" height="28" '
+        'preserveAspectRatio="xMidYMid slice" href="data:image/png;base64,%s" '
+        'style="image-rendering:pixelated"/>' % AVATAR_B64
     )
-    out.append(_li_avatar(cx, cy, 15, LT, glow=True))
-    out.append(
-        '<rect x="%s" y="%s" width="13" height="13" rx="2.5" fill="%s"/>'
-        % (cx + 6, cy + 3, BLU)
-    )
-    out.append(
-        '<text x="%s" y="%s" font-size="9.5" fill="#00142c">in</text>'
-        % (cx + 8, cy + 12.5)
-    )
-    return css, "".join(out)
+    b.append(_preview_text(56, 79, "Oxide 1-6", 12))
+    b.append(_preview_text(56, 96, "Linux / systems", 10.5, "#9eaec1"))
+    for cls, text, color, fill, opacity in [
+        ("li-ready", "+ Connect", blue, "#0b2138", 0),
+        ("li-pending", "Request pending", "#b8c8d9", "#101923", 0),
+        ("li-done", "Connected", C["green"], "#0b1d14", 1),
+    ]:
+        b.append('<g class="%s" opacity="%s">' % (cls, opacity))
+        b.append(
+            '<rect x="18" y="110" width="208" height="26" rx="3" '
+            'fill="%s" stroke="%s" stroke-opacity=".55"/>' % (fill, color)
+        )
+        b.append(_preview_text(FW / 2, 127, text, 11.5, color, "middle"))
+        b.append("</g>")
+    b.append(_cursor("li-cursor"))
+    return css, "".join(b)
 
 
 def _fx_email():
-    """Inbox: unread rows, an envelope dropping in, a sent paper-plane sweep
-    and a blinking compose caret."""
-    TEAL, TEAL2, DIMT = "#7fe3d0", "#39b39a", "#2b4d47"
+    """Compose preview: type a readable draft, click Send, then hold Sent."""
+    teal = "#7fe3d0"
+    message = "Loved your Linux setup."
+    # Departure Mono's advance is 7/11 em; reveal one character per step.
+    typed_w = len(message) * 12 * 7 / 11
     css = (
-        "@keyframes mdrop{0%{transform:translateY(-40px);opacity:0}"
-        "16%{opacity:1}64%{transform:translateY(0);opacity:1}"
-        "80%,100%{transform:translateY(0);opacity:0}}"
-        ".drop{animation:mdrop 4.4s ease-in infinite}"
-        "@keyframes unread{0%,100%{opacity:.3}50%{opacity:1}}"
-        ".un{animation:unread 1.6s ease-in-out infinite}"
-        "@keyframes plane{0%{transform:translate(-34px,6px);opacity:0}"
-        "22%,78%{opacity:.95}100%{transform:translate(250px,-14px);opacity:0}}"
-        ".plane{animation:plane 5.2s ease-in-out infinite}"
-        "@keyframes caret{0%,50%{opacity:1}51%,100%{opacity:0}}"
-        ".caret{animation:caret 1s steps(1) infinite}"
+        "@keyframes mailtype{0%,12%{width:0}48%,100%{width:TYPE_WIDTHpx}}"
+        ".mail-type{animation:mailtype 16s steps(TYPE_STEPS,end) infinite}"
+        "@keyframes mailcaret{0%,12%{transform:translateX(0);opacity:1}"
+        "48%,52%{transform:translateX(CARET_WIDTHpx);opacity:1}"
+        "53%,100%{transform:translateX(CARET_WIDTHpx);opacity:0}}"
+        ".mail-caret{animation:mailcaret 16s steps(TYPE_STEPS,end) infinite}"
+        "@keyframes textcaret{0%,49%{opacity:1}50%,100%{opacity:0}}"
+        ".typing-caret{animation:textcaret .9s steps(1,end) infinite}"
+        "@keyframes maildraft{0%,66%{opacity:1}67%,100%{opacity:0}}"
+        ".mail-draft{animation:maildraft 16s steps(1,end) infinite}"
+        "@keyframes mailsending{0%,66%{opacity:0}67%,79%{opacity:1}80%,100%{opacity:0}}"
+        ".mail-sending{animation:mailsending 16s steps(1,end) infinite}"
+        "@keyframes mailsent{0%,79%{opacity:0}80%,100%{opacity:1}}"
+        ".mail-sent{animation:mailsent 16s steps(1,end) infinite}"
+        "@keyframes mailcursor{0%,54%{opacity:0;transform:translate(208px,130px)}"
+        "58%{opacity:1;transform:translate(208px,130px)}"
+        "64%,68%{opacity:1;transform:translate(67px,130px)}"
+        "72%,100%{opacity:0;transform:translate(67px,130px)}}"
+        ".mail-cursor{animation:mailcursor 16s ease-in-out infinite}"
     )
-    out = []
-    for i, ry in enumerate((30, 60, 90)):
-        out.append(
-            '<rect x="10" y="%s" width="224" height="24" rx="3" '
-            'fill="#08201c" stroke="rgba(127,227,208,.25)" '
-            'stroke-width="1"/>' % ry
-        )
-        out.append(
-            '<circle class="un" cx="22" cy="%s" r="3.4" fill="%s" '
-            'style="animation-delay:%.2fs"/>' % (ry + 12, TEAL, i * 0.4)
-        )
-        out.append(
-            '<g transform="translate(32,%s)" stroke="%s" stroke-width="1" '
-            'fill="none"><rect width="15" height="11" rx="1.5"/>'
-            '<path d="M0 1l7.5 5.5L15 1"/></g>' % (ry + 6, TEAL)
-        )
-        out.append(
-            '<rect x="54" y="%s" width="%s" height="3.5" fill="%s"/>'
-            % (ry + 7, 70 + i * 14, TEAL)
-        )
-        out.append(
-            '<rect x="54" y="%s" width="%s" height="3" fill="%s" '
-            'opacity=".6"/>' % (ry + 14, 150 - i * 20, DIMT)
-        )
-    out.append(
-        '<g class="drop"><g transform="translate(105,16)" stroke="%s" '
-        'stroke-width="1.4" fill="#08201c"><rect width="34" height="24" '
-        'rx="2.5"/><path d="M0 2l17 13L34 2" fill="none"/></g></g>' % TEAL
+    css = (
+        css.replace("TYPE_WIDTH", str(typed_w + 1))
+        .replace("TYPE_STEPS", str(len(message)))
+        .replace("CARET_WIDTH", str(typed_w))
     )
-    out.append(
-        '<path class="plane" d="M0 0l20 8-7 2-2 7z" fill="%s" '
-        'transform="translate(0,116)"/>' % TEAL
+    b = [_preview_frame("#25443c", "#040b09")]
+    b.append(_preview_text(18, 47, "New message", 11.5, teal))
+    b.append(_preview_text(226, 47, "PREVIEW", 9, C["gray"], "end"))
+    b.append('<path d="M11 55h222M11 91h222" stroke="#25443c"/>')
+    b.append(_preview_text(18, 70, "To:", 10.5, "#a4bbb3"))
+    b.append(_preview_text(46, 70, "Oxide 1-6", 11.5))
+    b.append(_preview_text(18, 85, "Subject:", 10.5, "#a4bbb3"))
+    b.append(_preview_text(80, 85, "GitHub contact", 11))
+    b.append(_preview_text(18, 104, "Hi Oxide,", 12))
+    b.append(
+        '<clipPath id="mail-body"><rect class="mail-type" x="18" y="106" '
+        'width="%s" height="18"/></clipPath>' % (typed_w + 1)
     )
-    out.append(
-        '<text x="12" y="132" font-size="9" letter-spacing="1" '
-        'fill="%s">&gt; compose message</text>' % TEAL2
+    b.append('<g clip-path="url(#mail-body)">')
+    b.append(_preview_text(18, 119, message, 12))
+    b.append("</g>")
+    b.append(
+        '<g class="mail-caret motion-cursor"><rect class="typing-caret" '
+        'x="18" y="109" width="1.5" height="12" fill="%s"/></g>' % teal
     )
-    out.append(
-        '<rect class="caret" x="130" y="124" width="6" height="10" fill="%s"/>' % TEAL
-    )
-    return css, "".join(out)
+    for cls, action, status, color, opacity in [
+        ("mail-draft", "Send", "Draft saved", teal, 0),
+        ("mail-sending", "Sending", "Sending...", teal, 0),
+        ("mail-sent", "Sent", "Message sent", C["green"], 1),
+    ]:
+        b.append('<g class="%s" opacity="%s">' % (cls, opacity))
+        b.append(
+            '<rect x="18" y="126" width="68" height="18" rx="2" '
+            'fill="#10261f" stroke="%s" stroke-opacity=".45"/>' % color
+        )
+        b.append(_preview_text(52, 139, action, 10.5, color, "middle"))
+        b.append(_preview_text(226, 139, status, 10, "#a4bbb3", "end"))
+        b.append("</g>")
+    b.append(_cursor("mail-cursor"))
+    return css, "".join(b)
 
 
 def _fx_discord():
-    """Server chat + voice: messages popping in, a reaction pill, a typing
-    indicator, a speaking voice avatar and a member list with status dots."""
-    BLURPLE, GRN, PNK, YEL, RED = (
-        "#5865f2",
-        "#57f287",
-        "#eb459e",
-        "#fee75c",
-        "#ed4245",
-    )
-    TXT, SUB = "#c9c6ff", "#8d8db0"
+    """Conversation preview: a message, a brief typing indicator, then a reply."""
+    lavender = "#c4baff"
     css = (
-        "@keyframes dcpop{0%{opacity:0;transform:translateY(6px)}"
-        "12%,84%{opacity:1;transform:translateY(0)}100%{opacity:.1}}"
-        ".msg{animation:dcpop 5s ease-out infinite}"
-        "@keyframes tping{0%,60%,100%{opacity:.3}30%{opacity:1}}"
-        ".tp{animation:tping 1.2s infinite}"
-        "@keyframes vspeak{0%{transform:scale(1);opacity:.7}"
-        "100%{transform:scale(1.9);opacity:0}}"
-        ".vs{animation:vspeak 1.8s ease-out infinite;"
-        "transform-box:fill-box;transform-origin:center}"
-        "@keyframes react{0%{transform:scale(0);opacity:0}"
-        "18%{transform:scale(1.25)}32%{transform:scale(1)}"
-        "86%{opacity:1}100%{opacity:0}}"
-        ".rx{animation:react 5s ease-out infinite;"
-        "transform-box:fill-box;transform-origin:center}"
-        "@keyframes stat{0%,100%{opacity:.5}50%{opacity:1}}"
-        ".st{animation:stat 2.4s ease-in-out infinite}"
+        "@keyframes dctyping{0%,7%{opacity:0}8%,41%{opacity:1}42%,100%{opacity:0}}"
+        ".dc-typing{animation:dctyping 16s steps(1,end) infinite}"
+        "@keyframes dcreply{0%,41%{opacity:0;transform:translateY(3px)}"
+        "44%,100%{opacity:1;transform:translateY(0)}}"
+        ".dc-reply{animation:dcreply 16s ease-out infinite}"
+        "@keyframes dcdot{0%,70%,100%{opacity:.3}35%{opacity:1}}"
+        ".dc-dot{animation:dcdot 1.2s ease-in-out infinite}"
     )
-    out = []
-    avs = (BLURPLE, GRN, PNK)
+    b = [_preview_frame("#34334f", "#080911")]
+    b.append(_preview_text(18, 47, "# linux", 11.5, lavender))
+    b.append(_preview_text(226, 47, "PREVIEW", 9, C["gray"], "end"))
+    b.append('<path d="M11 55h222" stroke="#34334f"/>')
+    b.append('<rect x="18" y="62" width="17" height="17" rx="4" fill="#44416a"/>')
+    b.append(_preview_text(26.5, 75, "v", 11, C["bright"], "middle"))
+    b.append(_preview_text(44, 71, "visitor", 11, lavender))
+    b.append(_preview_text(44, 89, "Nice rice!", 12))
+    b.append('<g class="dc-typing" opacity="0">')
+    b.append(_preview_text(18, 119, "Oxide is typing", 11, "#acacc5"))
     for i in range(3):
-        yy = 30 + i * 32
-        out.append('<g class="msg" style="animation-delay:%.2fs">' % (i * 0.7))
-        out.append('<circle cx="18" cy="%s" r="7" fill="%s"/>' % (yy, avs[i]))
-        out.append(
-            '<rect x="30" y="%s" width="%s" height="4" rx="1" fill="%s"/>'
-            % (yy - 7, 40 + i * 10, TXT)
+        b.append(
+            '<circle class="dc-dot" cx="%s" cy="116" r="1.7" fill="%s" '
+            'style="animation-delay:%ss"/>' % (139 + i * 7, lavender, i * 0.18)
         )
-        out.append(
-            '<rect x="30" y="%s" width="%s" height="3.5" rx="1" fill="%s" '
-            'opacity=".7"/>' % (yy - 1, 96 - i * 16, SUB)
-        )
-        if i == 1:
-            out.append(
-                '<rect x="30" y="%s" width="46" height="3.5" rx="1" '
-                'fill="%s" opacity=".7"/>' % (yy + 5, SUB)
-            )
-        out.append("</g>")
-    # reaction pill on the first message
-    out.append(
-        '<g class="rx"><rect x="108" y="21" width="27" height="13" '
-        'rx="6.5" fill="#232447" stroke="%s" stroke-width="1"/>'
-        '<circle cx="116" cy="27.5" r="3" fill="%s"/>'
-        '<rect x="122" y="26" width="8" height="3" rx="1.5" fill="%s"/>'
-        "</g>" % (PNK, PNK, "#b3a4ff")
-    )
-    # typing indicator
-    ty = 126
-    out.append('<circle cx="18" cy="%s" r="7" fill="%s"/>' % (ty, YEL))
-    out.append(
-        '<rect x="30" y="%s" width="58" height="13" rx="6.5" '
-        'fill="#232447"/>' % (ty - 6)
-    )
-    for j in range(3):
-        out.append(
-            '<circle class="tp" cx="%s" cy="%s" r="2.2" fill="#b3a4ff" '
-            'style="animation-delay:%.2fs"/>' % (42 + j * 12, ty, j * 0.2)
-        )
-    # right column: voice avatar + member list
-    out.append(
-        '<line x1="162" y1="26" x2="162" y2="118" stroke="%s" '
-        'stroke-width="1" opacity=".22"/>' % BLURPLE
-    )
-    vx, vy = 200, 42
-    out.append(
-        '<circle class="vs" cx="%s" cy="%s" r="12" fill="none" '
-        'stroke="%s" stroke-width="1.6"/>' % (vx, vy, GRN)
-    )
-    out.append('<circle cx="%s" cy="%s" r="12" fill="%s"/>' % (vx, vy, BLURPLE))
-    out.append('<circle cx="%s" cy="%s" r="3.2" fill="#e9e9ff"/>' % (vx, vy - 2))
-    out.append('<path d="M%s %s a6 5 0 0 1 12 0" fill="#e9e9ff"/>' % (vx - 6, vy + 6))
-    for i, sc in enumerate((GRN, YEL, RED, GRN)):
-        my = 74 + i * 14
-        out.append('<circle cx="182" cy="%s" r="5" fill="#3a3c66"/>' % my)
-        out.append(
-            '<circle class="st" cx="186" cy="%s" r="2.4" fill="%s" '
-            'style="animation-delay:%.2fs"/>' % (my + 3, sc, i * 0.5)
-        )
-        out.append(
-            '<rect x="192" y="%s" width="%s" height="3.5" rx="1" '
-            'fill="%s" opacity=".7"/>' % (my - 2, 34 - i * 4, SUB)
-        )
-    return css, "".join(out)
+    b.append("</g>")
+    b.append('<g class="dc-reply" opacity="1">')
+    b.append('<rect x="18" y="101" width="17" height="17" rx="4" fill="#164348"/>')
+    b.append(_preview_text(26.5, 114, "o", 11, C["cyan"], "middle"))
+    b.append(_preview_text(44, 110, "Oxide 1-6", 11, C["cyan"]))
+    b.append(_preview_text(44, 128, "Thanks! Arch + NixOS.", 11.5))
+    b.append("</g>")
+    b.append('<rect x="18" y="136" width="208" height="11" rx="2" fill="#161823"/>')
+    b.append(_preview_text(23, 145, "Message #linux", 9.5, "#acacc5"))
+    return css, "".join(b)
 
 
 SOCIALS = [
@@ -297,45 +217,66 @@ SOCIALS = [
 
 def build_feed(name, cam, icon, fxfn):
     css_fx, inner = fxfn()
-    css = (
-        "@keyframes snow{0%{transform:translate(0,0)}"
-        "100%{transform:translate(-14px,-9px)}}" + css_fx
+    css = css_fx + (
+        "@media(prefers-reduced-motion:reduce){*{animation:none!important}"
+        ".motion-cursor,.typing-caret{display:none}}"
     )
     b = []
-    b.append('<rect width="%s" height="%s" fill="#020104"/>' % (FW, FH))
-    b.append('<clipPath id="fc"><rect width="%s" height="%s"/></clipPath>' % (FW, FH))
+    b.append("<title>%s contact preview</title>" % esc(name))
+    b.append("<desc>Illustrative animation. Open the contact link to connect.</desc>")
+    b.append('<rect width="%s" height="%s" fill="%s"/>' % (FW, FH, C["black"]))
+    b.append(
+        '<clipPath id="fc"><rect x="8" y="28" width="228" height="122"/></clipPath>'
+    )
     b.append('<g clip-path="url(#fc)">%s</g>' % inner)
+    # Keep preview text clear of the permanent contact controls.
     b.append(
-        '<rect width="%s" height="%s" fill="url(#scan)" opacity=".28"/>' % (FW, FH)
+        '<rect x="0" y="153" width="%s" height="30" fill="%s"/>' % (FW, C["black"])
     )
-    # bottom name gradient
+    b.append('<line x1="1" y1="153" x2="%s" y2="153" stroke="%s"/>' % (FW - 1, BC2))
+    b.append(_feed_icon(icon, 12, FH - 26))
     b.append(
-        '<rect x="0" y="%s" width="%s" height="40" fill="url(#nmfade)"/>'
-        % (FH - 40, FW)
-    )
-    b.append(_feed_icon(icon, 8, FH - 21))
-    b.append(
-        '<text x="27" y="%s" font-size="12" letter-spacing=".6" '
-        'fill="%s">%s</text>' % (FH - 11, C["bright"], esc(name.upper()))
+        '<text x="34" y="%s" font-size="14" letter-spacing=".6" '
+        'fill="%s">%s</text>' % (FH - 14, C["bright"], esc(name.upper()))
     )
     b.append(
-        '<text x="%s" y="%s" font-size="8.5" letter-spacing="1.4" '
-        'text-anchor="end" fill="%s">CONNECT ▶</text>' % (FW - 8, FH - 11, C["cyan"])
+        '<text x="%s" y="%s" font-size="9.5" letter-spacing="1.2" '
+        'text-anchor="end" fill="%s">CONNECT ▶</text>' % (FW - 12, FH - 14, C["cyan"])
     )
-    # cam / live (dark strip keeps labels legible over the animated feed)
-    b.append('<rect x="0" y="0" width="%s" height="19" fill="rgba(0,0,0,.55)"/>' % FW)
+    # Channel labels describe clickable routes, not presence or connection status.
+    b.append('<rect width="%s" height="24" fill="%s"/>' % (FW, C["black"]))
+    b.append('<rect width="%s" height="24" fill="rgba(85,255,255,.05)"/>' % FW)
+    b.append('<line x1="1" y1="24" x2="%s" y2="24" stroke="%s"/>' % (FW - 1, BC2))
     b.append(
-        '<text x="7" y="13" font-size="8" letter-spacing="1.2" fill="%s">'
+        '<text x="12" y="16" font-size="9.5" letter-spacing="1.2" fill="%s">'
         "%s</text>" % (C["cyan"], cam)
     )
-    b.append(led(FW - 34, 10))
+    b.append(led(FW - 61, 12, color=C["cyan"], blink=False))
     b.append(
-        '<text x="%s" y="13" font-size="8" text-anchor="end" fill="%s">'
-        "LIVE</text>" % (FW - 8, C["red"])
+        '<text x="%s" y="16" font-size="9.5" letter-spacing="1.2" '
+        'text-anchor="end" fill="%s">LINK</text>' % (FW - 12, C["cyan"])
     )
+    b.append(scanlines(1, 1, FW - 2, FH - 2, op=0.08))
     b.append(corners(0, 0, FW, FH, s=10, inset=4))
     b.append(
         '<rect x=".5" y=".5" width="%s" height="%s" fill="none" '
-        'stroke="%s"/>' % (FW - 1, FH - 1, BC2)
+        'stroke="%s"/>' % (FW - 1, FH - 1, BC)
     )
-    return svg(FW, FH, css, "".join(b))
+    # Each clickable tile carries a third of the common header. This keeps the
+    # header attached even when its scaled height is below an HTML text line.
+    column = next(i for i, social in enumerate(SOCIALS) if social[0] == name)
+    slice_w = W / len(SOCIALS)
+    header_h = 30 * FW / slice_w
+    header = '<svg width="%s" height="%s" viewBox="%s 0 %s 30">%s</svg>' % (
+        FW,
+        header_h,
+        column * slice_w,
+        slice_w,
+        label_body("ESTABLISH UPLINK", "REF://CONTACT.SYS"),
+    )
+    return svg(
+        FW,
+        FH + header_h,
+        css,
+        header + '<g transform="translate(0,%s)">%s</g>' % (header_h, "".join(b)),
+    )
