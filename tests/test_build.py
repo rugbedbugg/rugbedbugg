@@ -51,7 +51,6 @@ class BuildTests(unittest.TestCase):
                 "header.svg",
                 "dossier.svg",
                 "telemetry.svg",
-                "loadout.svg",
                 "contribution-latch.svg",
                 "contribution-anyps5.svg",
                 "contribution-feed.svg",

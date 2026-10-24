@@ -19,7 +19,6 @@
 
 <!-- ================= TELEMETRY (self-hosted; regenerate with assets/build.py) ================= -->
 <img src="./assets/telemetry.svg" alt="Telemetry — core stats, colorblind-safe language breakdown, contribution calendar" width="100%">
-<img src="./assets/loadout.svg" alt="Daily loadout — workflow and languages" width="100%">
 
 <!-- ================= COLLABORATIVE ENGINEERING (one continuous panel, three clickable regions;
      keep the adjacent slices aligned so the shared frame remains seamless) ================= -->

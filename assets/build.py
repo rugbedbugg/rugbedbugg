@@ -25,7 +25,6 @@ from builder.panels import (
     build_feed,
     build_header,
     build_label,
-    build_loadout,
     build_tape_footer,
     build_tape_header,
     build_telemetry,
@@ -45,7 +44,6 @@ def main():
     write("header.svg", build_header())
     write("dossier.svg", build_dossier())
     write("telemetry.svg", build_telemetry(stats, langs, cal))
-    write("loadout.svg", build_loadout())
     write("contribution-latch.svg", build_contribution("latch", contributions))
     write("contribution-anyps5.svg", build_contribution("anyps5", contributions))
     write("contribution-feed.svg", build_upstream_feed(contributions))
